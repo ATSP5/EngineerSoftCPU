@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: ALU.prj
 
@@ -46,7 +46,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "ALU"
 Output Format                      : NGC
-Target Device                      : xc6slx9-3-tqg144
+Target Device                      : xc6slx75-3-csg484
 
 ---- Source Options
 Top Module Name                    : ALU
@@ -113,9 +113,7 @@ Parsing module <ALU>.
 =========================================================================
 
 Elaborating module <ALU>.
-WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 39: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:1127 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 39: Assignment to ALU_Out ignored, since the identifier is never used
-WARNING:HDLCompiler:1499 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 21: Empty module <ALU> remains a black box.
+WARNING:HDLCompiler:1127 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 52: Assignment to ArgB ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -125,7 +123,6 @@ Synthesizing Unit <ALU>.
     Related source file is "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v".
 WARNING:Xst:647 - Input <A> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ALU_Sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <DecoderData> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <StatusRegisterVelues> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <RegRdy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -188,25 +185,34 @@ Top Level Output File Name         : ALU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
+# BELS                             : 3
+#      GND                         : 1
+#      LUT3                        : 1
+#      LUT6                        : 1
+# IO Buffers                       : 154
+#      IBUF                        : 8
+#      OBUF                        : 146
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 6slx9tqg144-3 
+Selected Device : 6slx75csg484-3 
 
 
 Slice Logic Utilization: 
+ Number of Slice LUTs:                    2  out of  46648     0%  
+    Number used as Logic:                 2  out of  46648     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
+ Number of LUT Flip Flop pairs used:      2
+   Number with an unused Flip Flop:       2  out of      2   100%  
+   Number with an unused LUT:             0  out of      2     0%  
+   Number of fully used LUT-FF pairs:     0  out of      2     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                         252
- Number of bonded IOBs:                   0  out of    102     0%  
+ Number of bonded IOBs:                 154  out of    328    46%  
 
 Specific Feature Utilization:
 
@@ -241,11 +247,31 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 6.170ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 1
+-------------------------------------------------------------------------
+Delay:               6.170ns (Levels of Logic = 4)
+  Source:            ALU_Sel<2> (PAD)
+  Destination:       MenagePC<0> (PAD)
+
+  Data Path: ALU_Sel<2> to MenagePC<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.808  ALU_Sel_2_IBUF (ALU_Sel_2_IBUF)
+     LUT3:I0->O            1   0.205   0.580  MenagePC<0><7>_SW0 (N2)
+     LUT6:I5->O            1   0.205   0.579  MenagePC<0><7> (MenagePC_0_OBUF)
+     OBUF:I->O                 2.571          MenagePC_0_OBUF (MenagePC<0>)
+    ----------------------------------------
+    Total                      6.170ns (4.203ns logic, 1.967ns route)
+                                       (68.1% logic, 31.9% route)
 
 =========================================================================
 
@@ -255,14 +281,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.00 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.02 secs
  
 --> 
 
-Total memory usage is 226588 kilobytes
+Total memory usage is 236060 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   10 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

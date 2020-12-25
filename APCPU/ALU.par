@@ -1,83 +1,30 @@
-Release 14.7 Map P.20131013 (nt64)
-Xilinx Map Application Log File for Design 'ALU'
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Design Information
-------------------
-Command Line   : map -intstyle ise -p xc6slx75-csg484-3 -w -logic_opt off -ol
-high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
--pr off -lc off -power off -o ALU_map.ncd ALU.ngd ALU.pcf 
-Target Device  : xc6slx75
-Target Package : csg484
-Target Speed   : -3
-Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Dec 25 14:32:47 2020
+APX_AMD::  Fri Dec 25 14:33:18 2020
 
-Mapping design into LUTs...
-Running directed packing...
-Running delay-based LUT packing...
-Updating timing models...
-INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
-   (.mrp).
-Running timing-driven placement...
-Total REAL time at the beginning of Placer: 5 secs 
-Total CPU  time at the beginning of Placer: 4 secs 
+par -w -intstyle ise -ol high -mt off ALU_map.ncd ALU.ncd ALU.pcf 
 
-Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:3078) REAL time: 7 secs 
 
-Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:3078) REAL time: 7 secs 
+Constraints file: ALU.pcf.
+Loading device for application Rf_Device from file '6slx75.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "ALU" is an NCD, version 3.2, device xc6slx75, package csg484, speed -3
 
-Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:3078) REAL time: 7 secs 
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
 
-Phase 4.2  Initial Placement for Architecture Specific Features
-...
-....
-Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:3078) REAL time: 15 secs 
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
 
-Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:3078) REAL time: 15 secs 
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 
-Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:3078) REAL time: 15 secs 
 
-Phase 7.3  Local Placement Optimization
-...
-....
-Phase 7.3  Local Placement Optimization (Checksum:37151bcc) REAL time: 21 secs 
 
-Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:37151bcc) REAL time: 21 secs 
+Device Utilization Summary:
 
-Phase 9.8  Global Placement
-.......
-.......
-Phase 9.8  Global Placement (Checksum:76a98864) REAL time: 21 secs 
-
-Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:76a98864) REAL time: 22 secs 
-
-Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:24531b24) REAL time: 27 secs 
-
-Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:24531b24) REAL time: 27 secs 
-
-Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:24531b24) REAL time: 27 secs 
-
-Total REAL time to Placer completion: 27 secs 
-Total CPU  time to Placer completion: 24 secs 
-Running post-placement packing...
-Writing output files...
-
-Design Summary
---------------
-
-Design Summary:
-Number of errors:      0
-Number of warnings:    0
 Slice Logic Utilization:
   Number of Slice Registers:                     0 out of  93,296    0%
   Number of Slice LUTs:                          2 out of  46,648    1%
@@ -130,11 +77,71 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                1.00
 
-Peak Memory Usage:  455 MB
-Total REAL time to MAP completion:  28 secs 
-Total CPU time to MAP completion:   25 secs 
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
 
-Mapping completed.
-See MAP report file "ALU_map.mrp" for details.
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
+
+Starting Router
+
+
+Phase  1  : 155 unrouted;      REAL time: 5 secs 
+
+Phase  2  : 155 unrouted;      REAL time: 5 secs 
+
+Phase  3  : 19 unrouted;      REAL time: 5 secs 
+
+Phase  4  : 19 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+
+Updating file: ALU.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Total REAL time to Router completion: 8 secs 
+Total CPU time to Router completion: 7 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 9 secs 
+Total CPU time to PAR completion: 8 secs 
+
+Peak Memory Usage:  401 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 2
+
+Writing design to file ALU.ncd
+
+
+
+PAR done!
