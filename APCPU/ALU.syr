@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: ALU.prj
@@ -113,7 +113,12 @@ Parsing module <ALU>.
 =========================================================================
 
 Elaborating module <ALU>.
-WARNING:HDLCompiler:1127 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 52: Assignment to ArgB ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 171: Result of 34-bit expression is truncated to fit in 33-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 183: Result of 34-bit expression is truncated to fit in 33-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 400: Result of 24-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 415: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 420: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 56: Assignment to ValidMemoryData ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -121,20 +126,448 @@ WARNING:HDLCompiler:1127 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU
 
 Synthesizing Unit <ALU>.
     Related source file is "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v".
-WARNING:Xst:647 - Input <A> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <DecoderData> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <StatusRegisterVelues> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <RegRdy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ValidMemData> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 33-bit subtractor for signal <GND_1_o_GND_1_o_sub_8_OUT> created at line 117.
+    Found 33-bit subtractor for signal <GND_1_o_GND_1_o_sub_10_OUT> created at line 123.
+    Found 33-bit subtractor for signal <GND_1_o_GND_1_o_sub_11_OUT> created at line 129.
+    Found 33-bit subtractor for signal <GND_1_o_GND_1_o_sub_13_OUT> created at line 135.
+    Found 33-bit adder for signal <n0242> created at line 93.
+    Found 33-bit adder for signal <BUS_0002_GND_1_o_add_3_OUT> created at line 99.
+    Found 33-bit adder for signal <n0248> created at line 105.
+    Found 33-bit adder for signal <BUS_0005_GND_1_o_add_6_OUT> created at line 111.
+    Found 25-bit adder for signal <n0252[24:0]> created at line 225.
+    Found 32x24-bit multiplier for signal <n0168> created at line 141.
+    Found 32x32-bit multiplier for signal <n0169> created at line 147.
+    Found 32-bit shifter logical left for signal <ArgA[31]_DataFromDecoder[23]_shift_left_17_OUT> created at line 165
+    Found 34-bit shifter logical left for signal <n0173> created at line 171
+    Found 32-bit shifter logical right for signal <ArgA[31]_DataFromDecoder[23]_shift_right_19_OUT> created at line 177
+    Found 34-bit shifter logical right for signal <n0175> created at line 183
+    Found 32-bit comparator equal for signal <ArgA[31]_ArgB[31]_equal_54_o> created at line 299
+    Found 32-bit comparator greater for signal <ArgB[31]_ArgA[31]_LessThan_55_o> created at line 304
+    Found 33-bit comparator equal for signal <ArgA[31]_ArgB[31]_equal_58_o> created at line 318
+    Found 33-bit comparator greater for signal <ArgB[31]_ArgA[31]_LessThan_59_o> created at line 323
+    Found 32-bit comparator equal for signal <ArgA[31]_GND_1_o_equal_62_o> created at line 337
+    Found 32-bit comparator greater for signal <GND_1_o_ArgA[31]_LessThan_63_o> created at line 342
     Summary:
-	no macro.
+	inferred   2 Multiplier(s).
+	inferred   9 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+	inferred  15 Multiplexer(s).
+	inferred   4 Combinational logic shifter(s).
 Unit <ALU> synthesized.
+
+Synthesizing Unit <div_32u_24u>.
+    Related source file is "".
+    Found 56-bit adder for signal <n2981> created at line 0.
+    Found 56-bit adder for signal <GND_4_o_b[23]_add_1_OUT> created at line 0.
+    Found 55-bit adder for signal <n2985> created at line 0.
+    Found 55-bit adder for signal <GND_4_o_b[23]_add_3_OUT> created at line 0.
+    Found 54-bit adder for signal <n2989> created at line 0.
+    Found 54-bit adder for signal <GND_4_o_b[23]_add_5_OUT> created at line 0.
+    Found 53-bit adder for signal <n2993> created at line 0.
+    Found 53-bit adder for signal <GND_4_o_b[23]_add_7_OUT> created at line 0.
+    Found 52-bit adder for signal <n2997> created at line 0.
+    Found 52-bit adder for signal <GND_4_o_b[23]_add_9_OUT> created at line 0.
+    Found 51-bit adder for signal <n3001> created at line 0.
+    Found 51-bit adder for signal <GND_4_o_b[23]_add_11_OUT> created at line 0.
+    Found 50-bit adder for signal <n3005> created at line 0.
+    Found 50-bit adder for signal <GND_4_o_b[23]_add_13_OUT> created at line 0.
+    Found 49-bit adder for signal <n3009> created at line 0.
+    Found 49-bit adder for signal <GND_4_o_b[23]_add_15_OUT> created at line 0.
+    Found 48-bit adder for signal <n3013> created at line 0.
+    Found 48-bit adder for signal <GND_4_o_b[23]_add_17_OUT> created at line 0.
+    Found 47-bit adder for signal <n3017> created at line 0.
+    Found 47-bit adder for signal <GND_4_o_b[23]_add_19_OUT> created at line 0.
+    Found 46-bit adder for signal <n3021> created at line 0.
+    Found 46-bit adder for signal <GND_4_o_b[23]_add_21_OUT> created at line 0.
+    Found 45-bit adder for signal <n3025> created at line 0.
+    Found 45-bit adder for signal <GND_4_o_b[23]_add_23_OUT> created at line 0.
+    Found 44-bit adder for signal <n3029> created at line 0.
+    Found 44-bit adder for signal <GND_4_o_b[23]_add_25_OUT> created at line 0.
+    Found 43-bit adder for signal <n3033> created at line 0.
+    Found 43-bit adder for signal <GND_4_o_b[23]_add_27_OUT> created at line 0.
+    Found 42-bit adder for signal <n3037> created at line 0.
+    Found 42-bit adder for signal <GND_4_o_b[23]_add_29_OUT> created at line 0.
+    Found 41-bit adder for signal <n3041> created at line 0.
+    Found 41-bit adder for signal <GND_4_o_b[23]_add_31_OUT> created at line 0.
+    Found 40-bit adder for signal <n3045> created at line 0.
+    Found 40-bit adder for signal <GND_4_o_b[23]_add_33_OUT> created at line 0.
+    Found 39-bit adder for signal <n3049> created at line 0.
+    Found 39-bit adder for signal <GND_4_o_b[23]_add_35_OUT> created at line 0.
+    Found 38-bit adder for signal <n3053> created at line 0.
+    Found 38-bit adder for signal <GND_4_o_b[23]_add_37_OUT> created at line 0.
+    Found 37-bit adder for signal <n3057> created at line 0.
+    Found 37-bit adder for signal <GND_4_o_b[23]_add_39_OUT> created at line 0.
+    Found 36-bit adder for signal <n3061> created at line 0.
+    Found 36-bit adder for signal <GND_4_o_b[23]_add_41_OUT> created at line 0.
+    Found 35-bit adder for signal <n3065> created at line 0.
+    Found 35-bit adder for signal <GND_4_o_b[23]_add_43_OUT> created at line 0.
+    Found 34-bit adder for signal <n3069> created at line 0.
+    Found 34-bit adder for signal <GND_4_o_b[23]_add_45_OUT> created at line 0.
+    Found 33-bit adder for signal <n3073> created at line 0.
+    Found 33-bit adder for signal <GND_4_o_b[23]_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <n3077> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[23]_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <n3081> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_4_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <n3085> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_4_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <n3089> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_4_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <n3093> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_4_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <n3097> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_4_o_add_59_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <n3101> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_4_o_add_61_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <n3105> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_4_o_add_63_OUT[31:0]> created at line 0.
+    Found 56-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 55-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 54-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 53-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 52-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 51-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 50-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 49-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 48-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 47-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 46-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 45-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 44-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 43-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 42-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  64 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 931 Multiplexer(s).
+Unit <div_32u_24u> synthesized.
+
+Synthesizing Unit <div_32u_32u>.
+    Related source file is "".
+    Found 64-bit adder for signal <n3436> created at line 0.
+    Found 64-bit adder for signal <GND_5_o_b[31]_add_1_OUT> created at line 0.
+    Found 63-bit adder for signal <n3440> created at line 0.
+    Found 63-bit adder for signal <GND_5_o_b[31]_add_3_OUT> created at line 0.
+    Found 62-bit adder for signal <n3444> created at line 0.
+    Found 62-bit adder for signal <GND_5_o_b[31]_add_5_OUT> created at line 0.
+    Found 61-bit adder for signal <n3448> created at line 0.
+    Found 61-bit adder for signal <GND_5_o_b[31]_add_7_OUT> created at line 0.
+    Found 60-bit adder for signal <n3452> created at line 0.
+    Found 60-bit adder for signal <GND_5_o_b[31]_add_9_OUT> created at line 0.
+    Found 59-bit adder for signal <n3456> created at line 0.
+    Found 59-bit adder for signal <GND_5_o_b[31]_add_11_OUT> created at line 0.
+    Found 58-bit adder for signal <n3460> created at line 0.
+    Found 58-bit adder for signal <GND_5_o_b[31]_add_13_OUT> created at line 0.
+    Found 57-bit adder for signal <n3464> created at line 0.
+    Found 57-bit adder for signal <GND_5_o_b[31]_add_15_OUT> created at line 0.
+    Found 56-bit adder for signal <n3468> created at line 0.
+    Found 56-bit adder for signal <GND_5_o_b[31]_add_17_OUT> created at line 0.
+    Found 55-bit adder for signal <n3472> created at line 0.
+    Found 55-bit adder for signal <GND_5_o_b[31]_add_19_OUT> created at line 0.
+    Found 54-bit adder for signal <n3476> created at line 0.
+    Found 54-bit adder for signal <GND_5_o_b[31]_add_21_OUT> created at line 0.
+    Found 53-bit adder for signal <n3480> created at line 0.
+    Found 53-bit adder for signal <GND_5_o_b[31]_add_23_OUT> created at line 0.
+    Found 52-bit adder for signal <n3484> created at line 0.
+    Found 52-bit adder for signal <GND_5_o_b[31]_add_25_OUT> created at line 0.
+    Found 51-bit adder for signal <n3488> created at line 0.
+    Found 51-bit adder for signal <GND_5_o_b[31]_add_27_OUT> created at line 0.
+    Found 50-bit adder for signal <n3492> created at line 0.
+    Found 50-bit adder for signal <GND_5_o_b[31]_add_29_OUT> created at line 0.
+    Found 49-bit adder for signal <n3496> created at line 0.
+    Found 49-bit adder for signal <GND_5_o_b[31]_add_31_OUT> created at line 0.
+    Found 48-bit adder for signal <n3500> created at line 0.
+    Found 48-bit adder for signal <GND_5_o_b[31]_add_33_OUT> created at line 0.
+    Found 47-bit adder for signal <n3504> created at line 0.
+    Found 47-bit adder for signal <GND_5_o_b[31]_add_35_OUT> created at line 0.
+    Found 46-bit adder for signal <n3508> created at line 0.
+    Found 46-bit adder for signal <GND_5_o_b[31]_add_37_OUT> created at line 0.
+    Found 45-bit adder for signal <n3512> created at line 0.
+    Found 45-bit adder for signal <GND_5_o_b[31]_add_39_OUT> created at line 0.
+    Found 44-bit adder for signal <n3516> created at line 0.
+    Found 44-bit adder for signal <GND_5_o_b[31]_add_41_OUT> created at line 0.
+    Found 43-bit adder for signal <n3520> created at line 0.
+    Found 43-bit adder for signal <GND_5_o_b[31]_add_43_OUT> created at line 0.
+    Found 42-bit adder for signal <n3524> created at line 0.
+    Found 42-bit adder for signal <GND_5_o_b[31]_add_45_OUT> created at line 0.
+    Found 41-bit adder for signal <n3528> created at line 0.
+    Found 41-bit adder for signal <GND_5_o_b[31]_add_47_OUT> created at line 0.
+    Found 40-bit adder for signal <n3532> created at line 0.
+    Found 40-bit adder for signal <GND_5_o_b[31]_add_49_OUT> created at line 0.
+    Found 39-bit adder for signal <n3536> created at line 0.
+    Found 39-bit adder for signal <GND_5_o_b[31]_add_51_OUT> created at line 0.
+    Found 38-bit adder for signal <n3540> created at line 0.
+    Found 38-bit adder for signal <GND_5_o_b[31]_add_53_OUT> created at line 0.
+    Found 37-bit adder for signal <n3544> created at line 0.
+    Found 37-bit adder for signal <GND_5_o_b[31]_add_55_OUT> created at line 0.
+    Found 36-bit adder for signal <n3548> created at line 0.
+    Found 36-bit adder for signal <GND_5_o_b[31]_add_57_OUT> created at line 0.
+    Found 35-bit adder for signal <n3552> created at line 0.
+    Found 35-bit adder for signal <GND_5_o_b[31]_add_59_OUT> created at line 0.
+    Found 34-bit adder for signal <n3556> created at line 0.
+    Found 34-bit adder for signal <GND_5_o_b[31]_add_61_OUT> created at line 0.
+    Found 33-bit adder for signal <n3560> created at line 0.
+    Found 33-bit adder for signal <GND_5_o_b[31]_add_63_OUT> created at line 0.
+    Found 64-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 63-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 62-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 61-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 60-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 59-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 58-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 57-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 56-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 55-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 54-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 53-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 52-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 51-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 50-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 49-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 48-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 47-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 46-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 45-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 44-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 43-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 42-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  64 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 993 Multiplexer(s).
+Unit <div_32u_32u> synthesized.
+
+Synthesizing Unit <mod_32u_32u>.
+    Related source file is "".
+    Found 64-bit adder for signal <n3436> created at line 0.
+    Found 64-bit adder for signal <GND_10_o_b[31]_add_1_OUT> created at line 0.
+    Found 63-bit adder for signal <n3440> created at line 0.
+    Found 63-bit adder for signal <GND_10_o_b[31]_add_3_OUT> created at line 0.
+    Found 62-bit adder for signal <n3444> created at line 0.
+    Found 62-bit adder for signal <GND_10_o_b[31]_add_5_OUT> created at line 0.
+    Found 61-bit adder for signal <n3448> created at line 0.
+    Found 61-bit adder for signal <GND_10_o_b[31]_add_7_OUT> created at line 0.
+    Found 60-bit adder for signal <n3452> created at line 0.
+    Found 60-bit adder for signal <GND_10_o_b[31]_add_9_OUT> created at line 0.
+    Found 59-bit adder for signal <n3456> created at line 0.
+    Found 59-bit adder for signal <GND_10_o_b[31]_add_11_OUT> created at line 0.
+    Found 58-bit adder for signal <n3460> created at line 0.
+    Found 58-bit adder for signal <GND_10_o_b[31]_add_13_OUT> created at line 0.
+    Found 57-bit adder for signal <n3464> created at line 0.
+    Found 57-bit adder for signal <GND_10_o_b[31]_add_15_OUT> created at line 0.
+    Found 56-bit adder for signal <n3468> created at line 0.
+    Found 56-bit adder for signal <GND_10_o_b[31]_add_17_OUT> created at line 0.
+    Found 55-bit adder for signal <n3472> created at line 0.
+    Found 55-bit adder for signal <GND_10_o_b[31]_add_19_OUT> created at line 0.
+    Found 54-bit adder for signal <n3476> created at line 0.
+    Found 54-bit adder for signal <GND_10_o_b[31]_add_21_OUT> created at line 0.
+    Found 53-bit adder for signal <n3480> created at line 0.
+    Found 53-bit adder for signal <GND_10_o_b[31]_add_23_OUT> created at line 0.
+    Found 52-bit adder for signal <n3484> created at line 0.
+    Found 52-bit adder for signal <GND_10_o_b[31]_add_25_OUT> created at line 0.
+    Found 51-bit adder for signal <n3488> created at line 0.
+    Found 51-bit adder for signal <GND_10_o_b[31]_add_27_OUT> created at line 0.
+    Found 50-bit adder for signal <n3492> created at line 0.
+    Found 50-bit adder for signal <GND_10_o_b[31]_add_29_OUT> created at line 0.
+    Found 49-bit adder for signal <n3496> created at line 0.
+    Found 49-bit adder for signal <GND_10_o_b[31]_add_31_OUT> created at line 0.
+    Found 48-bit adder for signal <n3500> created at line 0.
+    Found 48-bit adder for signal <GND_10_o_b[31]_add_33_OUT> created at line 0.
+    Found 47-bit adder for signal <n3504> created at line 0.
+    Found 47-bit adder for signal <GND_10_o_b[31]_add_35_OUT> created at line 0.
+    Found 46-bit adder for signal <n3508> created at line 0.
+    Found 46-bit adder for signal <GND_10_o_b[31]_add_37_OUT> created at line 0.
+    Found 45-bit adder for signal <n3512> created at line 0.
+    Found 45-bit adder for signal <GND_10_o_b[31]_add_39_OUT> created at line 0.
+    Found 44-bit adder for signal <n3516> created at line 0.
+    Found 44-bit adder for signal <GND_10_o_b[31]_add_41_OUT> created at line 0.
+    Found 43-bit adder for signal <n3520> created at line 0.
+    Found 43-bit adder for signal <GND_10_o_b[31]_add_43_OUT> created at line 0.
+    Found 42-bit adder for signal <n3524> created at line 0.
+    Found 42-bit adder for signal <GND_10_o_b[31]_add_45_OUT> created at line 0.
+    Found 41-bit adder for signal <n3528> created at line 0.
+    Found 41-bit adder for signal <GND_10_o_b[31]_add_47_OUT> created at line 0.
+    Found 40-bit adder for signal <n3532> created at line 0.
+    Found 40-bit adder for signal <GND_10_o_b[31]_add_49_OUT> created at line 0.
+    Found 39-bit adder for signal <n3536> created at line 0.
+    Found 39-bit adder for signal <GND_10_o_b[31]_add_51_OUT> created at line 0.
+    Found 38-bit adder for signal <n3540> created at line 0.
+    Found 38-bit adder for signal <GND_10_o_b[31]_add_53_OUT> created at line 0.
+    Found 37-bit adder for signal <n3544> created at line 0.
+    Found 37-bit adder for signal <GND_10_o_b[31]_add_55_OUT> created at line 0.
+    Found 36-bit adder for signal <n3548> created at line 0.
+    Found 36-bit adder for signal <GND_10_o_b[31]_add_57_OUT> created at line 0.
+    Found 35-bit adder for signal <n3552> created at line 0.
+    Found 35-bit adder for signal <GND_10_o_b[31]_add_59_OUT> created at line 0.
+    Found 34-bit adder for signal <n3556> created at line 0.
+    Found 34-bit adder for signal <GND_10_o_b[31]_add_61_OUT> created at line 0.
+    Found 33-bit adder for signal <n3560> created at line 0.
+    Found 33-bit adder for signal <GND_10_o_b[31]_add_63_OUT> created at line 0.
+    Found 32-bit adder for signal <n3564> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[31]_add_65_OUT[31:0]> created at line 0.
+    Found 64-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 63-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 62-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 61-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 60-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 59-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 58-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 57-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 56-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 55-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 54-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 53-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 52-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 51-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 50-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 49-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 48-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 47-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 46-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 45-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 44-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 43-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 42-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  66 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 994 Multiplexer(s).
+Unit <mod_32u_32u> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Multipliers                                          : 2
+ 32x24-bit multiplier                                  : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 203
+ 25-bit adder                                          : 1
+ 32-bit adder                                          : 18
+ 33-bit adder                                          : 10
+ 33-bit subtractor                                     : 4
+ 34-bit adder                                          : 6
+ 35-bit adder                                          : 6
+ 36-bit adder                                          : 6
+ 37-bit adder                                          : 6
+ 38-bit adder                                          : 6
+ 39-bit adder                                          : 6
+ 40-bit adder                                          : 6
+ 41-bit adder                                          : 6
+ 42-bit adder                                          : 6
+ 43-bit adder                                          : 6
+ 44-bit adder                                          : 6
+ 45-bit adder                                          : 6
+ 46-bit adder                                          : 6
+ 47-bit adder                                          : 6
+ 48-bit adder                                          : 6
+ 49-bit adder                                          : 6
+ 50-bit adder                                          : 6
+ 51-bit adder                                          : 6
+ 52-bit adder                                          : 6
+ 53-bit adder                                          : 6
+ 54-bit adder                                          : 6
+ 55-bit adder                                          : 6
+ 56-bit adder                                          : 6
+ 57-bit adder                                          : 4
+ 58-bit adder                                          : 4
+ 59-bit adder                                          : 4
+ 60-bit adder                                          : 4
+ 61-bit adder                                          : 4
+ 62-bit adder                                          : 4
+ 63-bit adder                                          : 4
+ 64-bit adder                                          : 4
+# Comparators                                          : 105
+ 32-bit comparator equal                               : 2
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 11
+ 33-bit comparator equal                               : 1
+ 33-bit comparator greater                             : 1
+ 33-bit comparator lessequal                           : 3
+ 34-bit comparator lessequal                           : 3
+ 35-bit comparator lessequal                           : 3
+ 36-bit comparator lessequal                           : 3
+ 37-bit comparator lessequal                           : 3
+ 38-bit comparator lessequal                           : 3
+ 39-bit comparator lessequal                           : 3
+ 40-bit comparator lessequal                           : 3
+ 41-bit comparator lessequal                           : 3
+ 42-bit comparator lessequal                           : 3
+ 43-bit comparator lessequal                           : 3
+ 44-bit comparator lessequal                           : 3
+ 45-bit comparator lessequal                           : 3
+ 46-bit comparator lessequal                           : 3
+ 47-bit comparator lessequal                           : 3
+ 48-bit comparator lessequal                           : 3
+ 49-bit comparator lessequal                           : 3
+ 50-bit comparator lessequal                           : 3
+ 51-bit comparator lessequal                           : 3
+ 52-bit comparator lessequal                           : 3
+ 53-bit comparator lessequal                           : 3
+ 54-bit comparator lessequal                           : 3
+ 55-bit comparator lessequal                           : 3
+ 56-bit comparator lessequal                           : 3
+ 57-bit comparator lessequal                           : 2
+ 58-bit comparator lessequal                           : 2
+ 59-bit comparator lessequal                           : 2
+ 60-bit comparator lessequal                           : 2
+ 61-bit comparator lessequal                           : 2
+ 62-bit comparator lessequal                           : 2
+ 63-bit comparator lessequal                           : 2
+ 64-bit comparator lessequal                           : 2
+# Multiplexers                                         : 2933
+ 1-bit 2-to-1 multiplexer                              : 2912
+ 3-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 14
+ 34-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# Logic shifters                                       : 4
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+ 34-bit shifter logical left                           : 1
+ 34-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
 =========================================================================
 
 =========================================================================
@@ -145,18 +578,82 @@ Found no macro
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Multipliers                                          : 2
+ 32x24-bit multiplier                                  : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 106
+ 25-bit adder                                          : 1
+ 32-bit adder carry in                                 : 97
+ 33-bit adder                                          : 4
+ 33-bit subtractor                                     : 4
+# Comparators                                          : 105
+ 32-bit comparator equal                               : 2
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 11
+ 33-bit comparator equal                               : 1
+ 33-bit comparator greater                             : 1
+ 33-bit comparator lessequal                           : 3
+ 34-bit comparator lessequal                           : 3
+ 35-bit comparator lessequal                           : 3
+ 36-bit comparator lessequal                           : 3
+ 37-bit comparator lessequal                           : 3
+ 38-bit comparator lessequal                           : 3
+ 39-bit comparator lessequal                           : 3
+ 40-bit comparator lessequal                           : 3
+ 41-bit comparator lessequal                           : 3
+ 42-bit comparator lessequal                           : 3
+ 43-bit comparator lessequal                           : 3
+ 44-bit comparator lessequal                           : 3
+ 45-bit comparator lessequal                           : 3
+ 46-bit comparator lessequal                           : 3
+ 47-bit comparator lessequal                           : 3
+ 48-bit comparator lessequal                           : 3
+ 49-bit comparator lessequal                           : 3
+ 50-bit comparator lessequal                           : 3
+ 51-bit comparator lessequal                           : 3
+ 52-bit comparator lessequal                           : 3
+ 53-bit comparator lessequal                           : 3
+ 54-bit comparator lessequal                           : 3
+ 55-bit comparator lessequal                           : 3
+ 56-bit comparator lessequal                           : 3
+ 57-bit comparator lessequal                           : 2
+ 58-bit comparator lessequal                           : 2
+ 59-bit comparator lessequal                           : 2
+ 60-bit comparator lessequal                           : 2
+ 61-bit comparator lessequal                           : 2
+ 62-bit comparator lessequal                           : 2
+ 63-bit comparator lessequal                           : 2
+ 64-bit comparator lessequal                           : 2
+# Multiplexers                                         : 2933
+ 1-bit 2-to-1 multiplexer                              : 2912
+ 3-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 14
+ 34-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# Logic shifters                                       : 4
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+ 34-bit shifter logical left                           : 1
+ 34-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <Mmult_n01693> of sequential type is unconnected in block <ALU>.
+WARNING:Xst:2677 - Node <Mmult_n01683> of sequential type is unconnected in block <ALU>.
 
 Optimizing unit <ALU> ...
 
+Optimizing unit <div_32u_24u> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 16.
 
 Final Macro Processing ...
 
@@ -185,13 +682,24 @@ Top Level Output File Name         : ALU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3
+# BELS                             : 10570
 #      GND                         : 1
-#      LUT3                        : 1
-#      LUT6                        : 1
-# IO Buffers                       : 154
-#      IBUF                        : 8
+#      INV                         : 90
+#      LUT1                        : 95
+#      LUT2                        : 168
+#      LUT3                        : 808
+#      LUT4                        : 2300
+#      LUT5                        : 1352
+#      LUT6                        : 1199
+#      MUXCY                       : 2794
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 1761
+# IO Buffers                       : 282
+#      IBUF                        : 136
 #      OBUF                        : 146
+# DSPs                             : 6
+#      DSP48A1                     : 6
 
 Device utilization summary:
 ---------------------------
@@ -200,21 +708,22 @@ Selected Device : 6slx75csg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    2  out of  46648     0%  
-    Number used as Logic:                 2  out of  46648     0%  
+ Number of Slice LUTs:                 6012  out of  46648    12%  
+    Number used as Logic:              6012  out of  46648    12%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      2
-   Number with an unused Flip Flop:       2  out of      2   100%  
-   Number with an unused LUT:             0  out of      2     0%  
-   Number of fully used LUT-FF pairs:     0  out of      2     0%  
+ Number of LUT Flip Flop pairs used:   6012
+   Number with an unused Flip Flop:    6012  out of   6012   100%  
+   Number with an unused LUT:             0  out of   6012     0%  
+   Number of fully used LUT-FF pairs:     0  out of   6012     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                         252
- Number of bonded IOBs:                 154  out of    328    46%  
+ Number of IOs:                         283
+ Number of bonded IOBs:                 282  out of    328    85%  
 
 Specific Feature Utilization:
+ Number of DSP48A1s:                      6  out of    132     4%  
 
 ---------------------------
 Partition Resource Summary:
@@ -247,7 +756,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 6.170ns
+   Maximum combinational path delay: 124.825ns
 
 Timing Details:
 ---------------
@@ -255,23 +764,374 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 8 / 1
+  Total number of paths / destination ports: 1577533195365011200000000000000000000000000000000000 / 139
 -------------------------------------------------------------------------
-Delay:               6.170ns (Levels of Logic = 4)
-  Source:            ALU_Sel<2> (PAD)
-  Destination:       MenagePC<0> (PAD)
+Delay:               124.825ns (Levels of Logic = 355)
+  Source:            DecoderData<1> (PAD)
+  Destination:       DataIO<0> (PAD)
 
-  Data Path: ALU_Sel<2> to MenagePC<0>
+  Data Path: DecoderData<1> to DataIO<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.808  ALU_Sel_2_IBUF (ALU_Sel_2_IBUF)
-     LUT3:I0->O            1   0.205   0.580  MenagePC<0><7>_SW0 (N2)
-     LUT6:I5->O            1   0.205   0.579  MenagePC<0><7> (MenagePC_0_OBUF)
-     OBUF:I->O                 2.571          MenagePC_0_OBUF (MenagePC<0>)
+     IBUF:I->O           195   1.222   2.393  DecoderData_1_IBUF (DecoderData<1>1)
+     LUT5:I0->O            1   0.203   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<31>_lut<0> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<31>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<31>_cy<0> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<31>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<31>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<31>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<31>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<31>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<31>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<31>_cy<3>)
+     MUXCY:CI->O           3   0.213   0.879  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<31>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<31>)
+     LUT3:I0->O            2   0.205   0.864  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_222_o1241 (ArgA[31]_DataFromDecoder[23]_div_15/a[31]_GND_4_o_MUX_191_o)
+     LUT5:I1->O            0   0.203   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_lutdi (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_cy<0> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_cy<4>)
+     MUXCY:CI->O           4   0.213   0.912  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<30>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<30>)
+     LUT3:I0->O            3   0.205   0.898  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_330_o1231 (ArgA[31]_DataFromDecoder[23]_div_15/a[30]_GND_4_o_MUX_300_o)
+     LUT4:I0->O            0   0.203   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_lutdi (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_cy<0> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_cy<4>)
+     MUXCY:CI->O           5   0.213   1.079  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<29>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<29>)
+     LUT6:I0->O            4   0.203   0.931  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_436_o1231 (ArgA[31]_DataFromDecoder[23]_div_15/a[30]_GND_4_o_MUX_406_o)
+     LUT5:I1->O            1   0.203   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<28>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<28>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<28>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<28>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<28>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<28>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<28>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<28>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<28>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<28>_cy<4>)
+     MUXCY:CI->O           7   0.213   1.138  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<28>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<28>)
+     LUT6:I0->O            7   0.203   1.002  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_540_o1211 (ArgA[31]_DataFromDecoder[23]_div_15/a[29]_GND_4_o_MUX_511_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_cy<5>)
+     MUXCY:CI->O          15   0.213   1.346  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<27>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<27>)
+     LUT6:I0->O            7   0.203   1.021  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_642_o1231 (ArgA[31]_DataFromDecoder[23]_div_15/a[30]_GND_4_o_MUX_612_o)
+     LUT5:I1->O            1   0.203   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<26>_lut<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<26>_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<26>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<26>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<26>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<26>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<26>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<26>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<26>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<26>_cy<5>)
+     MUXCY:CI->O          17   0.213   1.392  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<26>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<26>)
+     LUT6:I0->O            6   0.203   0.992  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_742_o1201 (ArgA[31]_DataFromDecoder[23]_div_15/a[28]_GND_4_o_MUX_714_o)
+     LUT4:I0->O            0   0.203   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_lutdi1 (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_lutdi1)
+     MUXCY:DI->O           1   0.145   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_cy<5>)
+     MUXCY:CI->O          25   0.213   1.537  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<25>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<25>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_840_o1181 (ArgA[31]_DataFromDecoder[23]_div_15/a[26]_GND_4_o_MUX_814_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_cy<5>)
+     MUXCY:CI->O          31   0.213   1.622  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<24>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<24>)
+     LUT5:I0->O            2   0.203   0.845  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_936_o1171 (ArgA[31]_DataFromDecoder[23]_div_15/a[25]_GND_4_o_MUX_911_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<6>)
+     MUXCY:CI->O          23   0.213   1.498  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<23>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<23>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1030_o1161 (ArgA[31]_DataFromDecoder[23]_div_15/a[24]_GND_4_o_MUX_1006_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<6>)
+     MUXCY:CI->O          37   0.213   1.707  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<22>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<22>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1122_o1151 (ArgA[31]_DataFromDecoder[23]_div_15/a[23]_GND_4_o_MUX_1099_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<6>)
+     MUXCY:CI->O          29   0.213   1.594  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<21>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<21>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1212_o1141 (ArgA[31]_DataFromDecoder[23]_div_15/a[22]_GND_4_o_MUX_1190_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<7>)
+     MUXCY:CI->O          43   0.213   1.793  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<20>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<20>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1300_o1131 (ArgA[31]_DataFromDecoder[23]_div_15/a[21]_GND_4_o_MUX_1279_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<7>)
+     MUXCY:CI->O          35   0.213   1.679  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<19>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<19>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1386_o1121 (ArgA[31]_DataFromDecoder[23]_div_15/a[20]_GND_4_o_MUX_1366_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<7>)
+     MUXCY:CI->O          49   0.213   1.878  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<18>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<18>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1470_o1101 (ArgA[31]_DataFromDecoder[23]_div_15/a[19]_GND_4_o_MUX_1451_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<8>)
+     MUXCY:CI->O          41   0.213   1.764  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<17>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<17>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1552_o191 (ArgA[31]_DataFromDecoder[23]_div_15/a[18]_GND_4_o_MUX_1534_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<8>)
+     MUXCY:CI->O          55   0.213   1.925  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<16>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<16>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1632_o181 (ArgA[31]_DataFromDecoder[23]_div_15/a[17]_GND_4_o_MUX_1615_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<8>)
+     MUXCY:CI->O          47   0.213   1.849  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<15>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<15>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1710_o171 (ArgA[31]_DataFromDecoder[23]_div_15/a[16]_GND_4_o_MUX_1694_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<8>)
+     MUXCY:CI->O          61   0.213   1.965  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<14>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<14>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1786_o161 (ArgA[31]_DataFromDecoder[23]_div_15/a[15]_GND_4_o_MUX_1771_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<9>)
+     MUXCY:CI->O          53   0.213   1.912  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<13>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<13>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1860_o151 (ArgA[31]_DataFromDecoder[23]_div_15/a[14]_GND_4_o_MUX_1846_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<9>)
+     MUXCY:CI->O          67   0.213   2.004  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<12>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<12>)
+     LUT5:I0->O            6   0.203   0.973  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_1932_o141 (ArgA[31]_DataFromDecoder[23]_div_15/a[13]_GND_4_o_MUX_1919_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<8>)
+     MUXCY:CI->O           1   0.213   0.580  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<9>)
+     LUT6:I5->O           59   0.205   1.951  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<11>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<11>)
+     LUT5:I0->O            5   0.203   0.943  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_2002_o131 (ArgA[31]_DataFromDecoder[23]_div_15/a[12]_GND_4_o_MUX_1990_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<10>)
+     MUXCY:CI->O          59   0.213   1.951  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<10>_cy<11> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<10>)
+     LUT5:I0->O            4   0.203   0.912  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_2070_o122 (ArgA[31]_DataFromDecoder[23]_div_15/a[11]_GND_4_o_MUX_2059_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<9>)
+     MUXCY:CI->O          24   0.213   1.420  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<9>_cy<10>)
+     LUT6:I2->O            6   0.203   0.992  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_GND_4_o_MUX_2136_o1311 (ArgA[31]_DataFromDecoder[23]_div_15/a[9]_GND_4_o_MUX_2127_o)
+     LUT4:I0->O            0   0.203   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_lutdi (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<0> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<9>)
+     MUXCY:CI->O           3   0.213   0.651  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<10>)
+     LUT5:I4->O           96   0.205   2.079  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<8>_cy<11> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<8>)
+     LUT3:I0->O            2   0.205   0.864  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_a[31]_MUX_2200_o1301 (ArgA[31]_DataFromDecoder[23]_div_15/a[8]_a[31]_MUX_2192_o)
+     LUT4:I0->O            0   0.203   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_lutdi (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<0> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<9>)
+     MUXCY:CI->O           1   0.213   0.684  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<10>)
+     LUT6:I4->O           54   0.203   1.918  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<7>_cy<11> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<7>)
+     LUT5:I0->O            4   0.203   0.912  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_a[31]_MUX_2232_o1301 (ArgA[31]_DataFromDecoder[23]_div_15/a[8]_a[31]_MUX_2224_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<11> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<11>)
+     MUXCY:CI->O          59   0.213   1.951  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<6>_cy<12> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<6>)
+     LUT5:I0->O            4   0.203   0.912  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_a[31]_MUX_2264_o1291 (ArgA[31]_DataFromDecoder[23]_div_15/a[7]_a[31]_MUX_2257_o)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<10>)
+     MUXCY:CI->O          53   0.213   1.672  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<11> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<5>_cy<11>)
+     LUT5:I3->O            4   0.203   0.931  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_a[31]_MUX_2296_o1271 (ArgA[31]_DataFromDecoder[23]_div_15/a[5]_a[31]_MUX_2291_o)
+     LUT4:I0->O            0   0.203   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_lutdi (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<0> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<10>)
+     MUXCY:CI->O          34   0.213   1.425  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<11> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<4>_cy<11>)
+     LUT6:I4->O            6   0.203   0.992  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_a[0]_a[31]_MUX_2328_o1261 (ArgA[31]_DataFromDecoder[23]_div_15/a[4]_a[31]_MUX_2324_o)
+     LUT4:I0->O            0   0.203   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_lutdi (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<0> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<10>)
+     MUXCY:CI->O           5   0.213   0.715  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<11> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<11>)
+     LUT5:I4->O          113   0.205   2.140  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<3>_cy<12> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<3>)
+     LUT3:I0->O            3   0.205   0.898  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_n3099261 (ArgA[31]_DataFromDecoder[23]_div_15/n3099<3>)
+     LUT4:I0->O            0   0.203   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_lutdi (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<0> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<10>)
+     MUXCY:CI->O           1   0.213   0.580  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<11> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<11>)
+     LUT6:I5->O           91   0.205   2.162  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<2>_cy<12> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<2>)
+     LUT5:I0->O            2   0.203   0.845  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_n3103261 (ArgA[31]_DataFromDecoder[23]_div_15/n3103<3>)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<11> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<11>)
+     MUXCY:CI->O           2   0.213   0.721  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<12> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<12>)
+     LUT6:I4->O           30   0.203   1.608  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<1>_cy<13> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<1>)
+     LUT5:I0->O            2   0.203   0.845  ArgA[31]_DataFromDecoder[23]_div_15/Mmux_n2974231 (ArgA[31]_DataFromDecoder[23]_div_15/n2974<2>)
+     LUT4:I1->O            1   0.205   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_lut<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<1> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<2> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<3> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<4> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<5> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<6> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<7> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<8> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<9> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<10> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<11> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<11>)
+     MUXCY:CI->O           1   0.213   0.580  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<12> (ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<12>)
+     LUT5:I4->O            1   0.205   0.827  ArgA[31]_DataFromDecoder[23]_div_15/Mcompar_o<0>_cy<13> (ArgA[31]_DataFromDecoder[23]_div_15_OUT<0>)
+     LUT6:I2->O            1   0.203   0.827  DataIO<0>17 (DataIO<0>19)
+     LUT4:I0->O            1   0.203   0.579  DataIO<0>18 (DataIO_0_OBUF)
+     OBUF:I->O                 2.571          DataIO_0_OBUF (DataIO<0>)
     ----------------------------------------
-    Total                      6.170ns (4.203ns logic, 1.967ns route)
-                                       (68.1% logic, 31.9% route)
+    Total                    124.825ns (34.696ns logic, 90.129ns route)
+                                       (27.8% logic, 72.2% route)
 
 =========================================================================
 
@@ -281,14 +1141,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.02 secs
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 29.01 secs
  
 --> 
 
-Total memory usage is 236060 kilobytes
+Total memory usage is 302684 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    7 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
