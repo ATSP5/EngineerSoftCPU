@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   16:46:52 12/31/2020
+// Create Date:   14:00:21 01/02/2021
 // Design Name:   ALU
 // Module Name:   E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/ALU_TB.v
 // Project Name:  APCPU
@@ -25,6 +25,7 @@
 module ALU_TB;
 
 	// Inputs
+	reg clk;
 	reg [31:0] A;
 	reg [31:0] B;
 	reg [7:0] ALU_Sel;
@@ -45,9 +46,11 @@ module ALU_TB;
 
 	// Bidirs
 	wire [31:0] DataIO;
+	
 
 	// Instantiate the Unit Under Test (UUT)
 	ALU uut (
+		.clk(clk), 
 		.A(A), 
 		.B(B), 
 		.ALU_Sel(ALU_Sel), 
@@ -65,9 +68,10 @@ module ALU_TB;
 		.SetSR(SetSR), 
 		.SetAP(SetAP)
 	);
-
+   reg [7:0] counter;
 	initial begin
 		// Initialize Inputs
+		clk = 0;
 		A = 0;
 		B = 0;
 		ALU_Sel = 0;
@@ -78,12 +82,23 @@ module ALU_TB;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-        
+        clk = 0;
+		  counter = 0;
+		  //StatusRegisterVelues = 8'b10000000;
+		   forever
+			begin
+			 #5 clk = ~clk;
+			 if(MenagePC == 1 && counter == 0 && clk == 0)
+		     begin
+		      ALU_Sel = 12;
+				DecoderData = 3;// ¯adnych liczb ujemnych!!!
+		      A = -119;//1431655765;//4294967295;
+		      B = -2;
+				counter=counter + 8'd1;
+		     end
+			end
 		// Add stimulus here
-		#5ALU_Sel = 8'd3;
-		A = 32'd2147483681;
-		B = 32'd2147483681;
-
+		
 	end
       
 endmodule

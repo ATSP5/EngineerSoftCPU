@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/ALU_isim_beh.exe" -prj "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/ALU_beh.prj" "work.ALU" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/ALU_TB_isim_beh.exe" -prj "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/ALU_TB_beh.prj" "work.ALU_TB" "work.glbl" 
