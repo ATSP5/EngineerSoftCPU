@@ -10,22 +10,22 @@ Target Device  : xc6slx75
 Target Package : csg484
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Jan 07 17:56:44 2021
+Mapped Date    : Thu Jan 07 20:59:52 2021
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    8
 Slice Logic Utilization:
-  Number of Slice Registers:                     5 out of  93,296    1%
+  Number of Slice Registers:                    36 out of  93,296    1%
     Number used as Flip Flops:                   0
-    Number used as Latches:                      0
+    Number used as Latches:                     32
     Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:                5
-  Number of Slice LUTs:                      7,921 out of  46,648   16%
-    Number used as logic:                    7,918 out of  46,648   16%
-      Number using O6 output only:           5,782
-      Number using O5 output only:             127
+    Number used as AND/OR logics:                4
+  Number of Slice LUTs:                      7,986 out of  46,648   17%
+    Number used as logic:                    7,983 out of  46,648   17%
+      Number using O6 output only:           5,848
+      Number using O5 output only:             126
       Number using O5 and O6:                2,009
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  11,072    0%
@@ -35,12 +35,13 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 2,957 out of  11,662   25%
+  Number of occupied Slices:                 2,773 out of  11,662   23%
   Number of MUXCYs used:                     4,600 out of  23,324   19%
-  Number of LUT Flip Flop pairs used:        7,921
-    Number with an unused Flip Flop:         7,916 out of   7,921   99%
-    Number with an unused LUT:                   0 out of   7,921    0%
-    Number of fully used LUT-FF pairs:           5 out of   7,921    1%
+  Number of LUT Flip Flop pairs used:        7,987
+    Number with an unused Flip Flop:         7,951 out of   7,987   99%
+    Number with an unused LUT:                   1 out of   7,987    1%
+    Number of fully used LUT-FF pairs:          35 out of   7,987    1%
+    Number of unique control sets:               1
     Number of slice register sites lost
       to control set restrictions:               0 out of  93,296    0%
 
@@ -51,8 +52,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       283 out of     328   86%
-    IOB Latches:                               139
+  Number of bonded IOBs:                       284 out of     328   86%
+    IOB Latches:                               146
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of     172    0%
@@ -65,8 +66,8 @@ Specific Feature Utilization:
   Number of DCM/DCM_CLKGENs:                     0 out of      12    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     442    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     442    0%
-  Number of OLOGIC2/OSERDES2s:                 139 out of     442   31%
-    Number used as OLOGIC2s:                   139
+  Number of OLOGIC2/OSERDES2s:                 146 out of     442   33%
+    Number used as OLOGIC2s:                   146
     Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     384    0%
@@ -81,11 +82,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.90
+Average Fanout of Non-Clock Nets:                4.89
 
-Peak Memory Usage:  573 MB
-Total REAL time to MAP completion:  1 mins 10 secs 
-Total CPU time to MAP completion:   1 mins 10 secs 
+Peak Memory Usage:  575 MB
+Total REAL time to MAP completion:  1 mins 8 secs 
+Total CPU time to MAP completion:   1 mins 7 secs 
 
 Table of Contents
 -----------------
@@ -108,10 +109,19 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8760_o
+WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8767_o
    is sourced by a combinatorial pin. This is not good design practice. Use the
    CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8767_o
+WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8724_o
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8765_o
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8761_o
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8760_o
    is sourced by a combinatorial pin. This is not good design practice. Use the
    CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8759_o
@@ -120,22 +130,12 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8759_o
 WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8688_o
    is sourced by a combinatorial pin. This is not good design practice. Use the
    CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8761_o
-   is sourced by a combinatorial pin. This is not good design practice. Use the
-   CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8765_o
-   is sourced by a combinatorial pin. This is not good design practice. Use the
-   CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8724_o
-   is sourced by a combinatorial pin. This is not good design practice. Use the
-   CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net clk_ALUSelect[7]_MUX_8690_o
    is sourced by a combinatorial pin. This is not good design practice. Use the
    CE pin to control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network ValidMemData has no load.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -362,13 +362,13 @@ Section 6 - IOB Properties
 | PCSet<22>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
 | PCSet<23>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
 | PCSet<24>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
-| PCSet<25>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| PCSet<26>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| PCSet<27>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| PCSet<28>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| PCSet<29>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| PCSet<30>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| PCSet<31>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PCSet<25>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
+| PCSet<26>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
+| PCSet<27>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
+| PCSet<28>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
+| PCSet<29>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
+| PCSet<30>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
+| PCSet<31>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
 | SPAddr<0>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | SPAddr<1>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | SPAddr<2>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
@@ -452,6 +452,7 @@ Section 6 - IOB Properties
 | StatusRegisterVelues<5>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | StatusRegisterVelues<6>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | StatusRegisterVelues<7>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| ValidMemData                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 

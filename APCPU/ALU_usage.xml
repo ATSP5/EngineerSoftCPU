@@ -4,56 +4,62 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="83">
-<DesignStatistics TimeStamp="Thu Jan 07 17:57:54 2021"><group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="83">
-<attrib name="value" value="283"/></item>
-<item name="AGG_IO" rev="83">
-<attrib name="value" value="283"/></item>
-<item name="AGG_SLICE" rev="83">
-<attrib name="value" value="2957"/></item>
-<item name="NUM_BONDED_IOB" rev="83">
-<attrib name="value" value="283"/></item>
-<item name="NUM_BSFULL" rev="83">
-<attrib name="value" value="5"/></item>
-<item name="NUM_BSLUTONLY" rev="83">
-<attrib name="value" value="7916"/></item>
-<item name="NUM_BSUSED" rev="83">
-<attrib name="value" value="7921"/></item>
-<item name="NUM_BUFG" rev="83">
+<DeviceUsageSummary rev="86">
+<DesignStatistics TimeStamp="Thu Jan 07 21:01:00 2021"><group name="MiscellaneousStatistics">
+<item name="AGG_BONDED_IO" rev="86">
+<attrib name="value" value="284"/></item>
+<item name="AGG_IO" rev="86">
+<attrib name="value" value="284"/></item>
+<item name="AGG_SLICE" rev="86">
+<attrib name="value" value="2773"/></item>
+<item name="NUM_BONDED_IOB" rev="86">
+<attrib name="value" value="284"/></item>
+<item name="NUM_BSFULL" rev="86">
+<attrib name="value" value="35"/></item>
+<item name="NUM_BSLUTONLY" rev="86">
+<attrib name="value" value="7951"/></item>
+<item name="NUM_BSREGONLY" rev="86">
+<attrib name="value" value="1"/></item>
+<item name="NUM_BSUSED" rev="86">
+<attrib name="value" value="7987"/></item>
+<item name="NUM_BUFG" rev="86">
 <attrib name="value" value="4"/></item>
-<item name="NUM_DSP48A1" rev="83">
+<item name="NUM_DSP48A1" rev="86">
 <attrib name="value" value="6"/></item>
-<item name="NUM_IOB_LATCH" rev="83">
-<attrib name="value" value="139"/></item>
-<item name="NUM_LOGIC_O5ANDO6" rev="83">
+<item name="NUM_IOB_LATCH" rev="86">
+<attrib name="value" value="146"/></item>
+<item name="NUM_LOGIC_O5ANDO6" rev="86">
 <attrib name="value" value="2009"/></item>
-<item name="NUM_LOGIC_O5ONLY" rev="83">
-<attrib name="value" value="127"/></item>
-<item name="NUM_LOGIC_O6ONLY" rev="83">
-<attrib name="value" value="5782"/></item>
-<item name="NUM_LUT_RT_DRIVES_CARRY4" rev="83">
+<item name="NUM_LOGIC_O5ONLY" rev="86">
+<attrib name="value" value="126"/></item>
+<item name="NUM_LOGIC_O6ONLY" rev="86">
+<attrib name="value" value="5848"/></item>
+<item name="NUM_LUT_RT_DRIVES_CARRY4" rev="86">
 <attrib name="value" value="3"/></item>
-<item name="NUM_LUT_RT_EXO6" rev="83">
+<item name="NUM_LUT_RT_EXO6" rev="86">
 <attrib name="value" value="3"/></item>
-<item name="NUM_LUT_RT_O6" rev="83">
+<item name="NUM_LUT_RT_O6" rev="86">
 <attrib name="value" value="124"/></item>
-<item name="NUM_OLOGIC2" rev="83">
-<attrib name="value" value="139"/></item>
-<item name="NUM_SLICEL" rev="83">
-<attrib name="value" value="1152"/></item>
-<item name="NUM_SLICEX" rev="83">
-<attrib name="value" value="1805"/></item>
-<item name="NUM_SLICE_CARRY4" rev="83">
+<item name="NUM_OLOGIC2" rev="86">
+<attrib name="value" value="146"/></item>
+<item name="NUM_SLICEL" rev="86">
+<attrib name="value" value="1153"/></item>
+<item name="NUM_SLICEX" rev="86">
+<attrib name="value" value="1620"/></item>
+<item name="NUM_SLICE_CARRY4" rev="86">
 <attrib name="value" value="1150"/></item>
-<item name="NUM_SLICE_CYINIT" rev="83">
-<attrib name="value" value="10322"/></item>
-<item name="NUM_SLICE_F7MUX" rev="83">
-<attrib name="value" value="2"/></item>
-<item name="NUM_SLICE_LATCHLOGIC" rev="83">
-<attrib name="value" value="5"/></item>
-<item name="NUM_SLICE_UNUSEDCTRL" rev="83">
-<attrib name="value" value="2952"/></item>
+<item name="NUM_SLICE_CONTROLSET" rev="86">
+<attrib name="value" value="1"/></item>
+<item name="NUM_SLICE_CYINIT" rev="86">
+<attrib name="value" value="10387"/></item>
+<item name="NUM_SLICE_F7MUX" rev="86">
+<attrib name="value" value="4"/></item>
+<item name="NUM_SLICE_LATCH" rev="86">
+<attrib name="value" value="32"/></item>
+<item name="NUM_SLICE_LATCHLOGIC" rev="86">
+<attrib name="value" value="4"/></item>
+<item name="NUM_SLICE_UNUSEDCTRL" rev="86">
+<attrib name="value" value="2751"/></item>
 </group>
 </DesignStatistics>
 <CmdHistory>

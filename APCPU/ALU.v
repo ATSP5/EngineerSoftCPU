@@ -23,7 +23,7 @@ module ALU( input wire clk, // Clock signal
             input wire [7:0] ALU_Sel,// ALU Selection
 			   input wire ValidMemData, //Valid data from memory signal
 			   input wire [23:0] DecoderData, //Data from decoder
-			   input wire [7:0] StatusRegisterVelues, //Value of status register | C -Carry | x | x | x | x | x | CPI1 - Compare Index 1 | CPI0 - Compare Index 0 | (x'es to be used in another version of CPU)
+			   input wire [7:0] StatusRegisterVelues, //Value of status register | C -Carry | N - Negative | x | x | x | x | CPI1 - Compare Index 1 | CPI0 - Compare Index 0 | (x'es to be used in another version of CPU)
 				input wire [31:0] SPAddr, // Adres w rejestrze SP
 				
 			   inout wire [31:0] DataIO,//Data from/to memory / General Register
@@ -80,15 +80,16 @@ module ALU( input wire clk, // Clock signal
 		 if(clk == 1'd1)
 		 begin
 		  case(ALUSelect)
-		   8'd255: //WAIT (Internal Instruction)
+		   8'd255: //NOP
 		    begin
+			   MenagePC <= 3'd1;
 		    end
 			8'd254: //ENDWAIT (Internal Instruction)
 		    begin
-		    end
-		   8'd0: //NOP
-		    begin
 			  MenagePC <= 3'd1;
+		    end
+		   8'd0: //WAIT (Internal Instruction)
+		    begin
 		    end
 		   8'd1: //ADDIM
 		    begin
@@ -312,9 +313,16 @@ module ALU( input wire clk, // Clock signal
 		     PCSet <= DataFromDecoder;
 			  MenagePC <= 3'b011;
           end
-			 8'd25: // JPR ////////////////////////////////////////////TO DO
+			 8'd25: // JPR 
 		    begin
-		     //*********************TO BE DONE!*********************************************************************************************************//
+		     //*********************TO Check!*********************************************************************************************************//
+			  MemIO <= 2'd1; // Read Memory Request
+			  ALUAddr <= ArgA;
+			  if(ValidMemoryData == 1'b1)
+			   begin
+				 PCSet <= DataBus;
+				 MenagePC <= 3'd1;// Go to next instruction
+				end
           end
 			 8'd26: // JEQ
 		    begin
@@ -508,17 +516,31 @@ module ALU( input wire clk, // Clock signal
 			 begin
             ALUAddr <= StackPointerAddr;
 				MemIO <= 2'b01;
-				//////////////////////////////******************************TO DO WAIT PROCEDURE**************************////////////////////////////////////
-				InDecSP <= 2'b10;
-				MenagePC <= 3'd1;
+				//////////////////////////////******************************TO check**************************////////////////////////////////////
+				 if(ValidMemoryData == 1'b1)
+			   begin
+				 MemIO <= 2'b11;// Save DataBus to Rx
+				 MenagePC <= 3'd1;// Go to next instruction
+				 InDecSP <= 2'b10; //SP --;
+				end
           end
 			 8'd36: // LD
 			 begin
-            //////////////////////////////******************************TO DO WAIT PROCEDURE**************************////////////////////////////////////
+            ALUAddr <= ArgB;
+				MemIO <= 2'b01;
+				//////////////////////////////******************************TO Check**************************////////////////////////////////////
+				 if(ValidMemoryData == 1'b1)
+			   begin
+				 MemIO <= 2'b11;// Save DataBus to Rx
+				 MenagePC <= 3'd1;// Go to next instruction
+				 InDecSP <= 2'b10; //SP --;
+				 end
           end
 			 8'd37: // LDI
 			 begin
-            //////////////////////////////******************************TO DO WAIT PROCEDURE**************************////////////////////////////////////
+            DataBus <= ArgA;
+				MemIO <= 2'b11;// Save DataBus to Rx
+				MenagePC <= 3'd1;// Go to next instruction
           end
 			 8'd38: // MOV
 			 begin
