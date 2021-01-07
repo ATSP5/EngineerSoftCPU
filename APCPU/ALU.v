@@ -232,30 +232,14 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd11: // DIVIM
 		    begin
-		     {SetSR[7],DataBus} <= {1'b0,ArgA} / {9'b0,DataFromDecoder};
+		     DataBus <= ArgA / DataFromDecoder;
 			  MemIO <= 2'd3; // Data to general purpose registers
-			  if(ArgA[31] == 1'd1)
-			   begin
-				 SetSR[6] <= 1'b1;
-			   end
-				else
-				begin
-				 SetSR[6] <= 1'b0;
-				end 
 			  MenagePC <= 3'd1;
           end
 			 8'd12: // DIV
 		    begin
-		     {SetSR[7],DataBus} <= {1'b0,ArgA} / {1'b0,ArgB};
+		     DataBus <= ArgA / ArgB;
 			  MemIO <= 2'd3; // Data to general purpose registers
-			  if(ArgA[31] == 1'd1 || ArgB[31] == 1'd1)
-			   begin
-				 SetSR[6] <= ((ArgA / ArgB )>>31);;
-			   end
-				else
-				begin
-				 SetSR[6] <= 1'b0;
-				end 
 			  MenagePC <= 3'd1;
           end
 			 8'd13: // SHL
@@ -394,6 +378,26 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd31: // CP
 		    begin
+			 if(StatusRegVal[6]== 1'b1)
+			 begin
+           	if($signed(ArgA) == $signed(ArgB))
+			   begin
+				 SetSR[1] <=1'b1;
+				 SetSR[0] <=1'b1;
+				end
+				else if($signed(ArgA) > $signed(ArgB))
+				begin 
+				 SetSR[1] <=1'b1;
+				 SetSR[0] <=1'b0;
+				end 
+				else
+				begin 
+				 SetSR[1] <=1'b0;
+				 SetSR[0] <=1'b1;
+				end	 
+			 end 
+			 else
+			 begin
 		     if(ArgA == ArgB)
 			   begin
 				 SetSR[1] <=1'b1;
@@ -409,10 +413,31 @@ module ALU( input wire clk, // Clock signal
 				 SetSR[1] <=1'b0;
 				 SetSR[0] <=1'b1;
 				end
-				MenagePC <= 3'd1;
+			  end
+			  MenagePC <= 3'd1;
           end
 			 8'd32: // CPC
 			 begin
+			  if(StatusRegVal[6]== 1'b1)
+			   begin
+				  if($signed({ArgA,StatusRegVal[7]}) == $signed({ArgB,1'b0}))
+			   begin
+				 SetSR[1] <=1'b1;
+				 SetSR[0] <=1'b1;
+				end
+				else if($signed({ArgA,StatusRegVal[7]}) > $signed({ArgB,1'b0}))
+				begin 
+				 SetSR[1] <=1'b1;
+				 SetSR[0] <=1'b0;
+				end 
+				else
+				begin 
+				 SetSR[1] <=1'b0;
+				 SetSR[0] <=1'b1;
+				end
+				end
+			  else
+			   begin
 		     if({ArgA,StatusRegVal[1]} == {ArgB,1'b0})
 			   begin
 				 SetSR[1] <=1'b1;
@@ -428,10 +453,31 @@ module ALU( input wire clk, // Clock signal
 				 SetSR[1] <=1'b0;
 				 SetSR[0] <=1'b1;
 				end
+				end
 				MenagePC <= 3'd1;
           end
 			  8'd33: // CPI
 		    begin
+			  if(StatusRegVal[6]== 1'b1)
+			   begin
+				 if($signed(ArgA) == {8'd0,DataFromDecoder})
+			   begin
+				 SetSR[1] <=1'b1;
+				 SetSR[0] <=1'b1;
+				end
+				else if($signed(ArgA) > {8'd0,DataFromDecoder})
+				begin 
+				 SetSR[1] <=1'b1;
+				 SetSR[0] <=1'b0;
+				end 
+				else
+				begin 
+				 SetSR[1] <=1'b0;
+				 SetSR[0] <=1'b1;
+				end
+				end
+			  else
+			   begin
 		     if(ArgA == {8'd0,DataFromDecoder})
 			   begin
 				 SetSR[1] <=1'b1;
@@ -446,6 +492,7 @@ module ALU( input wire clk, // Clock signal
 				begin 
 				 SetSR[1] <=1'b0;
 				 SetSR[0] <=1'b1;
+				end
 				end
 				MenagePC <= 3'd1;
           end
@@ -530,18 +577,34 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd48: // MOD
 			 begin
-            {SetSR[7],DataBus} <= {1'b0,ArgA} % {1'b0,ArgB};
-				MemIO <= 2'd3; // Data to general purpose registers
-				if(ArgA[31] == 1'd1)
+			  if(StatusRegVal[6] == 1'b1)
 			   begin
+				 DataBus <= $signed(ArgA) % $signed(ArgB);
 				 SetSR[6] <= 1'b1;
-			   end
+				end
 				else
-				begin
+				begin 
+				 DataBus <= ArgA % ArgB;
 				 SetSR[6] <= 1'b0;
-				end 
+				end
+				MemIO <= 2'd3; // Data to general purpose registers
 			   MenagePC <= 3'd1;
           end
+			 8'd49: //ABS
+			 begin
+			  MemIO <= 2'd3; // Data to general purpose registers
+			  MenagePC <= 3'd1;
+			  if(ArgA[31] == 1'b1)
+			   begin
+				 DataBus <= (ArgA * -32'd1);
+				 SetSR[6] <= 1'b1;
+				end
+			  else
+			   begin
+				 DataBus <= ArgA[31];
+				 SetSR[6] <= 1'b0;
+				end
+			 end
 			 
 		   endcase
 			end

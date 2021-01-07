@@ -84,16 +84,17 @@ module ALU_TB;
 		#100;
         clk = 0;
 		  counter = 0;
-		  //StatusRegisterVelues = 8'b10000000;
+		  //StatusRegisterVelues = 8'b01000010;
+		  //SPAddr = 124802;
 		   forever
 			begin
 			 #5 clk = ~clk;
 			 if(MenagePC == 1 && counter == 0 && clk == 0)
 		     begin
-		      ALU_Sel = 12;
-				DecoderData = 3;// ¯adnych liczb ujemnych!!!
-		      A = -119;//1431655765;//4294967295;
-		      B = -2;
+		      ALU_Sel = 48;
+				DecoderData = 250;// ¯adnych liczb ujemnych!!!
+		      A = 199;//1431655765;//4294967295;
+		      B = 5;
 				counter=counter + 8'd1;
 		     end
 			end
