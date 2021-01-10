@@ -47,11 +47,16 @@ module ALU( input wire clk, // Clock signal
 			  reg [31:0] StackPointerAddr;
 			  //Rejestr IO:
 			  reg [31:0] DataBus;
+			  //reg [31:0] ReadDataBus;
 			  reg [2:0] PCReset;
+			  reg oe; //Zezwolenie na wyjœciowy kierunek DataIO
 			  //Rejestry wewnêtrzne:
 			  //reg [7:0] EndWaitCode;// Rejestr zawieraj¹cy kod powrotu z instrukcji oczekiwania
 			  //Przypisz linii IO danych, rejestr danych:
-        assign DataIO = DataBus;
+        assign DataIO = oe ? DataBus : 32'dz;
+		  //assign DataIO = DataBus;
+		  //assign ReadDataBus = DataIO;
+		  //assign oe = 0;
 		  //Dla ka¿dego cyklu:
      always @(clk)
       begin
@@ -83,16 +88,20 @@ module ALU( input wire clk, // Clock signal
 		   8'd255: //NOP
 		    begin
 			   MenagePC <= 3'd1;
+				oe <= 1'b0;
 		    end
 			8'd254: //ENDWAIT (Internal Instruction)
 		    begin
 			  MenagePC <= 3'd1;
+			  oe <= 1'b0;
 		    end
 		   8'd0: //WAIT (Internal Instruction)
 		    begin
+			 oe <= 1'b0;
 		    end
 		   8'd1: //ADDIM
 		    begin
+			  oe <= 1'b1;
 		     {SetSR[7],DataBus} <= {1'd0,ArgA} + {9'd0,DataFromDecoder};
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  if(ArgA[31] == 1'd1) // Data From Decoder tylko na 24'rech bitach w zwi¹zku z czym nie mo¿e byæ ujemna!
@@ -107,6 +116,7 @@ module ALU( input wire clk, // Clock signal
 		    end
 			8'd2: // ADDIMC
 			 begin
+			 oe <= 1'b1;
 			  {SetSR[7],DataBus} <= {1'd0,ArgA} + {9'd0,DataFromDecoder} + StatusRegVal[7];
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  if(ArgA[31] == 1'd1)
@@ -121,6 +131,7 @@ module ALU( input wire clk, // Clock signal
 			 end
 			8'd3: // ADD
 		    begin
+			 oe <= 1'b1;
 			  {SetSR[7],DataBus} <= {1'b0,ArgA} + {1'b0,ArgB};
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  if((ArgA[31] == 1'd1) || (ArgB[31] == 1'd1))
@@ -135,6 +146,7 @@ module ALU( input wire clk, // Clock signal
 			 end
 			8'd4: // ADDC
 		    begin
+			 oe <= 1'b1;
 			  {SetSR[7],DataBus} <= {1'b0,ArgA} + {1'b0,ArgB} + StatusRegVal[7];
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  if((ArgA[31] == 1'd1) || (ArgB[31] == 1'd1))
@@ -149,6 +161,7 @@ module ALU( input wire clk, // Clock signal
 			 end
 			8'd5: // SUBIM
 		    begin
+			 oe <= 1'b1;
 		     {SetSR[7],DataBus} <= {1'b0,ArgA} - {9'b0,DataFromDecoder};
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  if((ArgA < {8'd0,DataFromDecoder}) || (ArgA[31] == 1'd1))
@@ -163,6 +176,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd6: // SUBIMC
 		    begin
+			 oe <= 1'b1;
 		     {SetSR[7],DataBus} <= {1'b0,ArgA} - ({9'b0,DataFromDecoder} - StatusRegVal[7]);
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  if(ArgA < ({8'd0,DataFromDecoder} - 32'd1) || (ArgA[31] == 1'd1))
@@ -177,6 +191,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd7: // SUB
 		    begin
+			 oe <= 1'b1;
 		     {SetSR[7],DataBus} <= {1'b0,ArgA} - {1'b0,ArgB};
 			  if((ArgA < ArgB) ||(ArgA[31] == 1'd1))
 			   begin
@@ -191,6 +206,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd8: // SUBC
 		    begin
+			 oe <= 1'b1;
 		     {SetSR[7],DataBus} <= {1'b0,ArgA} - ({1'b0,ArgB} - StatusRegVal[7]);
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  if((ArgA < ArgB) || (ArgA[31] == 1'd1))
@@ -205,6 +221,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd9: // MULIM
 		    begin
+			 oe <= 1'b1;
 		     {SetSR[7],DataBus} <= {1'b0,ArgA} * {9'b0,DataFromDecoder};
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  if(ArgA[31] == 1'd1)
@@ -219,6 +236,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd10: // MUL
 		    begin
+			 oe <= 1'b1;
 		     {SetSR[7],DataBus} <= {1'b0,ArgA} * {1'b0,ArgB};
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  if(ArgA[31] == 1'd1 || ArgB[31] == 1'd1)
@@ -233,99 +251,119 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd11: // DIVIM
 		    begin
+			 oe <= 1'b1;
 		     DataBus <= ArgA / DataFromDecoder;
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd12: // DIV
 		    begin
+			 oe <= 1'b1;
 		     DataBus <= ArgA / ArgB;
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd13: // SHL
 		    begin
+			 oe <= 1'b1;
 			  DataBus <= ArgA << DataFromDecoder;
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd14: // SHLC
 		    begin
+			 oe <= 1'b1;
 		     {SetSR[7],DataBus} <= {1'b0,ArgA,StatusRegVal[7]} << DataFromDecoder;
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd15: // SHR
 		    begin
+			 oe <= 1'b1;
 			  DataBus <= ArgA >> DataFromDecoder;
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd16: // SHRC
 		    begin
+			 oe <= 1'b1;
 		     {SetSR[7],DataBus} <= {1'b0,ArgA,StatusRegVal[7]} >> DataFromDecoder;
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd17: // AND
 		    begin
+			 oe <= 1'b1;
 		     DataBus <= ArgA & ArgB;
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd18: // NAND
 		    begin
+			 oe <= 1'b1;
 		     DataBus <= ~(ArgA & ArgB);
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd19: // OR
 		    begin
+			 oe <= 1'b1;
 		     DataBus <= ArgA | ArgB;
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd20: // NOR
 		    begin
+			 oe <= 1'b1;
 		     DataBus <= ~(ArgA | ArgB);
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd21: // XOR
 		    begin
+			 oe <= 1'b1;
 		     DataBus <= ArgA ^ ArgB;
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd22: // XNOR
 		    begin
+			 oe <= 1'b1;
 		     DataBus <= ~(ArgA ^ ArgB);
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
           end
 			 8'd23: // RJP
 		    begin
+			 oe <= 1'b0;
 		     PCSet <= (DataFromDecoder + 23'd1);
 			  MenagePC <= 3'b100;
           end
 			 8'd24: // JP
 		    begin
+			 oe <= 1'b0;
 		     PCSet <= DataFromDecoder;
 			  MenagePC <= 3'b011;
           end
 			 8'd25: // JPR 
 		    begin
-		     //*********************TO Check!*********************************************************************************************************//
-			  MemIO <= 2'd1; // Read Memory Request
-			  ALUAddr <= ArgA;
+			  oe <= 1'b0;
 			  if(ValidMemoryData == 1'b1)
 			   begin
-				 PCSet <= DataBus;
-				 MenagePC <= 3'd1;// Go to next instruction
+				 PCSet <= DataIO;// Tu chyba powinno byæ DataIO, sprawdzimy !!!
+				 MenagePC <= 3'd3;// Go to instruction
+				 MemIO <= 2'd0;
+				 ALUAddr <= 32'd0;
+				end
+			  else 
+			   begin 
+				  MemIO <= 2'd1; // Read Memory Request
+			     ALUAddr <= ArgA;
 				end
           end
 			 8'd26: // JEQ
 		    begin
+			 oe <= 1'b0;
 		     if(StatusRegVal[1] == 1'b1 && StatusRegVal[0] == 1'b1)
 			    begin 
 				  PCSet <= DataFromDecoder;
@@ -338,6 +376,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd27: // JG
 		    begin
+			 oe <= 1'b0;
 		     if(StatusRegVal[1] == 1'b1 && StatusRegVal[0] == 1'b0)
 			    begin 
 				  PCSet <= DataFromDecoder;
@@ -350,6 +389,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd28: // JL
 		    begin
+			 oe <= 1'b0;
 		     if(StatusRegVal[1] == 1'b0 && StatusRegVal[0] == 1'b1)
 			    begin 
 				  PCSet <= DataFromDecoder;
@@ -362,6 +402,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd29: // JGEQ
 		    begin
+			 oe <= 1'b0;
 		     if(StatusRegVal[1] == 1'b1 && (StatusRegVal[0] == 1'b1 || StatusRegVal[0] == 1'b0))
 			    begin 
 				  PCSet <= DataFromDecoder;
@@ -374,6 +415,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd30: // JLEQ
 		    begin
+			 oe <= 1'b0;
 		     if((StatusRegVal[1] == 1'b1 || StatusRegVal[1] == 1'b0)&& StatusRegVal[0] == 1'b1)
 			    begin 
 				  PCSet <= DataFromDecoder;
@@ -386,6 +428,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd31: // CP
 		    begin
+			 oe <= 1'b0;
 			 if(StatusRegVal[6]== 1'b1)
 			 begin
            	if($signed(ArgA) == $signed(ArgB))
@@ -426,6 +469,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd32: // CPC
 			 begin
+			 oe <= 1'b0;
 			  if(StatusRegVal[6]== 1'b1)
 			   begin
 				  if($signed({ArgA,StatusRegVal[7]}) == $signed({ArgB,1'b0}))
@@ -466,6 +510,7 @@ module ALU( input wire clk, // Clock signal
           end
 			  8'd33: // CPI
 		    begin
+			 oe <= 1'b0;
 			  if(StatusRegVal[6]== 1'b1)
 			   begin
 				 if($signed(ArgA) == {8'd0,DataFromDecoder})
@@ -506,6 +551,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd34: // PUSH
 			 begin
+			 oe <= 1'b1;
             DataBus <= ArgA;
 				ALUAddr <= StackPointerAddr;
 				MemIO <= 2'b10;
@@ -514,42 +560,52 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd35: // POP
 			 begin
-            ALUAddr <= StackPointerAddr;
-				MemIO <= 2'b01;
-				//////////////////////////////******************************TO check**************************////////////////////////////////////
+			 oe <= 1'b0; 
 				 if(ValidMemoryData == 1'b1)
 			   begin
 				 MemIO <= 2'b11;// Save DataBus to Rx
 				 MenagePC <= 3'd1;// Go to next instruction
 				 InDecSP <= 2'b10; //SP --;
+				 ALUAddr <= 32'd0;
+				end
+				 else
+				begin
+				 ALUAddr <= StackPointerAddr;
+				MemIO <= 2'b01;
 				end
           end
 			 8'd36: // LD
 			 begin
-            ALUAddr <= ArgB;
-				MemIO <= 2'b01;
-				//////////////////////////////******************************TO Check**************************////////////////////////////////////
+			 oe <= 1'b0;
 				 if(ValidMemoryData == 1'b1)
 			   begin
 				 MemIO <= 2'b11;// Save DataBus to Rx
 				 MenagePC <= 3'd1;// Go to next instruction
-				 InDecSP <= 2'b10; //SP --;
+				 ALUAddr <= 32'd0;
+				 end
+				 else
+				 begin
+				   ALUAddr <= ArgB;
+				   MemIO <= 2'b01;
 				 end
           end
 			 8'd37: // LDI
 			 begin
-            DataBus <= ArgA;
+			  oe <= 1'b1;
+            DataBus <= DataFromDecoder;
 				MemIO <= 2'b11;// Save DataBus to Rx
 				MenagePC <= 3'd1;// Go to next instruction
           end
 			 8'd38: // MOV
 			 begin
+			 oe <= 1'b1;
             DataBus <= ArgB;
 				MemIO <= 2'b11;
 				MenagePC <= 3'd1;
           end
 			 8'd39: // ST
 			 begin
+			 oe <= 1'b1;
             ALUAddr <= ArgA;
             DataBus <= ArgB;
 				MemIO <= 2'b10;
@@ -557,6 +613,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd40: // STI
 			 begin
+			 oe <= 1'b1;
 			   ALUAddr <= ArgA;
             DataBus <= DataFromDecoder;
 				MemIO <= 2'b10;
@@ -564,11 +621,13 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd41: // SAP
 			 begin
+			 oe <= 1'b0;
             SetAP <= DataFromDecoder;
 				MenagePC <= 3'd1;
           end
 			 8'd42: // SSP
 			 begin
+			 oe <= 1'b0;
             SetSP <= ArgA;
 				InDecSP <= 2'd3;
 				MenagePC <= 3'd1;
@@ -579,16 +638,19 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd44: // SOR
 			 begin
+			 oe <= 1'b0;
             SetSR <= StatusRegVal | ArgA;
 				MenagePC <= 3'd1;
           end
 			 8'd45: // SAND
 			 begin
+			 oe <= 1'b0;
             SetSR <= StatusRegVal & ArgA;
 				MenagePC <= 3'd1;
           end
 			 8'd46: // SLD
 			 begin
+			 oe <= 1'b1;
             DataBus <= {24'd0,StatusRegVal};
 				MemIO <= 2'd3; // Data to general purpose registers
 			   MenagePC <= 3'd1;
@@ -599,6 +661,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd48: // MOD
 			 begin
+			 oe <= 1'b1;
 			  if(StatusRegVal[6] == 1'b1)
 			   begin
 				 DataBus <= $signed(ArgA) % $signed(ArgB);
@@ -614,6 +677,7 @@ module ALU( input wire clk, // Clock signal
           end
 			 8'd49: //ABS
 			 begin
+			 oe <= 1'b1;
 			  MemIO <= 2'd3; // Data to general purpose registers
 			  MenagePC <= 3'd1;
 			  if(ArgA[31] == 1'b1)

@@ -68,10 +68,10 @@ module ALU_TB;
 		.SetSR(SetSR), 
 		.SetAP(SetAP)
 	);
-   reg [7:0] counter;
+   //reg [7:0] counter;
 	reg [31:0] DataInput;
 	
-	assign DataIO = DataInput;
+	//assign DataIO = DataInput;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
@@ -82,17 +82,18 @@ module ALU_TB;
 		DecoderData = 0;
 		StatusRegisterVelues = 0;
 		SPAddr = 0;
-      DataInput = 32'd0;
+     // DataInput = 32'd0;
 		// Wait 100 ns for global reset to finish
 		#100;
-		
+		/*
 		   clk = 0;
-		  counter = 0;
+		 // counter = 0;
 		  //StatusRegisterVelues = 8'b01000010;
 		  //SPAddr = 124802;
 			#5 clk = ~clk;
-		   ALU_Sel = 25;
-		   A = 879199;//1431655765;//4294967295;
+		   ALU_Sel = 36;
+		   //A = 879199;//1431655765;//4294967295;
+			B = 879199;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
@@ -111,6 +112,21 @@ module ALU_TB;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
+			*/
+			
+			clk = 0;
+		  //StatusRegisterVelues = 8'b01000010;
+		  //SPAddr = 124802;
+		   forever
+			begin
+			 #5 clk = ~clk;
+		      ALU_Sel = 37;
+				DecoderData = 250;// ¯adnych liczb ujemnych!!!
+		      //A = 199;//1431655765;//4294967295;
+		     // B = 5;
+			end
+		// Add stimulus here
+		
 	end
       
 endmodule
