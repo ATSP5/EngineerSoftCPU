@@ -1,0 +1,29 @@
+Command line:
+   GPReg_TB_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52057
+
+Mon Jan 11 22:59:09 2021
+
+
+ Elaboration Time: 0.015625 sec
+
+ Current Memory Usage: 361.312 Meg
+
+ Total Signals          : 21
+ Total Nets             : 121
+ Total Signal Drivers   : 13
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 16
+ Total Traceable Variables  : 27
+ Total Scalar Nets and Variables : 565
+Total Line Count : 67
+
+ Total Simulation Time: 0.453125 sec
+
+ Current Memory Usage: 361.312 Meg
+
+Mon Jan 11 23:15:33 2021
+

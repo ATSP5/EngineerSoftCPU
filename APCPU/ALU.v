@@ -35,7 +35,7 @@ module ALU( input wire clk, // Clock signal
             output reg [2:0] MenagePC, //Menage Program Counter 000 - Do nothing, 001 - inc, 010 - dec, 011 - set 100 - add to current
             output reg [31:0] PCSet,//Set addres to PC 	
             output reg [7:0] SetSR,//Set Status Register
-            output reg [2:0] SetAP//Set Acumulator Pointer 			  
+            output reg [3:0] SetAP//Set Acumulator Pointer 			  
     );
            
 			  reg [31:0] ArgA;
@@ -70,7 +70,7 @@ module ALU( input wire clk, // Clock signal
        MenagePC <= 3'd0;
        PCSet <= 32'd0;
        SetSR <= 8'd0; // Hmm czy aby na pewno??? Trza to ustaliæ.
-       SetAP <= 3'd0;
+       SetAP <= 4'd0;
 		 DataBus <= 32'd0;
 		 end
 		 //Pobierz dane z wejœæ.
@@ -622,7 +622,7 @@ module ALU( input wire clk, // Clock signal
 			 8'd41: // SAP
 			 begin
 			 oe <= 1'b0;
-            SetAP <= DataFromDecoder;
+            SetAP <= DataFromDecoder + 4'd1; // Do numeru rejestru dodaj 1 co wyzwoli proces ustawiania w rejestrze. 
 				MenagePC <= 3'd1;
           end
 			 8'd42: // SSP
