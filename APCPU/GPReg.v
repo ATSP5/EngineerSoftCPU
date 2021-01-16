@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module GPReg(
     input wire clk,
+	 input wire rst,
     input wire[2:0] SelX,
     input wire[2:0] SelY,
     input wire[2:0] SelZ,
@@ -29,26 +30,30 @@ module GPReg(
     output reg[31:0] B
     );
     reg [31:0] Accumulator [0:7];
-/*
-	 initial 
-	 begin
-     integer i;
-      for(i = 0; i < 8; i = i + 1)
-    	 begin
-        Accumulator[i] = 32'd0;
-       end
-    end
-*/ 
-    always@(clk)
+	 
+    always@(posedge clk or posedge rst)
   begin
-   if(clk == 1'b1)
+   if(rst == 1'b0)
 	 begin
+	  A <= Accumulator[SelX];
+	  B <= Accumulator[SelY]; 
 	  if(MemInstruction == 2'b11)
 	   begin
 		 Accumulator[SelZ] <= MemData;
 		end
-	  A <= Accumulator[SelX];
-	  B <= Accumulator[SelY];
-	 end
+	  end
+	 else
+	  begin
+	   A <= 32'd0;
+		B <= 32'd0;
+		Accumulator[0] <= 32'd0;
+		Accumulator[1] <= 32'd0;
+		Accumulator[2] <= 32'd0;
+		Accumulator[3] <= 32'd0;
+		Accumulator[4] <= 32'd0;
+		Accumulator[5] <= 32'd0;
+		Accumulator[6] <= 32'd0;
+		Accumulator[7] <= 32'd0;
+	  end
   end
 endmodule

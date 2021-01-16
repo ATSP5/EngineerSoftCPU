@@ -26,6 +26,7 @@ module PC_TB;
 
 	// Inputs
 	reg clk;
+	reg rst;
 	reg [31:0] PCSet;
 	reg [2:0] PCDrive;
 
@@ -36,6 +37,7 @@ module PC_TB;
 	// Instantiate the Unit Under Test (UUT)
 	PC uut (
 		.clk(clk), 
+		.rst(rst),
 		.PCSet(PCSet), 
 		.PCDrive(PCDrive), 
 		.PCAddr(PCAddr), 
@@ -47,10 +49,13 @@ module PC_TB;
 		clk = 0;
 		PCSet = 0;
 		PCDrive = 0;
-
+      rst = 0;
 		// Wait 100 ns for global reset to finish
 		#100;
-        
+        rst = 1;
+		  #5
+		  rst = 0;
+		  #5
 		// Add stimulus here
        forever
 		  begin

@@ -19,15 +19,20 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module SR(input wire clk,
+    input wire rst,
     input wire [7:0] SRSet,
     output reg [7:0] SRData
     );
 
-always@(clk)
+always@(posedge clk or posedge rst)
   begin
-   if(clk == 1'b1)
+   if(rst == 1'b0)
 	 begin
 	  SRData <= SRSet; 
+	 end
+	 else
+	 begin
+	  SRData <= 8'd0;
 	 end
   end
 endmodule

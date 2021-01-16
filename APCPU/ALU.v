@@ -18,6 +18,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ALU( input wire clk, // Clock signal
+            input wire rst, // Reset signal Pod³¹czyæ do clk!
             input wire [31:0] A, // ALU 32-bit Input 
             input wire [31:0] B,  // ALU 32-bit Input                 
             input wire [7:0] ALU_Sel,// ALU Selection
@@ -58,32 +59,32 @@ module ALU( input wire clk, // Clock signal
 		  //assign ReadDataBus = DataIO;
 		  //assign oe = 0;
 		  //Dla ka¿dego cyklu:
-     always @(clk)
+     always @(posedge clk or negedge rst)
       begin
 		 //Ustaw wszystkie wyjœcia jako logiczne 0 przy ka¿dym cyklu zegara!!!
-		 if(clk == 1'd0)
+		 if(rst == 1'd0)
 		 begin
-		 SetSP <= 32'd0;
-		 InDecSP <= 2'd0;
-		 MemIO <= 2'd0;
-       ALUAddr <= 32'd0;
-       MenagePC <= 3'd0;
-       PCSet <= 32'd0;
-       SetSR <= 8'd0; // Hmm czy aby na pewno??? Trza to ustaliæ.
-       SetAP <= 4'd0;
-		 DataBus <= 32'd0;
+		  SetSP <= 32'd0;
+		  InDecSP <= 2'd0;
+		  MemIO <= 2'd0;
+        ALUAddr <= 32'd0;
+        MenagePC <= 3'd0;
+        PCSet <= 32'd0;
+        SetSR <= 8'd0; // Hmm czy aby na pewno??? Trza to ustaliæ.
+        SetAP <= 4'd0;
+		  DataBus <= 32'd0;
 		 end
-		 //Pobierz dane z wejœæ.
-		 ArgA <= A;
-	    ArgB <= B;
-	    ALUSelect <= ALU_Sel;
-	    StatusRegVal <= StatusRegisterVelues;
-	    ValidMemoryData <= ValidMemData;
-	    DataFromDecoder <= DecoderData;
-		 StackPointerAddr <= SPAddr;
+		 else
+		  begin
+		  //Pobierz dane z wejœæ.
+		  ArgA <= A;
+	     ArgB <= B;
+	     ALUSelect <= ALU_Sel;
+	     StatusRegVal <= StatusRegisterVelues;
+	     ValidMemoryData <= ValidMemData;
+	     DataFromDecoder <= DecoderData;
+		  StackPointerAddr <= SPAddr;
 		 //Rozpocznij przetwarzanie.
-		 if(clk == 1'd1)
-		 begin
 		  case(ALUSelect)
 		   8'd255: //NOP
 		    begin

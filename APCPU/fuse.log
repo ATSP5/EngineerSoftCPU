@@ -12,7 +12,8 @@ Compiling module MemoryController
 Compiling module MemoryController_TB
 Compiling module glbl
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
 Built simulation executable E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController_TB_isim_beh.exe
-Fuse Memory Usage: 26540 KB
-Fuse CPU Usage: 343 ms
+Fuse Memory Usage: 26656 KB
+Fuse CPU Usage: 327 ms

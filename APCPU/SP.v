@@ -19,14 +19,15 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module SP(input wire clk,
+    input wire rst,
     input wire [31:0] SPSet,
     input wire [1:0] SPDrive, //Increment/Decrement SP 00 - Do nothing 01 - Increment 10 - Decrement 11 - Set SP 
     output reg [31:0] SPOutput
     );
 	 
-always@(clk)
+always@(posedge clk or posedge rst)
   begin
-   if(clk == 1'b1)
+   if(rst == 1'b0)
 	 begin
 	  if(SPDrive == 2'b01)
 	   begin
@@ -40,9 +41,10 @@ always@(clk)
 	   begin
 		 SPOutput <= SPSet;
 		end
+	end
 	  else
 	   begin
+		 SPOutput <= 32'd0;
 		end
-	 end
   end
 endmodule

@@ -20,15 +20,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 module PC(
     input wire clk,
+	 input wire rst,
     input wire [31:0] PCSet,
     input wire [2:0] PCDrive, //Menage Program Counter 000 - Do nothing, 001 - inc, 010 - dec, 011 - set 100 - add to current
     output reg [31:0] PCAddr,
     output reg GetInstruction
     );
 
-always@(clk)
+always@(posedge clk or posedge rst)
   begin
-   if(clk == 1'b1)
+   if(rst == 1'b1)
+	begin
+	  GetInstruction <= 1'b1;
+	  PCAddr <= 32'd0;
+	 end
+	 else
 	 begin
 	  if(PCDrive == 3'b001)
 	   begin
@@ -54,10 +60,6 @@ always@(clk)
 	   begin
 		 GetInstruction <= 1'b0;
 		end
-	 end
-	 else
-	 begin
-	  GetInstruction <= 1'b0;
 	 end
   end
 endmodule

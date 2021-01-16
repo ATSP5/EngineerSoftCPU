@@ -1,0 +1,23 @@
+[Inputs]
+clk
+ValidMemData
+=A[31:0]=
+=B[31:0]=
+=ALU_Sel[7:0]=
+=DecoderData[23:0]=
+=StatusRegisterVelues[7:0]=
+=SPAddr[31:0]=
+[Outputs]
+=SetSP[31:0]=
+=InDecSP[1:0]=
+=MemIO[1:0]=
+=ALUAddr[31:0]=
+=MenagePC[2:0]=
+=PCSet[31:0]=
+=SetSR[7:0]=
+=SetAP[3:0]=
+[BiDir]
+=DataIO[31:0]=
+[ATTRIBUTES]
+VeriModel ALU
+

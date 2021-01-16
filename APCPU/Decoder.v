@@ -19,6 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Decoder( input wire clk,
+    input wire rst,// asynchronous reset nie pod³¹czyæ do clk
     input wire[31:0] InstructionBus,
     input wire[2:0] APSelBus,
     output reg[7:0] AluCode,
@@ -27,9 +28,9 @@ module Decoder( input wire clk,
     output reg[2:0] RegSelY,
     output reg[2:0] RegSelZ
     );
-    always @(clk)
+    always @(posedge clk or posedge rst)
 	  begin
-	   if(clk == 1'b1)
+	   if(rst == 1'b0)
 		 begin
 		 AluCode <= InstructionBus[7:0];
 		  case(InstructionBus[7:0])
@@ -74,5 +75,13 @@ module Decoder( input wire clk,
 				 end
    		 endcase
 	  end
+	  else
+	   begin
+		 AluCode <= 32'd0;
+		 RegSelX <= 32'd0;
+		 RegSelY <= 32'd0;
+		 RegSelZ <= 32'd0;
+		 DecoderData <= 24'd0;
+		end
 	 end
 endmodule

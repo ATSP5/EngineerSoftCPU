@@ -26,6 +26,7 @@ module MemoryController_TB;
 
 	// Inputs
 	reg clk;
+	reg rst;
 	reg [31:0] PCAddressBus;
 	reg PCGetNewInstruction;
 	reg [31:0] ALUAddressBus;
@@ -46,6 +47,7 @@ module MemoryController_TB;
 	// Instantiate the Unit Under Test (UUT)
 	MemoryController uut (
 		.clk(clk), 
+		.rst(rst),
 		.ExternalDataBus(ExternalDataBus), 
 		.ExternalAddressBus(ExternalAddressBus), 
 		.InstructionBus(InstructionBus), 
@@ -59,8 +61,8 @@ module MemoryController_TB;
 		.ExternalExchangeReady(ExternalExchangeReady)
 	);
 
-  //assign ExternalDataBus = EDB;
-  assign InternalDataBus = IDB;
+  assign ExternalDataBus = EDB;
+  //assign InternalDataBus = IDB;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
@@ -72,31 +74,46 @@ module MemoryController_TB;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-        
+        rst = 1;
+		  #5
+		  rst = 0;
 		// Add stimulus here
-		//WRITE MEMORY PROCEDURE:
-      forever
+	//	NEXT INSTRUCTION PROCEDURE:
+ forever
 		  begin
 		   #5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			MemoryIOBus = 2'b10;
-			ALUAddressBus = 32'd 4467;
-			IDB = 32'd 555;
+			PCGetNewInstruction = 1;
+			PCAddressBus = 540;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			ExternalExchangeReady = 1'd1;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			end
+         ExternalExchangeReady = 1'b1;
+			EDB = 339;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			PCGetNewInstruction = 0;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+		  end
 
 	end
       
@@ -155,6 +172,29 @@ MEMORY READ PROCEDURE:
 			#5 clk = ~clk;
 			ExternalExchangeReady = 1'd1;
 			EDB = 32'd 555;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			end
+//WRITE MEMORY PROCEDURE:
+      forever
+		  begin
+		   #5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			MemoryIOBus = 2'b10;
+			ALUAddressBus = 32'd 4467;
+			IDB = 32'd 555;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			ExternalExchangeReady = 1'd1;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;

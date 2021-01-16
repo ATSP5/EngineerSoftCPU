@@ -26,6 +26,7 @@ module Decoder_TB;
 
 	// Inputs
 	reg clk;
+	reg rst;
 	reg [31:0] InstructionBus;
 	reg [2:0] APSelBus;
 
@@ -35,33 +36,39 @@ module Decoder_TB;
 	wire [2:0] RegSelX;
 	wire [2:0] RegSelY;
 	wire [2:0] RegSelZ;
-	wire [7:0] debbug;
 
 	// Instantiate the Unit Under Test (UUT)
 	Decoder uut (
-		.clk(clk), 
+		.clk(clk),
+      .rst(rst),		
 		.InstructionBus(InstructionBus), 
 		.APSelBus(APSelBus), 
 		.AluCode(AluCode), 
 		.DecoderData(DecoderData), 
 		.RegSelX(RegSelX), 
 		.RegSelY(RegSelY), 
-		.RegSelZ(RegSelZ), 
-		.debbug(debbug)
+		.RegSelZ(RegSelZ)
 	);
 
 	initial begin
 		// Initialize Inputs
 		clk = 0;
+		rst = clk;
 		InstructionBus = 0;
 		APSelBus = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
+		#5
+		rst = 1;
+		#5
+		rst = 0;
 		forever
 		  begin
 		   #5 clk = ~clk;
-			InstructionBus = 32'hC464AD48;
+			InstructionBus = 32'd12802;
+			#5 clk = ~clk;
+			InstructionBus = 32'd17994755;
 			#5 clk = ~clk;
         end
 		// Add stimulus here

@@ -19,6 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module MemoryController(input wire clk,
+    input wire rst,
     inout wire[31:0] ExternalDataBus, //External IO
     inout wire[31:0] ExternalAddressBus, //External IO
     output reg[31:0] InstructionBus, //Magistrala Instrukcji
@@ -39,9 +40,9 @@ module MemoryController(input wire clk,
 	 assign ExternalAddressBus = EAB_EN ? EABDrive : 32'dz;
 	 assign InternalDataBus = IDB_EN ? IDBDrive : 32'dz;
 	
-	   always@(clk)
+	   always@(posedge clk or posedge rst)
 		 begin
-		 if(clk == 1'b1)
+		 if(rst == 1'b0)
 		 begin
 		 // Pobranie kolejnej instrukcji
 		  if( ExternalDrive == 3'b001)
@@ -59,6 +60,7 @@ module MemoryController(input wire clk,
 			if(PCGetNewInstruction == 1'd1) // Rozkaz pobrania kolejnej instrukcji
 			 begin
 			   ExternalDrive <= 3'b001;
+				ValidMemoryData <= 1'b0; // Wyzeruj ten sygna³ przy ka¿dyej nowej instrukcji !!!
 			 end
 			if(MemoryIOBus == 2'b01) // Odczyt danych z pamiêci
 			 begin
@@ -89,6 +91,14 @@ module MemoryController(input wire clk,
 		 else
 		 begin
 		  ValidMemoryData <= 1'b0;
+		  ExternalDrive <= 1'b0;
+		  InstructionBus <= 32'd0;
+		  EDBDrive <= 32'd0;
+		  EABDrive <= 32'd0;
+		  IDBDrive <= 32'd0;
+		  EDB_EN <= 1'b1;
+		  EAB_EN <= 1'b1;
+		  IDB_EN <= 1'b1;
 		 end
 		 end
 	 

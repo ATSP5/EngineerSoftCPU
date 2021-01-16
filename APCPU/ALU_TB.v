@@ -26,6 +26,7 @@ module ALU_TB;
 
 	// Inputs
 	reg clk;
+	reg rst;
 	reg [31:0] A;
 	reg [31:0] B;
 	reg [7:0] ALU_Sel;
@@ -51,6 +52,7 @@ module ALU_TB;
 	// Instantiate the Unit Under Test (UUT)
 	ALU uut (
 		.clk(clk), 
+		.rst(rst),
 		.A(A), 
 		.B(B), 
 		.ALU_Sel(ALU_Sel), 
@@ -74,6 +76,7 @@ module ALU_TB;
 	//assign DataIO = DataInput;
 	initial begin
 		// Initialize Inputs
+		rst = 0;
 		clk = 0;
 		A = 0;
 		B = 0;
@@ -114,19 +117,20 @@ module ALU_TB;
 			#5 clk = ~clk;
 			*/
 			
-			clk = 0;
+			
+		clk = 0;
 		  //StatusRegisterVelues = 8'b01000010;
 		  //SPAddr = 124802;
 		   forever
 			begin
 			 #5 clk = ~clk;
-		      ALU_Sel = 37;
+			 rst = clk;
+		      ALU_Sel = 48;
 				DecoderData = 250;// ¯adnych liczb ujemnych!!!
-		      //A = 199;//1431655765;//4294967295;
-		     // B = 5;
+		      A = 199;//1431655765;//4294967295;
+		      B = 5;
 			end
 		// Add stimulus here
-		
 	end
       
 endmodule
@@ -147,6 +151,22 @@ endmodule
 		      B = 5;
 				counter=counter + 8'd1;
 		     end
+			end
+		// Add stimulus here
+		
+*************************************************************************		
+		
+		clk = 0;
+		  //StatusRegisterVelues = 8'b01000010;
+		  //SPAddr = 124802;
+		   forever
+			begin
+			 #5 clk = ~clk;
+			   rst = clk;
+		      ALU_Sel = 37;
+				DecoderData = 250;// ¯adnych liczb ujemnych!!!
+		      //A = 199;//1431655765;//4294967295;
+		     // B = 5;
 			end
 		// Add stimulus here
 		*/

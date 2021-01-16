@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU.xst" -ofn "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-csg484-3 MainCPU.ngc MainCPU.ngd  
+xst -intstyle ise -ifn "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU.xst" -ofn "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-csg484-3 MainCPU.ngc MainCPU.ngd  

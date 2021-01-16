@@ -26,6 +26,7 @@ module GPReg_TB;
 
 	// Inputs
 	reg clk;
+	reg rst;
 	reg [2:0] SelX;
 	reg [2:0] SelY;
 	reg [2:0] SelZ;
@@ -40,6 +41,7 @@ module GPReg_TB;
 	// Instantiate the Unit Under Test (UUT)
 	GPReg uut (
 		.clk(clk), 
+		.rst(rst),
 		.SelX(SelX), 
 		.SelY(SelY), 
 		.SelZ(SelZ), 
@@ -57,12 +59,14 @@ module GPReg_TB;
 		SelZ = 0;
 		MemInstruction = 0;
 		MemData = 0;
-
+      rst = clk;
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
-       
+         rst = 1;
+			#5
+			rst = 0;
 		   #5 clk = ~clk;
 			SelX = 3'b000;
 			SelY = 3'b000;

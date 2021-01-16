@@ -26,6 +26,7 @@ module SR_TB;
 
 	// Inputs
 	reg clk;
+	reg rst;
 	reg [7:0] SRSet;
 
 	// Outputs
@@ -35,6 +36,7 @@ module SR_TB;
 	// Instantiate the Unit Under Test (UUT)
 	SR uut (
 		.clk(clk), 
+		.rst(rst),
 		.SRSet(SRSet), 
 		.SRData(SRData)
 	);
@@ -43,10 +45,12 @@ module SR_TB;
 		// Initialize Inputs
 		clk = 0;
 		SRSet = 0;
-
+      rst = 0;
 		// Wait 100 ns for global reset to finish
 		#100;
-        
+        rst = 1;
+		  #5
+		  rst = 0;
 		// Add stimulus here
 		  forever
 		  begin

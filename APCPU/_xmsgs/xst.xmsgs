@@ -5,778 +5,220 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 77: Signal &lt;<arg fmt="%s" index="1">A</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 125: Result of <arg fmt="%d" index="1">2</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 78: Signal &lt;<arg fmt="%s" index="1">B</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 277: Result of <arg fmt="%d" index="1">34</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">33</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 79: Signal &lt;<arg fmt="%s" index="1">ALU_Sel</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 291: Result of <arg fmt="%d" index="1">34</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">33</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 80: Signal &lt;<arg fmt="%s" index="1">StatusRegisterVelues</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 626: Result of <arg fmt="%d" index="1">24</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 81: Signal &lt;<arg fmt="%s" index="1">ValidMemData</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 643: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 82: Signal &lt;<arg fmt="%s" index="1">DecoderData</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 649: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 83: Signal &lt;<arg fmt="%s" index="1">SPAddr</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mmult_n02793</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 87: Signal &lt;<arg fmt="%s" index="1">ALUSelect</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mmult_n02803</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 105: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_0</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 107: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_1</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 109: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_10</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 120: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_11</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 122: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_12</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 124: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_13</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 124: Result of <arg fmt="%d" index="1">2</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_14</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 135: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_15</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 137: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_16</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 139: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_17</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 150: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_18</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 152: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_19</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 154: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_2</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 165: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_20</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 167: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_21</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 180: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_22</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 182: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_23</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 184: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_24</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 195: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_25</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 196: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_26</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 198: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_27</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 210: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_28</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 212: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_29</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 214: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_3</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 225: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_30</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 227: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_31</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 240: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_4</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 242: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_5</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 244: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_6</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 255: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_7</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 262: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_8</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 269: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgA_9</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 276: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_0</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 276: Result of <arg fmt="%d" index="1">34</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">33</arg>-bit target.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_1</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 283: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_10</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 290: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_11</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 290: Result of <arg fmt="%d" index="1">34</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">33</arg>-bit target.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_12</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 297: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_13</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 304: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_14</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 311: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_15</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 318: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_16</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 325: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_17</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 332: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_18</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 339: Signal &lt;<arg fmt="%s" index="1">DataFromDecoder</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_19</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 345: Signal &lt;<arg fmt="%s" index="1">DataFromDecoder</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_2</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 351: Signal &lt;<arg fmt="%s" index="1">ValidMemoryData</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_20</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 353: Signal &lt;<arg fmt="%s" index="1">DataIO</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_21</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 361: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_22</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 367: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_23</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 369: Signal &lt;<arg fmt="%s" index="1">DataFromDecoder</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_24</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 380: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_25</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 382: Signal &lt;<arg fmt="%s" index="1">DataFromDecoder</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_26</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 393: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_27</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 395: Signal &lt;<arg fmt="%s" index="1">DataFromDecoder</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_28</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 406: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_29</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 408: Signal &lt;<arg fmt="%s" index="1">DataFromDecoder</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_3</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 419: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_30</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 421: Signal &lt;<arg fmt="%s" index="1">DataFromDecoder</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_31</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 432: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_4</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 434: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_5</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 439: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_6</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 452: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_7</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 457: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_8</arg> connected to a primary input has been replicated
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 473: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 475: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 480: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 493: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 498: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 514: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 516: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 521: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 534: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 539: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 555: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 556: Signal &lt;<arg fmt="%s" index="1">StackPointerAddr</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 564: Signal &lt;<arg fmt="%s" index="1">ValidMemoryData</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 573: Signal &lt;<arg fmt="%s" index="1">StackPointerAddr</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 580: Signal &lt;<arg fmt="%s" index="1">ValidMemoryData</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 588: Signal &lt;<arg fmt="%s" index="1">ArgB</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 595: Signal &lt;<arg fmt="%s" index="1">DataFromDecoder</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 602: Signal &lt;<arg fmt="%s" index="1">ArgB</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 609: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 610: Signal &lt;<arg fmt="%s" index="1">ArgB</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 617: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 618: Signal &lt;<arg fmt="%s" index="1">DataFromDecoder</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 625: Signal &lt;<arg fmt="%s" index="1">DataFromDecoder</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 625: Result of <arg fmt="%d" index="1">24</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 631: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 642: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 642: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 648: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 648: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 654: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 665: Signal &lt;<arg fmt="%s" index="1">StatusRegVal</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 667: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 672: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 683: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 685: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 690: Signal &lt;<arg fmt="%s" index="1">ArgA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;30&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;29&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;28&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;27&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;26&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;25&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;24&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;23&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;22&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;21&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;20&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;19&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;18&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;17&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;16&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;15&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;14&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;13&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;12&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;11&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;10&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;9&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;8&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">InDecSP&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">InDecSP&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">MemIO&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">MemIO&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;31&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;30&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;29&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;28&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;27&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;26&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;25&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;24&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;23&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;22&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;21&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;20&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;19&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;18&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;17&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;16&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;15&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;14&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;13&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;12&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;11&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;10&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;9&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;8&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ALUAddr&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">MenagePC&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">MenagePC&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">MenagePC&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;31&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;30&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;29&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;28&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;27&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;26&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;25&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;24&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;23&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;22&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;21&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;20&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;19&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;18&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;17&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;16&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;15&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;14&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;13&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;12&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;11&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;10&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;9&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;8&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCSet&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSR&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSR&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSR&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSR&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSR&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSR&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSR&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSR&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetAP&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetAP&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetAP&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetAP&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;31&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;30&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;29&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;28&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;27&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;26&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;25&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;24&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;23&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;22&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;21&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;20&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;19&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;18&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;17&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;16&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;15&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;14&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;13&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;12&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;11&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;10&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;9&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;8&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataBus&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">oe</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">SetSP&lt;31&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mmult_n04373</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mmult_n04363</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
-</msg>
-
-<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="info" file="Xst" num="1843" delta="old" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">ArgB_9</arg> connected to a primary input has been replicated
 </msg>
 
 </messages>

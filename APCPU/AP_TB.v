@@ -27,12 +27,14 @@ module AP_TB;
 	// Inputs
 	reg [3:0] APSet;
    reg clk;
+	reg rst;
 	// Outputs
 	wire [3:0] APSel;
 
 	// Instantiate the Unit Under Test (UUT)
 	AP uut (
 	   .clk(clk),
+		.rst(rst),
 		.APSet(APSet), 
 		.APSel(APSel)
 	);
@@ -41,8 +43,12 @@ module AP_TB;
 		// Initialize Inputs
 		APSet = 0;
       clk = 0;
+		rst = clk;
 		// Wait 100 ns for global reset to finish
 		#100;
+		rst = 1;
+		#5
+		rst = 0;
         forever
 		  begin
 		   #5 clk = ~clk;

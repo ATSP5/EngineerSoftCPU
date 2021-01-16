@@ -26,6 +26,7 @@ module SP_TB;
 
 	// Inputs
 	reg clk;
+	reg rst;
 	reg [31:0] SPSet;
 	reg [1:0] SPDrive;
 
@@ -35,6 +36,7 @@ module SP_TB;
 	// Instantiate the Unit Under Test (UUT)
 	SP uut (
 		.clk(clk), 
+		.rst(rst),
 		.SPSet(SPSet), 
 		.SPDrive(SPDrive), 
 		.SPOutput(SPOutput)
@@ -45,10 +47,12 @@ module SP_TB;
 		clk = 0;
 		SPSet = 0;
 		SPDrive = 0;
-
+      rst = 0;
 		// Wait 100 ns for global reset to finish
 		#100;
-        
+        rst = 1;
+		#5 
+		  rst = 0;
 		// Add stimulus here
         forever
 		  begin
