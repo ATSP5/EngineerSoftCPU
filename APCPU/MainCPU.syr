@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.07 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: MainCPU.prj
 
@@ -105,155 +105,109 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SR.v" into library work
+Parsing module <SR>.
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SP.v" into library work
+Parsing module <SP>.
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\PC.v" into library work
+Parsing module <PC>.
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\MemoryController.v" into library work
+Parsing module <MemoryController>.
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\GPReg.v" into library work
+Parsing module <GPReg>.
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" into library work
+Parsing module <Decoder>.
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\AP.v" into library work
+Parsing module <AP>.
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" into library work
+Parsing module <ALU>.
 Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\MainCPU.vf" into library work
 Parsing module <MainCPU>.
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" into library work
+Parsing module <Main>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
 Elaborating module <MainCPU>.
-WARNING:HDLCompiler:1499 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\MainCPU.vf" Line 23: Empty module <MainCPU> remains a black box.
 
-=========================================================================
-*                           HDL Synthesis                               *
-=========================================================================
+Elaborating module <ALU>.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 125: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 277: Result of 34-bit expression is truncated to fit in 33-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 291: Result of 34-bit expression is truncated to fit in 33-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 626: Result of 24-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 643: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 649: Result of 32-bit expression is truncated to fit in 8-bit target.
 
-Synthesizing Unit <MainCPU>.
-    Related source file is "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\MainCPU.vf".
-    Summary:
-	no macro.
-Unit <MainCPU> synthesized.
+Elaborating module <AP>.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\AP.v" Line 37: Result of 4-bit expression is truncated to fit in 3-bit target.
 
-=========================================================================
-HDL Synthesis Report
+Elaborating module <Decoder>.
+WARNING:HDLCompiler:462 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 33: if-condition does not match any sensitivity list edge
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 35: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 36: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 42: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 43: Signal <APSelBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 44: Signal <APSelBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 48: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 49: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 50: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 54: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 55: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 59: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 60: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 61: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 65: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 69: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 73: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 74: Signal <InstructionBus> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+ERROR:HDLCompiler:1128 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 80: Assignment under multiple single edges is not supported for synthesis
+INFO - You can change the severity of this error message to warning using switch -change_error_to_warning "HDLCompiler:1128"
+Module Decoder remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v" Line 21: Empty module <Decoder> remains a black box.
 
-Found no macro
-=========================================================================
+Elaborating module <GPReg>.
+WARNING:HDLCompiler:462 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\GPReg.v" Line 36: if-condition does not match any sensitivity list edge
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\GPReg.v" Line 38: Signal <Accumulator> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\GPReg.v" Line 39: Signal <Accumulator> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\GPReg.v" Line 40: Signal <MemInstruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\GPReg.v" Line 42: Signal <MemData> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+ERROR:HDLCompiler:1128 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\GPReg.v" Line 47: Assignment under multiple single edges is not supported for synthesis
+INFO - You can change the severity of this error message to warning using switch -change_error_to_warning "HDLCompiler:1128"
+Module GPReg remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\GPReg.v" Line 21: Empty module <GPReg> remains a black box.
 
-=========================================================================
-*                       Advanced HDL Synthesis                          *
-=========================================================================
+Elaborating module <SP>.
+WARNING:HDLCompiler:462 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SP.v" Line 30: if-condition does not match any sensitivity list edge
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SP.v" Line 32: Signal <SPDrive> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SP.v" Line 34: Signal <SPOutput> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SP.v" Line 36: Signal <SPDrive> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SP.v" Line 38: Signal <SPOutput> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SP.v" Line 40: Signal <SPDrive> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SP.v" Line 42: Signal <SPSet> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+ERROR:HDLCompiler:1128 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SP.v" Line 47: Assignment under multiple single edges is not supported for synthesis
+INFO - You can change the severity of this error message to warning using switch -change_error_to_warning "HDLCompiler:1128"
+Module SP remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SP.v" Line 21: Empty module <SP> remains a black box.
 
+Elaborating module <SR>.
+WARNING:HDLCompiler:462 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SR.v" Line 29: if-condition does not match any sensitivity list edge
+WARNING:HDLCompiler:91 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SR.v" Line 31: Signal <SRSet> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+ERROR:HDLCompiler:1128 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SR.v" Line 35: Assignment under multiple single edges is not supported for synthesis
+INFO - You can change the severity of this error message to warning using switch -change_error_to_warning "HDLCompiler:1128"
+Module SR remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\SR.v" Line 21: Empty module <SR> remains a black box.
 
-=========================================================================
-Advanced HDL Synthesis Report
+Elaborating module <PC>.
 
-Found no macro
-=========================================================================
-
-=========================================================================
-*                         Low Level Synthesis                           *
-=========================================================================
-
-Optimizing unit <MainCPU> ...
-
-Mapping all equations...
-Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block MainCPU, actual ratio is 0.
-
-Final Macro Processing ...
-
-=========================================================================
-Final Register Report
-
-Found no macro
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Design Summary                             *
-=========================================================================
-
-Top Level Output File Name         : MainCPU.ngc
-
-Primitive and Black Box Usage:
-------------------------------
-
-Device utilization summary:
----------------------------
-
-Selected Device : 6slx75csg484-3 
-
-
-Slice Logic Utilization: 
-
-Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
-
-IO Utilization: 
- Number of IOs:                           0
- Number of bonded IOBs:                   0  out of    328     0%  
-
-Specific Feature Utilization:
-
----------------------------
-Partition Resource Summary:
----------------------------
-
-  No Partitions were found in this design.
-
----------------------------
-
-
-=========================================================================
-Timing Report
-
-NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
-      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
-      GENERATED AFTER PLACE-and-ROUTE.
-
-Clock Information:
-------------------
-No clock signals found in this design
-
-Asynchronous Control Signals Information:
-----------------------------------------
-No asynchronous control signals found in this design
-
-Timing Summary:
----------------
-Speed Grade: -3
-
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: No path found
-
-Timing Details:
----------------
-All values displayed in nanoseconds (ns)
-
-=========================================================================
-
-Cross Clock Domains Report:
---------------------------
-
-=========================================================================
-
-
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.54 secs
- 
+Elaborating module <MemoryController>.
+WARNING:HDLCompiler:634 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\MainCPU.vf" Line 65: Net <XLXN_12[2]> does not have a driver.
 --> 
 
-Total memory usage is 226460 kilobytes
+Total memory usage is 222300 kilobytes
 
-Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of errors   :    4 (   0 filtered)
+Number of warnings :   44 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

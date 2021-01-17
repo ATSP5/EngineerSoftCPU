@@ -21,14 +21,14 @@
 module AP( input wire clk,
     input wire rst, // Pod³¹czyæ do grst (Global Reset) nie do clk
     input wire [3:0] APSet,
-    output reg [3:0] APSel
+    output reg [2:0] APSel
     );
 
  always@(posedge clk or posedge rst)
   begin
   if(rst == 1'b1)
 	  begin
-	   APSel <= 4'd0;
+	   APSel <= 3'd0;
 	  end
 	else
 	begin

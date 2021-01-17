@@ -1,0 +1,11 @@
+[Inputs]
+clk
+rst
+=SPSet[31:0]=
+=SPDrive[1:0]=
+[Outputs]
+=SPOutput[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel SP
+

@@ -1,0 +1,19 @@
+[Inputs]
+clk
+rst
+PCGetNewInstruction
+ExternalExchangeReady
+=PCAddressBus[31:0]=
+=ALUAddressBus[31:0]=
+=MemoryIOBus[1:0]=
+[Outputs]
+ValidMemoryData
+=InstructionBus[31:0]=
+=ExternalDrive[2:0]=
+[BiDir]
+=ExternalDataBus[31:0]=
+=ExternalAddressBus[31:0]=
+=InternalDataBus[31:0]=
+[ATTRIBUTES]
+VeriModel MemoryController
+

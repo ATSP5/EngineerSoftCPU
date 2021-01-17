@@ -1,0 +1,12 @@
+[Inputs]
+clk
+rst
+=PCSet[31:0]=
+=PCDrive[2:0]=
+[Outputs]
+GetInstruction
+=PCAddr[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel PC
+

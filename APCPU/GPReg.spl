@@ -1,0 +1,15 @@
+[Inputs]
+clk
+rst
+=SelX[2:0]=
+=SelY[2:0]=
+=SelZ[2:0]=
+=MemInstruction[1:0]=
+=MemData[31:0]=
+[Outputs]
+=A[31:0]=
+=B[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel GPReg
+

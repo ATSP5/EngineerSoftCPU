@@ -40,7 +40,7 @@ module MemoryController(input wire clk,
 	 assign ExternalAddressBus = EAB_EN ? EABDrive : 32'dz;
 	 assign InternalDataBus = IDB_EN ? IDBDrive : 32'dz;
 	
-	   always@(posedge clk or posedge rst)
+	   always@(posedge clk)
 		 begin
 		 if(rst == 1'b0)
 		 begin
@@ -49,10 +49,10 @@ module MemoryController(input wire clk,
 		   begin
 			  EAB_EN <= 1'b1;
 			  EABDrive <= PCAddressBus;
+			  EDB_EN <= 1'b0;
 			  if(ExternalExchangeReady == 1'b1)// Dzia³ania po oczekiwaniu na zwrot z pamiêci instrukcji
 			   begin
 			    ExternalDrive <= 3'b000;
-				 EDB_EN <= 1'b0;
 				 InstructionBus <= ExternalDataBus;
 			   end
 			end

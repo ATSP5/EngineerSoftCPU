@@ -1,19 +1,40 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController_TB_isim_beh.exe -prj E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController_TB_beh.prj work.MemoryController_TB work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_MainCPU_sch_tb_isim_beh.exe -prj E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_MainCPU_sch_tb_beh.prj work.MainCPU_MainCPU_sch_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
+Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/SR.v" into library work
+Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/SP.v" into library work
+Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/PC.v" into library work
 Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController.v" into library work
-Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController_TB.v" into library work
+Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/GPReg.v" into library work
+Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/Decoder.v" into library work
+Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/AP.v" into library work
+Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/ALU.v" into library work
+Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU.vf" into library work
+Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:329 - "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" Line 31: Target <PCAddressBus> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" Line 32: Target <NewInstruction> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" Line 34: Target <ALUAddressBus> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" Line 35: Target <MemIO> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:1016 - "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" Line 25: Port A is not connected to this instance
 Completed static elaboration
+Compiling module ALU
+Compiling module AP
+Compiling module Decoder
+Compiling module GPReg
+Compiling module SP
+Compiling module SR
+Compiling module PC
 Compiling module MemoryController
-Compiling module MemoryController_TB
+Compiling module MainCPU
+Compiling module MainCPU_MainCPU_sch_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 3 Verilog Units
-Built simulation executable E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController_TB_isim_beh.exe
-Fuse Memory Usage: 26656 KB
-Fuse CPU Usage: 327 ms
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 11 Verilog Units
+Built simulation executable E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_MainCPU_sch_tb_isim_beh.exe
+Fuse Memory Usage: 28644 KB
+Fuse CPU Usage: 374 ms

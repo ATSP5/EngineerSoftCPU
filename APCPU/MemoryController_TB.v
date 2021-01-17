@@ -75,8 +75,10 @@ module MemoryController_TB;
 		// Wait 100 ns for global reset to finish
 		#100;
         rst = 1;
+		  clk = ~clk;
 		  #5
 		  rst = 0;
+		  clk = ~clk;
 		// Add stimulus here
 	//	NEXT INSTRUCTION PROCEDURE:
  forever

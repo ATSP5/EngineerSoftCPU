@@ -1,0 +1,532 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : xc6vlx75t-3-ff484
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\AP.v" into library work
+Parsing module <AP>.
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" into library work
+Parsing module <ALU>.
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" into library work
+Parsing module <Main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Main>.
+
+Elaborating module <AP>.
+
+Elaborating module <ALU>.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 125: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 277: Result of 34-bit expression is truncated to fit in 33-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 291: Result of 34-bit expression is truncated to fit in 33-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 626: Result of 24-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 643: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 649: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:552 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" Line 27: Input port clk is not connected on this instance
+WARNING:HDLCompiler:552 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" Line 31: Input port clk is not connected on this instance
+WARNING:Xst:2972 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" line 27. All outputs of instance <XLXI_2> of block <AP> are unconnected in block <Main>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Main>.
+    Related source file is "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf".
+WARNING:Xst:2898 - Port 'APSet', unconnected in block instance 'XLXI_2', is tied to GND.
+WARNING:Xst:2898 - Port 'clk', unconnected in block instance 'XLXI_2', is tied to GND.
+WARNING:Xst:2898 - Port 'rst', unconnected in block instance 'XLXI_2', is tied to GND.
+WARNING:Xst:2898 - Port 'A', unconnected in block instance 'XLXI_3', is tied to GND.
+WARNING:Xst:2898 - Port 'B', unconnected in block instance 'XLXI_3', is tied to GND.
+WARNING:Xst:2898 - Port 'ALU_Sel', unconnected in block instance 'XLXI_3', is tied to GND.
+WARNING:Xst:2898 - Port 'DecoderData', unconnected in block instance 'XLXI_3', is tied to GND.
+WARNING:Xst:2898 - Port 'StatusRegisterVelues', unconnected in block instance 'XLXI_3', is tied to GND.
+WARNING:Xst:2898 - Port 'SPAddr', unconnected in block instance 'XLXI_3', is tied to GND.
+WARNING:Xst:2898 - Port 'clk', unconnected in block instance 'XLXI_3', is tied to GND.
+WARNING:Xst:2898 - Port 'rst', unconnected in block instance 'XLXI_3', is tied to GND.
+WARNING:Xst:2898 - Port 'ValidMemData', unconnected in block instance 'XLXI_3', is tied to GND.
+INFO:Xst:3210 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" line 27: Output port <APSel> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" line 31: Output port <SetSP> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" line 31: Output port <InDecSP> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" line 31: Output port <MemIO> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" line 31: Output port <ALUAddr> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" line 31: Output port <MenagePC> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" line 31: Output port <PCSet> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" line 31: Output port <SetSR> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" line 31: Output port <SetAP> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <Main> synthesized.
+WARNING:Xst:2972 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" line 256. All outputs of instance <ArgA[31]_DataFromDecoder[23]_div_46> of block <div_32u_24u> are unconnected in block <ALU>. Underlying logic will be removed.
+WARNING:Xst:2972 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" line 263. All outputs of instance <ArgA[31]_ArgB[31]_div_47> of block <div_32u_32u> are unconnected in block <ALU>. Underlying logic will be removed.
+WARNING:Xst:2972 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" line 668. All outputs of instance <ArgA[31]_ArgB[31]_rem_117> of block <rem_32s_32s> are unconnected in block <ALU>. Underlying logic will be removed.
+WARNING:Xst:2972 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" line 673. All outputs of instance <ArgA[31]_ArgB[31]_mod_118> of block <mod_32u_32u> are unconnected in block <ALU>. Underlying logic will be removed.
+
+Synthesizing Unit <ALU>.
+    Related source file is "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v".
+    Found 32-bit register for signal <ArgA>.
+    Found 32-bit register for signal <ArgB>.
+    Found 8-bit register for signal <ALUSelect>.
+    Found 8-bit register for signal <StatusRegVal>.
+    Found 1-bit register for signal <ValidMemoryData>.
+    Found 24-bit register for signal <DataFromDecoder>.
+    Found 32-bit register for signal <StackPointerAddr>.
+    Found 1-bit register for signal <oe>.
+    Found 1-bit register for signal <InDecSP<1>>.
+    Found 1-bit register for signal <InDecSP<0>>.
+    Found 1-bit register for signal <MemIO<1>>.
+    Found 1-bit register for signal <MemIO<0>>.
+    Found 1-bit register for signal <ALUAddr<31>>.
+    Found 1-bit register for signal <ALUAddr<30>>.
+    Found 1-bit register for signal <ALUAddr<29>>.
+    Found 1-bit register for signal <ALUAddr<28>>.
+    Found 1-bit register for signal <ALUAddr<27>>.
+    Found 1-bit register for signal <ALUAddr<26>>.
+    Found 1-bit register for signal <ALUAddr<25>>.
+    Found 1-bit register for signal <ALUAddr<24>>.
+    Found 1-bit register for signal <ALUAddr<23>>.
+    Found 1-bit register for signal <ALUAddr<22>>.
+    Found 1-bit register for signal <ALUAddr<21>>.
+    Found 1-bit register for signal <ALUAddr<20>>.
+    Found 1-bit register for signal <ALUAddr<19>>.
+    Found 1-bit register for signal <ALUAddr<18>>.
+    Found 1-bit register for signal <ALUAddr<17>>.
+    Found 1-bit register for signal <ALUAddr<16>>.
+    Found 1-bit register for signal <ALUAddr<15>>.
+    Found 1-bit register for signal <ALUAddr<14>>.
+    Found 1-bit register for signal <ALUAddr<13>>.
+    Found 1-bit register for signal <ALUAddr<12>>.
+    Found 1-bit register for signal <ALUAddr<11>>.
+    Found 1-bit register for signal <ALUAddr<10>>.
+    Found 1-bit register for signal <ALUAddr<9>>.
+    Found 1-bit register for signal <ALUAddr<8>>.
+    Found 1-bit register for signal <ALUAddr<7>>.
+    Found 1-bit register for signal <ALUAddr<6>>.
+    Found 1-bit register for signal <ALUAddr<5>>.
+    Found 1-bit register for signal <ALUAddr<4>>.
+    Found 1-bit register for signal <ALUAddr<3>>.
+    Found 1-bit register for signal <ALUAddr<2>>.
+    Found 1-bit register for signal <ALUAddr<1>>.
+    Found 1-bit register for signal <ALUAddr<0>>.
+    Found 1-bit register for signal <MenagePC<2>>.
+    Found 1-bit register for signal <MenagePC<1>>.
+    Found 1-bit register for signal <MenagePC<0>>.
+    Found 1-bit register for signal <PCSet<31>>.
+    Found 1-bit register for signal <PCSet<30>>.
+    Found 1-bit register for signal <PCSet<29>>.
+    Found 1-bit register for signal <PCSet<28>>.
+    Found 1-bit register for signal <PCSet<27>>.
+    Found 1-bit register for signal <PCSet<26>>.
+    Found 1-bit register for signal <PCSet<25>>.
+    Found 1-bit register for signal <PCSet<24>>.
+    Found 1-bit register for signal <PCSet<23>>.
+    Found 1-bit register for signal <PCSet<22>>.
+    Found 1-bit register for signal <PCSet<21>>.
+    Found 1-bit register for signal <PCSet<20>>.
+    Found 1-bit register for signal <PCSet<19>>.
+    Found 1-bit register for signal <PCSet<18>>.
+    Found 1-bit register for signal <PCSet<17>>.
+    Found 1-bit register for signal <PCSet<16>>.
+    Found 1-bit register for signal <PCSet<15>>.
+    Found 1-bit register for signal <PCSet<14>>.
+    Found 1-bit register for signal <PCSet<13>>.
+    Found 1-bit register for signal <PCSet<12>>.
+    Found 1-bit register for signal <PCSet<11>>.
+    Found 1-bit register for signal <PCSet<10>>.
+    Found 1-bit register for signal <PCSet<9>>.
+    Found 1-bit register for signal <PCSet<8>>.
+    Found 1-bit register for signal <PCSet<7>>.
+    Found 1-bit register for signal <PCSet<6>>.
+    Found 1-bit register for signal <PCSet<5>>.
+    Found 1-bit register for signal <PCSet<4>>.
+    Found 1-bit register for signal <PCSet<3>>.
+    Found 1-bit register for signal <PCSet<2>>.
+    Found 1-bit register for signal <PCSet<1>>.
+    Found 1-bit register for signal <PCSet<0>>.
+    Found 1-bit register for signal <SetSR_7>.
+    Found 1-bit register for signal <SetSR_6>.
+    Found 1-bit register for signal <SetSR_5>.
+    Found 1-bit register for signal <SetSR_4>.
+    Found 1-bit register for signal <SetSR_3>.
+    Found 1-bit register for signal <SetSR_2>.
+    Found 1-bit register for signal <SetSR_1>.
+    Found 1-bit register for signal <SetSR_0>.
+    Found 1-bit register for signal <SetAP<3>>.
+    Found 1-bit register for signal <SetAP<2>>.
+    Found 1-bit register for signal <SetAP<1>>.
+    Found 1-bit register for signal <SetAP<0>>.
+    Found 1-bit register for signal <DataBus<31>>.
+    Found 1-bit register for signal <DataBus<30>>.
+    Found 1-bit register for signal <DataBus<29>>.
+    Found 1-bit register for signal <DataBus<28>>.
+    Found 1-bit register for signal <DataBus<27>>.
+    Found 1-bit register for signal <DataBus<26>>.
+    Found 1-bit register for signal <DataBus<25>>.
+    Found 1-bit register for signal <DataBus<24>>.
+    Found 1-bit register for signal <DataBus<23>>.
+    Found 1-bit register for signal <DataBus<22>>.
+    Found 1-bit register for signal <DataBus<21>>.
+    Found 1-bit register for signal <DataBus<20>>.
+    Found 1-bit register for signal <DataBus<19>>.
+    Found 1-bit register for signal <DataBus<18>>.
+    Found 1-bit register for signal <DataBus<17>>.
+    Found 1-bit register for signal <DataBus<16>>.
+    Found 1-bit register for signal <DataBus<15>>.
+    Found 1-bit register for signal <DataBus<14>>.
+    Found 1-bit register for signal <DataBus<13>>.
+    Found 1-bit register for signal <DataBus<12>>.
+    Found 1-bit register for signal <DataBus<11>>.
+    Found 1-bit register for signal <DataBus<10>>.
+    Found 1-bit register for signal <DataBus<9>>.
+    Found 1-bit register for signal <DataBus<8>>.
+    Found 1-bit register for signal <DataBus<7>>.
+    Found 1-bit register for signal <DataBus<6>>.
+    Found 1-bit register for signal <DataBus<5>>.
+    Found 1-bit register for signal <DataBus<4>>.
+    Found 1-bit register for signal <DataBus<3>>.
+    Found 1-bit register for signal <DataBus<2>>.
+    Found 1-bit register for signal <DataBus<1>>.
+    Found 1-bit register for signal <DataBus<0>>.
+    Found 1-bit register for signal <SetSP<31>>.
+    Found 1-bit register for signal <SetSP<30>>.
+    Found 1-bit register for signal <SetSP<29>>.
+    Found 1-bit register for signal <SetSP<28>>.
+    Found 1-bit register for signal <SetSP<27>>.
+    Found 1-bit register for signal <SetSP<26>>.
+    Found 1-bit register for signal <SetSP<25>>.
+    Found 1-bit register for signal <SetSP<24>>.
+    Found 1-bit register for signal <SetSP<23>>.
+    Found 1-bit register for signal <SetSP<22>>.
+    Found 1-bit register for signal <SetSP<21>>.
+    Found 1-bit register for signal <SetSP<20>>.
+    Found 1-bit register for signal <SetSP<19>>.
+    Found 1-bit register for signal <SetSP<18>>.
+    Found 1-bit register for signal <SetSP<17>>.
+    Found 1-bit register for signal <SetSP<16>>.
+    Found 1-bit register for signal <SetSP<15>>.
+    Found 1-bit register for signal <SetSP<14>>.
+    Found 1-bit register for signal <SetSP<13>>.
+    Found 1-bit register for signal <SetSP<12>>.
+    Found 1-bit register for signal <SetSP<11>>.
+    Found 1-bit register for signal <SetSP<10>>.
+    Found 1-bit register for signal <SetSP<9>>.
+    Found 1-bit register for signal <SetSP<8>>.
+    Found 1-bit register for signal <SetSP<7>>.
+    Found 1-bit register for signal <SetSP<6>>.
+    Found 1-bit register for signal <SetSP<5>>.
+    Found 1-bit register for signal <SetSP<4>>.
+    Found 1-bit register for signal <SetSP<3>>.
+    Found 1-bit register for signal <SetSP<2>>.
+    Found 1-bit register for signal <SetSP<1>>.
+    Found 1-bit register for signal <SetSP<0>>.
+    Found 1-bit tristate buffer for signal <DataIO<31>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<30>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<29>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<28>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<27>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<26>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<25>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<24>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<23>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<22>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<21>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<20>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<19>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<18>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<17>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<16>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<15>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<14>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<13>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<12>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<11>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<10>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<9>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<8>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<7>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<6>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<5>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<4>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<3>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<2>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<1>> created at line 57
+    Found 1-bit tristate buffer for signal <DataIO<0>> created at line 57
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred  32 Tristate(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <div_32u_24u>.
+    Related source file is "".
+    Summary:
+	no macro.
+Unit <div_32u_24u> synthesized.
+
+Synthesizing Unit <div_32u_32u>.
+    Related source file is "".
+    Summary:
+	no macro.
+Unit <div_32u_32u> synthesized.
+
+Synthesizing Unit <rem_32s_32s>.
+    Related source file is "".
+    Summary:
+	no macro.
+Unit <rem_32s_32s> synthesized.
+
+Synthesizing Unit <mod_32u_32u>.
+    Related source file is "".
+    Summary:
+	no macro.
+Unit <mod_32u_32u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Tristates                                            : 32
+ 1-bit tristate buffer                                 : 32
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <XLXI_3> is unconnected in block <Main>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <oe> (without init value) has a constant value of 0 in block <ALU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2042 - Unit ALU: 32 internal tristates are replaced by logic (pull-up yes): DataIO<0>, DataIO<10>, DataIO<11>, DataIO<12>, DataIO<13>, DataIO<14>, DataIO<15>, DataIO<16>, DataIO<17>, DataIO<18>, DataIO<19>, DataIO<1>, DataIO<20>, DataIO<21>, DataIO<22>, DataIO<23>, DataIO<24>, DataIO<25>, DataIO<26>, DataIO<27>, DataIO<28>, DataIO<29>, DataIO<2>, DataIO<30>, DataIO<31>, DataIO<3>, DataIO<4>, DataIO<5>, DataIO<6>, DataIO<7>, DataIO<8>, DataIO<9>.
+
+Optimizing unit <Main> ...
+
+Optimizing unit <ALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx75tff484-3 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                           0
+ Number of bonded IOBs:                   0  out of    240     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.47 secs
+ 
+--> 
+
+Total memory usage is 286428 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   28 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

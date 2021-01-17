@@ -1,1 +1,2 @@
 verilog work "MemoryController.v"
+verilog work "Main.vf"

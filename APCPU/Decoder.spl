@@ -1,0 +1,15 @@
+[Inputs]
+clk
+rst
+=InstructionBus[31:0]=
+=APSelBus[2:0]=
+[Outputs]
+=AluCode[7:0]=
+=DecoderData[23:0]=
+=RegSelX[2:0]=
+=RegSelY[2:0]=
+=RegSelZ[2:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Decoder
+

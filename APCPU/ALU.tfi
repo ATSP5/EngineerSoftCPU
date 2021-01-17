@@ -1,0 +1,26 @@
+
+
+
+// Instantiate the module
+ALU instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .A(A), 
+    .B(B), 
+    .ALU_Sel(ALU_Sel), 
+    .ValidMemData(ValidMemData), 
+    .DecoderData(DecoderData), 
+    .StatusRegisterVelues(StatusRegisterVelues), 
+    .SPAddr(SPAddr), 
+    .DataIO(DataIO), 
+    .SetSP(SetSP), 
+    .InDecSP(InDecSP), 
+    .MemIO(MemIO), 
+    .ALUAddr(ALUAddr), 
+    .MenagePC(MenagePC), 
+    .PCSet(PCSet), 
+    .SetSR(SetSR), 
+    .SetAP(SetAP)
+    );
+
+

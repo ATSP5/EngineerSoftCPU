@@ -1,0 +1,518 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: MemoryController.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MemoryController.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MemoryController"
+Output Format                      : NGC
+Target Device                      : xc6slx75-3-csg484
+
+---- Source Options
+Top Module Name                    : MemoryController
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\MemoryController.v" into library work
+Parsing module <MemoryController>.
+Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" into library work
+Parsing module <Main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <MemoryController>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MemoryController>.
+    Related source file is "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\MemoryController.v".
+    Found 32-bit register for signal <EABDrive>.
+    Found 1-bit register for signal <EDB_EN>.
+    Found 3-bit register for signal <ExternalDrive>.
+    Found 32-bit register for signal <InstructionBus>.
+    Found 1-bit register for signal <ValidMemoryData>.
+    Found 1-bit register for signal <IDB_EN>.
+    Found 32-bit register for signal <EDBDrive>.
+    Found 32-bit register for signal <IDBDrive>.
+    Found finite state machine <FSM_0> for signal <ExternalDrive>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 26                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit tristate buffer for signal <ExternalDataBus<31>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<30>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<29>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<28>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<27>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<26>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<25>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<24>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<23>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<22>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<21>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<20>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<19>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<18>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<17>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<16>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<15>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<14>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<13>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<12>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<11>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<10>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<9>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<8>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<7>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<6>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<5>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<4>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<3>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<2>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<1>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalDataBus<0>> created at line 39
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<31>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<30>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<29>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<28>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<27>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<26>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<25>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<24>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<23>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<22>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<21>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<20>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<19>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<18>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<17>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<16>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<15>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<14>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<13>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<12>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<11>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<10>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<9>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<8>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<7>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<6>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<5>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<4>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<3>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<2>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<1>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<0>> created at line 40
+    Found 1-bit tristate buffer for signal <InternalDataBus<31>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<30>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<29>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<28>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<27>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<26>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<25>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<24>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<23>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<22>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<21>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<20>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<19>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<18>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<17>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<16>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<15>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<14>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<13>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<12>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<11>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<10>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<9>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<8>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<7>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<6>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<5>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<4>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<3>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<2>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<1>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<0>> created at line 41
+    Found 32-bit comparator equal for signal <ExternalDataBus[31]_InternalDataBus[31]_equal_24_o> created at line 85
+    Summary:
+	inferred 131 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   5 Multiplexer(s).
+	inferred  96 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <MemoryController> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 7
+ 1-bit register                                        : 3
+ 32-bit register                                       : 4
+# Comparators                                          : 1
+ 32-bit comparator equal                               : 1
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 4
+# Tristates                                            : 96
+ 1-bit tristate buffer                                 : 96
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 131
+ Flip-Flops                                            : 131
+# Comparators                                          : 1
+ 32-bit comparator equal                               : 1
+# Multiplexers                                         : 36
+ 1-bit 2-to-1 multiplexer                              : 33
+ 32-bit 2-to-1 multiplexer                             : 3
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <ExternalDrive[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 10
+ 011   | 11
+-------------------
+
+Optimizing unit <MemoryController> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MemoryController, actual ratio is 0.
+FlipFlop ExternalDrive_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop ExternalDrive_FSM_FFd2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 135
+ Flip-Flops                                            : 135
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MemoryController.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 132
+#      GND                         : 1
+#      INV                         : 2
+#      LUT2                        : 3
+#      LUT3                        : 35
+#      LUT4                        : 34
+#      LUT5                        : 1
+#      LUT6                        : 44
+#      MUXCY                       : 11
+#      VCC                         : 1
+# FlipFlops/Latches                : 135
+#      FDR                         : 69
+#      FDRE                        : 64
+#      FDS                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 201
+#      IBUF                        : 69
+#      IOBUF                       : 64
+#      OBUF                        : 68
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx75csg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             103  out of  93296     0%  
+ Number of Slice LUTs:                  119  out of  46648     0%  
+    Number used as Logic:               119  out of  46648     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    121
+   Number with an unused Flip Flop:      18  out of    121    14%  
+   Number with an unused LUT:             2  out of    121     1%  
+   Number of fully used LUT-FF pairs:   101  out of    121    83%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                         202
+ Number of bonded IOBs:                 202  out of    328    61%  
+    IOB Flip Flops/Latches:              32
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 135   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.772ns (Maximum Frequency: 360.705MHz)
+   Minimum input arrival time before clock: 4.505ns
+   Maximum output required time after clock: 5.131ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.772ns (frequency: 360.705MHz)
+  Total number of paths / destination ports: 301 / 135
+-------------------------------------------------------------------------
+Delay:               2.772ns (Levels of Logic = 2)
+  Source:            ExternalDrive_FSM_FFd2_1 (FF)
+  Destination:       EABDrive_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ExternalDrive_FSM_FFd2_1 to EABDrive_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.447   0.788  ExternalDrive_FSM_FFd2_1 (ExternalDrive_FSM_FFd2_1)
+     LUT2:I0->O           17   0.203   1.028  ExternalDrive_ExternalDrive[2]_GND_1_o_equal_6_o1 (ExternalDrive[2]_GND_1_o_equal_6_o)
+     LUT6:I5->O            1   0.205   0.000  Mmux_EABDrive[31]_ALUAddressBus[31]_mux_18_OUT110 (EABDrive[31]_ALUAddressBus[31]_mux_18_OUT<0>)
+     FDR:D                     0.102          EABDrive_0
+    ----------------------------------------
+    Total                      2.772ns (0.957ns logic, 1.815ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 571 / 302
+-------------------------------------------------------------------------
+Offset:              4.505ns (Levels of Logic = 2)
+  Source:            MemoryIOBus<1> (PAD)
+  Destination:       EDBDrive_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: MemoryIOBus<1> to EDBDrive_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.467  MemoryIOBus_1_IBUF (MemoryIOBus_1_IBUF)
+     LUT2:I0->O           32   0.203   1.291  ExternalDrive_FSM_FFd1-In11 (ExternalDrive_FSM_FFd1-In1)
+     FDRE:CE                   0.322          EDBDrive_31
+    ----------------------------------------
+    Total                      4.505ns (1.747ns logic, 2.758ns route)
+                                       (38.8% logic, 61.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 195 / 131
+-------------------------------------------------------------------------
+Offset:              5.131ns (Levels of Logic = 2)
+  Source:            EDB_EN (FF)
+  Destination:       ExternalDataBus<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: EDB_EN to ExternalDataBus<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              2   0.447   0.616  EDB_EN (EDB_EN)
+     INV:I->O             32   0.206   1.291  EDB_EN_inv321_INV_0 (EDB_EN_inv)
+     IOBUF:T->IO               2.571          ExternalDataBus_31_IOBUF (ExternalDataBus<31>)
+    ----------------------------------------
+    Total                      5.131ns (3.224ns logic, 1.907ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.772|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.85 secs
+ 
+--> 
+
+Total memory usage is 237084 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,9 @@
+// Verilog instantiation template created from schematic E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\MainCPU.sch - Sat Jan 16 13:14:03 2021
+//
+// Notes: 
+// To use this template to instantiate this component,cut-and-paste and then edit
+//
+// Instantiate the UUT
+   MainCPU UUT (
+		
+   );
