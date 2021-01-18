@@ -31,7 +31,7 @@ module GPReg(
     );
     reg [31:0] Accumulator [0:7];
 	 
-    always@(posedge clk or posedge rst)
+    always@(posedge clk)
   begin
    if(rst == 1'b0)
 	 begin

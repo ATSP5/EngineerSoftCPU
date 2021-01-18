@@ -28,7 +28,7 @@ module Decoder( input wire clk,
     output reg[2:0] RegSelY,
     output reg[2:0] RegSelZ
     );
-    always @(posedge clk or posedge rst)
+    always @(posedge clk)
 	  begin
 	   if(rst == 1'b0)
 		 begin

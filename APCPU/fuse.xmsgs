@@ -5,20 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" Line 31: Target &lt;<arg fmt="%s" index="1">PCAddressBus</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" Line 32: Target &lt;<arg fmt="%s" index="1">NewInstruction</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" Line 34: Target &lt;<arg fmt="%s" index="1">ALUAddressBus</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" Line 35: Target &lt;<arg fmt="%s" index="1">MemIO</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" Line 25: Port <arg fmt="%s" index="1">A</arg> is not connected to this instance
-</msg>
-
 </messages>
 

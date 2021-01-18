@@ -29,7 +29,7 @@ module AP_TB;
    reg clk;
 	reg rst;
 	// Outputs
-	wire [3:0] APSel;
+	wire [2:0] APSel;
 
 	// Instantiate the Unit Under Test (UUT)
 	AP uut (
@@ -47,6 +47,8 @@ module AP_TB;
 		// Wait 100 ns for global reset to finish
 		#100;
 		rst = 1;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
 		#5
 		rst = 0;
         forever

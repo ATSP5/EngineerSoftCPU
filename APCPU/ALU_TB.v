@@ -125,7 +125,7 @@ module ALU_TB;
 			begin
 			 #5 clk = ~clk;
 			 rst = clk;
-		      ALU_Sel = 48;
+		      ALU_Sel = 1;
 				DecoderData = 250;// ¯adnych liczb ujemnych!!!
 		      A = 199;//1431655765;//4294967295;
 		      B = 5;

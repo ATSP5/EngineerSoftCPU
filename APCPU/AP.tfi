@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+AP instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .APSet(APSet), 
+    .APSel(APSel)
+    );
+
+

@@ -50,6 +50,7 @@ module MemoryController(input wire clk,
 			  EAB_EN <= 1'b1;
 			  EABDrive <= PCAddressBus;
 			  EDB_EN <= 1'b0;
+			  IDB_EN <= 1'b0;
 			  if(ExternalExchangeReady == 1'b1)// Dzia³ania po oczekiwaniu na zwrot z pamiêci instrukcji
 			   begin
 			    ExternalDrive <= 3'b000;

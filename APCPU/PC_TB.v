@@ -53,9 +53,13 @@ module PC_TB;
 		// Wait 100 ns for global reset to finish
 		#100;
         rst = 1;
-		  #5
+		  #5 clk = ~clk;
+		  #5 clk = ~clk;
+		  #5 clk = ~clk;
+		  #5 clk = ~clk;
 		  rst = 0;
-		  #5
+		  #5 clk = ~clk;
+		  #5 clk = ~clk;
 		// Add stimulus here
        forever
 		  begin

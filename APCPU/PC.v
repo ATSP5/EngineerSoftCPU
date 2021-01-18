@@ -27,7 +27,7 @@ module PC(
     output reg GetInstruction
     );
 
-always@(posedge clk or posedge rst)
+always@(posedge clk)
   begin
    if(rst == 1'b1)
 	begin
@@ -36,30 +36,32 @@ always@(posedge clk or posedge rst)
 	 end
 	 else
 	 begin
-	  if(PCDrive == 3'b001)
+	  case (PCDrive)
+	  3'b001:
 	   begin
 		 PCAddr <= PCAddr + 32'd1;
 		 GetInstruction <= 1'b1;
 		end
-	  if(PCDrive == 3'b010)
+	  3'b010:
 	   begin
 		 PCAddr <= PCAddr - 32'd1;
 		 GetInstruction <= 1'b1;
 		end
-	  if(PCDrive == 3'b011)
+	  3'b011:
 	   begin
 		 PCAddr <= PCSet;
 		 GetInstruction <= 1'b1;
 		end
-	  if(PCDrive == 3'b100)
+	  3'b100:
 	   begin
 		 PCAddr <= PCAddr + PCSet;
 		 GetInstruction <= 1'b1;
 		end
-	  else
+	 3'b000, 3'b101, 3'b110, 3'b111:
 	   begin
 		 GetInstruction <= 1'b0;
 		end
-	 end
+		endcase
+		end
   end
 endmodule

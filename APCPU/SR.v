@@ -24,7 +24,7 @@ module SR(input wire clk,
     output reg [7:0] SRData
     );
 
-always@(posedge clk or posedge rst)
+always@(posedge clk)
   begin
    if(rst == 1'b0)
 	 begin

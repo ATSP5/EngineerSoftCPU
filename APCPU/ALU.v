@@ -59,10 +59,10 @@ module ALU( input wire clk, // Clock signal
 		  //assign ReadDataBus = DataIO;
 		  //assign oe = 0;
 		  //Dla ka¿dego cyklu:
-     always @(posedge clk or negedge rst)
+     always @(posedge clk)
       begin
 		 //Ustaw wszystkie wyjœcia jako logiczne 0 przy ka¿dym cyklu zegara!!!
-		 if(rst == 1'd0)
+		 if(rst == 1'd1)
 		 begin
 		  SetSP <= 32'd0;
 		  InDecSP <= 2'd0;
@@ -73,6 +73,7 @@ module ALU( input wire clk, // Clock signal
         SetSR <= 8'd0; // Hmm czy aby na pewno??? Trza to ustaliæ.
         SetAP <= 4'd0;
 		  DataBus <= 32'd0;
+		  oe <= 1'b1;
 		 end
 		 else
 		  begin

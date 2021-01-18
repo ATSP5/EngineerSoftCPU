@@ -1,2 +1,4 @@
 vhdtdtfi -lib work E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/GPReg.v -lang verilog -prj APCPU -o GPReg.spl -module GPReg -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan6 GPReg.spl E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/GPReg.sym 
+vhdtdtfi -lib work E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/GPReg.v -lang verilog -prj APCPU -o GPReg.spl -module GPReg -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 GPReg.spl E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/GPReg.sym 
