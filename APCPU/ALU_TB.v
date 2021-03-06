@@ -70,7 +70,6 @@ module ALU_TB;
 		.SetSR(SetSR), 
 		.SetAP(SetAP)
 	);
-   //reg [7:0] counter;
 	reg [31:0] DataInput;
 	
 	//assign DataIO = DataInput;
@@ -85,50 +84,39 @@ module ALU_TB;
 		DecoderData = 0;
 		StatusRegisterVelues = 0;
 		SPAddr = 0;
-     // DataInput = 32'd0;
+      DataInput = 32'd0;
 		// Wait 100 ns for global reset to finish
 		#100;
-		/*
-		   clk = 0;
-		 // counter = 0;
-		  //StatusRegisterVelues = 8'b01000010;
-		  //SPAddr = 124802;
-			#5 clk = ~clk;
-		   ALU_Sel = 36;
-		   //A = 879199;//1431655765;//4294967295;
-			B = 879199;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			DataInput = 500;
-			ValidMemData = 1;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			*/
-			
-			
-		clk = 0;
-		  //StatusRegisterVelues = 8'b01000010;
-		  //SPAddr = 124802;
-		   forever
-			begin
+		 rst = 1;
+		 #5 clk = ~clk;
+		 #5 clk = ~clk;
+		 rst = 0;
+		    StatusRegisterVelues = 8'b00000000;
 			 #5 clk = ~clk;
-			 rst = clk;
-		      ALU_Sel = 1;
-				DecoderData = 250;// ¯adnych liczb ujemnych!!!
-		      A = 199;//1431655765;//4294967295;
-		      B = 5;
+		    #5 clk = ~clk;
+		    //SPAddr = 124802;			
+		      ALU_Sel = 49;
+				DecoderData = 5;// ¯adnych liczb ujemnych!!!
+		      A = -337;//1431655765;//4294967295;
+		      B = 28;
+				/*
+				SPAddr = 555;
+				
+				#5 clk = ~clk;
+				#5 clk = ~clk;
+				#5 clk = ~clk;
+				#5 clk = ~clk;
+				//DataInput = 333;
+				#5 clk = ~clk;
+				#5 clk = ~clk;
+				ValidMemData = 1;
+				#5 clk = ~clk;
+				#5 clk = ~clk;
+				ValidMemData = 0;
+				*/
+				forever
+			begin
+			#5 clk = ~clk;
 			end
 		// Add stimulus here
 	end
@@ -136,37 +124,26 @@ module ALU_TB;
 endmodule
 
 /*
-        clk = 0;
-		  counter = 0;
-		  //StatusRegisterVelues = 8'b01000010;
-		  //SPAddr = 124802;
-		   forever
-			begin
-			 #5 clk = ~clk;
-			 if(MenagePC == 1 && counter == 0 && clk == 0)
-		     begin
-		      ALU_Sel = 48;
-				DecoderData = 250;// ¯adnych liczb ujemnych!!!
-		      A = 199;//1431655765;//4294967295;
-		      B = 5;
-				counter=counter + 8'd1;
-		     end
-			end
-		// Add stimulus here
-		
-*************************************************************************		
-		
-		clk = 0;
-		  //StatusRegisterVelues = 8'b01000010;
-		  //SPAddr = 124802;
-		   forever
-			begin
-			 #5 clk = ~clk;
-			   rst = clk;
-		      ALU_Sel = 37;
-				DecoderData = 250;// ¯adnych liczb ujemnych!!!
-		      //A = 199;//1431655765;//4294967295;
-		     // B = 5;
-			end
-		// Add stimulus here
-		*/
+				#5 clk = ~clk;
+		      #5 clk = ~clk;
+				#5 clk = ~clk;
+		      #5 clk = ~clk;
+				#5 clk = ~clk;
+		      #5 clk = ~clk;
+				ALU_Sel = 33;
+				StatusRegisterVelues = 8'b00000000;
+				DecoderData = 335;// ¯adnych liczb ujemnych!!!
+		      A = 395;//1431655765;//4294967295;
+		      B = 10;
+				#5 clk = ~clk;
+		      #5 clk = ~clk;
+				#5 clk = ~clk;
+		      #5 clk = ~clk;
+				#5 clk = ~clk;
+		      #5 clk = ~clk;
+				ALU_Sel = 33;
+				StatusRegisterVelues = 8'b00000000;
+				DecoderData = 335;// ¯adnych liczb ujemnych!!!
+		      A = 8;//1431655765;//4294967295;
+		      B = 8;
+*/

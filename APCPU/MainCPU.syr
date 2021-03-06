@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: MainCPU.prj
@@ -122,7 +122,6 @@ Parsing module <AP>.
 Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" into library work
 Parsing module <ALU>.
 Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\MainCPU.vf" into library work
-Parsing module <IFD_HXILINX_MainCPU>.
 Parsing module <MainCPU>.
 Analyzing Verilog file "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Main.vf" into library work
 Parsing module <Main>.
@@ -137,9 +136,9 @@ Elaborating module <ALU>.
 WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 126: Result of 2-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 278: Result of 34-bit expression is truncated to fit in 33-bit target.
 WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 292: Result of 34-bit expression is truncated to fit in 33-bit target.
-WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 627: Result of 24-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 644: Result of 32-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 650: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 638: Result of 24-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 657: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\ALU.v" Line 664: Result of 32-bit expression is truncated to fit in 8-bit target.
 
 Elaborating module <AP>.
 WARNING:HDLCompiler:413 - "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\AP.v" Line 37: Result of 4-bit expression is truncated to fit in 3-bit target.
@@ -156,11 +155,9 @@ Elaborating module <PC>.
 
 Elaborating module <MemoryController>.
 
-Elaborating module <OR3>.
-
 Elaborating module <INV>.
 
-Elaborating module <IFD_HXILINX_MainCPU(INIT=1'b0)>.
+Elaborating module <OR4>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -168,7 +165,6 @@ Elaborating module <IFD_HXILINX_MainCPU(INIT=1'b0)>.
 
 Synthesizing Unit <MainCPU>.
     Related source file is "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\MainCPU.vf".
-    Set property "HU_SET = XLXI_57_0" for instance <XLXI_57>.
     Summary:
 	no macro.
 Unit <MainCPU> synthesized.
@@ -203,26 +199,26 @@ Synthesizing Unit <ALU>.
     Found 25-bit subtractor for signal <GND_2_o_GND_2_o_sub_25_OUT> created at line 182.
     Found 33-bit subtractor for signal <GND_2_o_GND_2_o_sub_26_OUT> created at line 182.
     Found 25-bit subtractor for signal <GND_2_o_GND_2_o_sub_27_OUT> created at line 184.
-    Found 32-bit subtractor for signal <n0281> created at line 186.
+    Found 32-bit subtractor for signal <n0280> created at line 186.
     Found 33-bit subtractor for signal <GND_2_o_GND_2_o_sub_32_OUT> created at line 197.
-    Found 32-bit subtractor for signal <n0283> created at line 200.
+    Found 32-bit subtractor for signal <n0282> created at line 200.
     Found 33-bit subtractor for signal <GND_2_o_GND_2_o_sub_36_OUT> created at line 212.
     Found 33-bit subtractor for signal <GND_2_o_GND_2_o_sub_37_OUT> created at line 212.
     Found 32-bit subtractor for signal <ArgB[31]_GND_2_o_sub_40_OUT> created at line 216.
-    Found 32-bit subtractor for signal <n0287> created at line 216.
-    Found 32-bit subtractor for signal <ArgA[31]_unary_minus_123_OUT> created at line 687.
-    Found 33-bit adder for signal <n0463> created at line 107.
+    Found 32-bit subtractor for signal <n0286> created at line 216.
+    Found 32-bit subtractor for signal <ArgA[31]_unary_minus_123_OUT> created at line 702.
+    Found 33-bit adder for signal <n0460> created at line 107.
     Found 33-bit adder for signal <BUS_0003_GND_2_o_add_7_OUT> created at line 122.
-    Found 33-bit adder for signal <n0469> created at line 137.
+    Found 33-bit adder for signal <n0466> created at line 137.
     Found 33-bit adder for signal <BUS_0009_GND_2_o_add_16_OUT> created at line 152.
-    Found 32-bit adder for signal <n0276> created at line 156.
-    Found 25-bit adder for signal <n0476[24:0]> created at line 341.
-    Found 32x24-bit multiplier for signal <n0288> created at line 227.
-    Found 32x32-bit multiplier for signal <n0289> created at line 242.
+    Found 32-bit adder for signal <n0275> created at line 156.
+    Found 25-bit adder for signal <n0473[24:0]> created at line 342.
+    Found 32x24-bit multiplier for signal <n0287> created at line 227.
+    Found 32x32-bit multiplier for signal <n0288> created at line 242.
     Found 32-bit shifter logical left for signal <ArgA[31]_DataFromDecoder[23]_shift_left_49_OUT> created at line 271
-    Found 34-bit shifter logical left for signal <n0293> created at line 278
+    Found 34-bit shifter logical left for signal <n0292> created at line 278
     Found 32-bit shifter logical right for signal <ArgA[31]_DataFromDecoder[23]_shift_right_51_OUT> created at line 285
-    Found 34-bit shifter logical right for signal <n0295> created at line 292
+    Found 34-bit shifter logical right for signal <n0294> created at line 292
     Found 1-bit tristate buffer for signal <DataIO<31>> created at line 57
     Found 1-bit tristate buffer for signal <DataIO<30>> created at line 57
     Found 1-bit tristate buffer for signal <DataIO<29>> created at line 57
@@ -258,20 +254,19 @@ Synthesizing Unit <ALU>.
     Found 32-bit comparator greater for signal <ArgA[31]_GND_2_o_LessThan_23_o> created at line 169
     Found 32-bit comparator greater for signal <ArgA[31]_GND_2_o_LessThan_28_o> created at line 184
     Found 32-bit comparator greater for signal <ArgA[31]_ArgB[31]_LessThan_33_o> created at line 198
-    Found 32-bit comparator greater for signal <ArgA[31]_ArgB[31]_LessThan_93_o> created at line 441
-    Found 32-bit comparator equal for signal <ArgA[31]_ArgB[31]_equal_94_o> created at line 454
-    Found 32-bit comparator greater for signal <ArgB[31]_ArgA[31]_LessThan_95_o> created at line 459
-    Found 33-bit comparator equal for signal <ArgA[31]_ArgB[31]_equal_97_o> created at line 477
-    Found 33-bit comparator greater for signal <ArgA[31]_ArgB[31]_LessThan_98_o> created at line 482
-    Found 33-bit comparator equal for signal <ArgA[31]_ArgB[31]_equal_99_o> created at line 495
-    Found 33-bit comparator greater for signal <ArgB[31]_ArgA[31]_LessThan_100_o> created at line 500
-    Found 32-bit comparator equal for signal <ArgA[31]_GND_2_o_equal_104_o> created at line 536
-    Found 32-bit comparator greater for signal <GND_2_o_ArgA[31]_LessThan_105_o> created at line 541
+    Found 32-bit comparator greater for signal <ArgA[31]_ArgB[31]_LessThan_93_o> created at line 450
+    Found 32-bit comparator equal for signal <ArgA[31]_ArgB[31]_equal_94_o> created at line 463
+    Found 32-bit comparator greater for signal <ArgB[31]_ArgA[31]_LessThan_95_o> created at line 468
+    Found 33-bit comparator greater for signal <ArgA[31]_ArgB[31]_LessThan_98_o> created at line 492
+    Found 33-bit comparator equal for signal <ArgA[31]_ArgB[31]_equal_99_o> created at line 505
+    Found 33-bit comparator greater for signal <ArgB[31]_ArgA[31]_LessThan_100_o> created at line 510
+    Found 32-bit comparator equal for signal <ArgA[31]_GND_2_o_equal_104_o> created at line 547
+    Found 32-bit comparator greater for signal <GND_2_o_ArgA[31]_LessThan_105_o> created at line 552
     Summary:
 	inferred   2 Multiplier(s).
 	inferred  18 Adder/Subtractor(s).
 	inferred 285 D-type flip-flop(s).
-	inferred  12 Comparator(s).
+	inferred  11 Comparator(s).
 	inferred  40 Multiplexer(s).
 	inferred   4 Combinational logic shifter(s).
 	inferred  32 Tristate(s).
@@ -715,24 +710,26 @@ Unit <AP> synthesized.
 
 Synthesizing Unit <Decoder>.
     Related source file is "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\Decoder.v".
+    Found 8-bit register for signal <AluCode>.
     Found 24-bit register for signal <DecoderData>.
     Found 3-bit register for signal <RegSelX>.
     Found 3-bit register for signal <RegSelZ>.
     Found 3-bit register for signal <RegSelY>.
-    Found 8-bit register for signal <AluCode>.
+    Found 1-bit register for signal <DataACKOut>.
     Summary:
-	inferred  41 D-type flip-flop(s).
+	inferred  42 D-type flip-flop(s).
 Unit <Decoder> synthesized.
 
 Synthesizing Unit <GPReg>.
     Related source file is "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\GPReg.v".
-    Found 32-bit register for signal <B>.
-    Found 256-bit register for signal <n0027[255:0]>.
     Found 32-bit register for signal <A>.
-    Found 32-bit 8-to-1 multiplexer for signal <SelX[2]_Accumulator[7][31]_wide_mux_2_OUT> created at line 38.
-    Found 32-bit 8-to-1 multiplexer for signal <SelY[2]_Accumulator[7][31]_wide_mux_3_OUT> created at line 39.
+    Found 32-bit register for signal <B>.
+    Found 256-bit register for signal <n0029[255:0]>.
+    Found 1-bit register for signal <DataACKOut>.
+    Found 32-bit 8-to-1 multiplexer for signal <SelX[2]_Accumulator[7][31]_wide_mux_2_OUT> created at line 41.
+    Found 32-bit 8-to-1 multiplexer for signal <SelY[2]_Accumulator[7][31]_wide_mux_3_OUT> created at line 42.
     Summary:
-	inferred 320 D-type flip-flop(s).
+	inferred 321 D-type flip-flop(s).
 	inferred  10 Multiplexer(s).
 Unit <GPReg> synthesized.
 
@@ -779,6 +776,7 @@ Synthesizing Unit <MemoryController>.
     Found 1-bit register for signal <ValidMemoryData>.
     Found 32-bit register for signal <EDBDrive>.
     Found 32-bit register for signal <IDBDrive>.
+    Found 1-bit register for signal <ExchangeACK>.
     Found finite state machine <FSM_0> for signal <ExternalDrive>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -792,119 +790,110 @@ Synthesizing Unit <MemoryController>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit tristate buffer for signal <ExternalDataBus<31>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<30>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<29>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<28>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<27>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<26>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<25>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<24>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<23>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<22>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<21>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<20>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<19>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<18>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<17>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<16>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<15>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<14>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<13>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<12>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<11>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<10>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<9>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<8>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<7>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<6>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<5>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<4>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<3>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<2>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<1>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalDataBus<0>> created at line 39
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<31>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<30>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<29>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<28>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<27>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<26>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<25>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<24>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<23>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<22>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<21>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<20>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<19>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<18>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<17>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<16>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<15>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<14>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<13>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<12>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<11>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<10>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<9>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<8>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<7>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<6>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<5>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<4>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<3>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<2>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<1>> created at line 40
-    Found 1-bit tristate buffer for signal <ExternalAddressBus<0>> created at line 40
-    Found 1-bit tristate buffer for signal <InternalDataBus<31>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<30>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<29>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<28>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<27>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<26>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<25>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<24>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<23>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<22>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<21>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<20>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<19>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<18>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<17>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<16>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<15>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<14>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<13>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<12>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<11>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<10>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<9>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<8>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<7>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<6>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<5>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<4>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<3>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<2>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<1>> created at line 41
-    Found 1-bit tristate buffer for signal <InternalDataBus<0>> created at line 41
-    Found 32-bit comparator equal for signal <ExternalDataBus[31]_InternalDataBus[31]_equal_24_o> created at line 86
+    Found 1-bit tristate buffer for signal <ExternalDataBus<31>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<30>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<29>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<28>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<27>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<26>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<25>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<24>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<23>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<22>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<21>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<20>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<19>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<18>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<17>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<16>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<15>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<14>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<13>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<12>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<11>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<10>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<9>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<8>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<7>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<6>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<5>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<4>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<3>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<2>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<1>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalDataBus<0>> created at line 40
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<31>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<30>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<29>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<28>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<27>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<26>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<25>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<24>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<23>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<22>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<21>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<20>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<19>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<18>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<17>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<16>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<15>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<14>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<13>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<12>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<11>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<10>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<9>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<8>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<7>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<6>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<5>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<4>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<3>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<2>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<1>> created at line 41
+    Found 1-bit tristate buffer for signal <ExternalAddressBus<0>> created at line 41
+    Found 1-bit tristate buffer for signal <InternalDataBus<31>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<30>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<29>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<28>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<27>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<26>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<25>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<24>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<23>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<22>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<21>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<20>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<19>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<18>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<17>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<16>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<15>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<14>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<13>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<12>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<11>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<10>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<9>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<8>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<7>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<6>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<5>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<4>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<3>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<2>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<1>> created at line 42
+    Found 1-bit tristate buffer for signal <InternalDataBus<0>> created at line 42
+    Found 32-bit comparator equal for signal <ExternalDataBus[31]_InternalDataBus[31]_equal_24_o> created at line 88
     Summary:
-	inferred 131 D-type flip-flop(s).
+	inferred 132 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 	inferred   6 Multiplexer(s).
 	inferred  96 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <MemoryController> synthesized.
-
-Synthesizing Unit <IFD_HXILINX_MainCPU>.
-    Related source file is "E:\Adam\GitHubLocallReopsitory\EngineerSoftCPU\APCPU\MainCPU.vf".
-        INIT = 1'b0
-    Set property "IOB = TRUE" for signal <Q>.
-    Found 1-bit register for signal <Q>.
-    Summary:
-	inferred   1 D-type flip-flop(s).
-Unit <IFD_HXILINX_MainCPU> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -955,8 +944,8 @@ Macro Statistics
  62-bit adder                                          : 6
  63-bit adder                                          : 6
  64-bit adder                                          : 6
-# Registers                                            : 37
- 1-bit register                                        : 7
+# Registers                                            : 39
+ 1-bit register                                        : 9
  2-bit register                                        : 2
  24-bit register                                       : 2
  256-bit register                                      : 1
@@ -965,11 +954,11 @@ Macro Statistics
  4-bit register                                        : 1
  64-bit register                                       : 1
  8-bit register                                        : 5
-# Comparators                                          : 145
+# Comparators                                          : 144
  32-bit comparator equal                               : 3
  32-bit comparator greater                             : 6
  32-bit comparator lessequal                           : 12
- 33-bit comparator equal                               : 2
+ 33-bit comparator equal                               : 1
  33-bit comparator greater                             : 2
  33-bit comparator lessequal                           : 4
  34-bit comparator lessequal                           : 4
@@ -1062,13 +1051,13 @@ Macro Statistics
  32-bit subtractor                                     : 7
  33-bit adder                                          : 4
  33-bit subtractor                                     : 5
-# Registers                                            : 854
- Flip-Flops                                            : 854
-# Comparators                                          : 145
+# Registers                                            : 856
+ Flip-Flops                                            : 856
+# Comparators                                          : 144
  32-bit comparator equal                               : 3
  32-bit comparator greater                             : 6
  32-bit comparator lessequal                           : 12
- 33-bit comparator equal                               : 2
+ 33-bit comparator equal                               : 1
  33-bit comparator greater                             : 2
  33-bit comparator lessequal                           : 4
  34-bit comparator lessequal                           : 4
@@ -1133,13 +1122,11 @@ Optimizing FSM <XLXI_13/FSM_0> on signal <ExternalDrive[1:2]> with sequential en
  010   | 10
  011   | 11
 -------------------
+WARNING:Xst:2677 - Node <Mmult_n02873> of sequential type is unconnected in block <ALU>.
 WARNING:Xst:2677 - Node <Mmult_n02883> of sequential type is unconnected in block <ALU>.
-WARNING:Xst:2677 - Node <Mmult_n02893> of sequential type is unconnected in block <ALU>.
 WARNING:Xst:2040 - Unit MainCPU: 32 multi-source signals are replaced by logic (pull-up yes): InternalDataBus<0>_MLTSRCEDGE, InternalDataBus<10>_MLTSRCEDGE, InternalDataBus<11>_MLTSRCEDGE, InternalDataBus<12>_MLTSRCEDGE, InternalDataBus<13>_MLTSRCEDGE, InternalDataBus<14>_MLTSRCEDGE, InternalDataBus<15>_MLTSRCEDGE, InternalDataBus<16>_MLTSRCEDGE, InternalDataBus<17>_MLTSRCEDGE, InternalDataBus<18>_MLTSRCEDGE, InternalDataBus<19>_MLTSRCEDGE, InternalDataBus<1>_MLTSRCEDGE, InternalDataBus<20>_MLTSRCEDGE, InternalDataBus<21>_MLTSRCEDGE, InternalDataBus<22>_MLTSRCEDGE, InternalDataBus<23>_MLTSRCEDGE, InternalDataBus<24>_MLTSRCEDGE, InternalDataBus<25>_MLTSRCEDGE, InternalDataBus<26>_MLTSRCEDGE, InternalDataBus<27>_MLTSRCEDGE, InternalDataBus<28>_MLTSRCEDGE, InternalDataBus<29>_MLTSRCEDGE, InternalDataBus<2>_MLTSRCEDGE, InternalDataBus<30>_MLTSRCEDGE, InternalDataBus<31>_MLTSRCEDGE, InternalDataBus<3>_MLTSRCEDGE, InternalDataBus<4>_MLTSRCEDGE, InternalDataBus<5>_MLTSRCEDGE, InternalDataBus<6>_MLTSRCEDGE, InternalDataBus<7>_MLTSRCEDGE, InternalDataBus<8>_MLTSRCEDGE, InternalDataBus<9>_MLTSRCEDGE.
 
 Optimizing unit <SR> ...
-
-Optimizing unit <IFD_HXILINX_MainCPU> ...
 
 Optimizing unit <MainCPU> ...
 
@@ -1198,11 +1185,11 @@ FlipFlop XLXI_6/ArgB_14 has been replicated 4 time(s)
 FlipFlop XLXI_6/ArgB_15 has been replicated 3 time(s)
 FlipFlop XLXI_6/ArgB_16 has been replicated 4 time(s)
 FlipFlop XLXI_6/ArgB_17 has been replicated 4 time(s)
-FlipFlop XLXI_6/ArgB_18 has been replicated 3 time(s)
-FlipFlop XLXI_6/ArgB_19 has been replicated 3 time(s)
+FlipFlop XLXI_6/ArgB_18 has been replicated 4 time(s)
+FlipFlop XLXI_6/ArgB_19 has been replicated 4 time(s)
 FlipFlop XLXI_6/ArgB_2 has been replicated 2 time(s)
 FlipFlop XLXI_6/ArgB_20 has been replicated 4 time(s)
-FlipFlop XLXI_6/ArgB_21 has been replicated 3 time(s)
+FlipFlop XLXI_6/ArgB_21 has been replicated 4 time(s)
 FlipFlop XLXI_6/ArgB_22 has been replicated 4 time(s)
 FlipFlop XLXI_6/ArgB_23 has been replicated 4 time(s)
 FlipFlop XLXI_6/ArgB_24 has been replicated 4 time(s)
@@ -1227,8 +1214,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1009
- Flip-Flops                                            : 1009
+# Registers                                            : 1014
+ Flip-Flops                                            : 1014
 
 =========================================================================
 
@@ -1251,32 +1238,31 @@ Top Level Output File Name         : MainCPU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 17915
+# BELS                             : 17950
 #      GND                         : 1
 #      INV                         : 237
 #      LUT1                        : 127
-#      LUT2                        : 352
-#      LUT3                        : 1328
-#      LUT4                        : 2996
-#      LUT5                        : 3485
-#      LUT6                        : 2488
-#      MUXCY                       : 4207
-#      MUXF7                       : 107
-#      OR3                         : 1
+#      LUT2                        : 335
+#      LUT3                        : 1329
+#      LUT4                        : 3031
+#      LUT5                        : 3552
+#      LUT6                        : 2432
+#      MUXCY                       : 4196
+#      MUXF7                       : 123
+#      OR4                         : 1
 #      VCC                         : 1
 #      XORCY                       : 2585
-# FlipFlops/Latches                : 1009
-#      FD                          : 1
-#      FDE                         : 290
-#      FDR                         : 256
+# FlipFlops/Latches                : 1014
+#      FDE                         : 294
+#      FDR                         : 259
 #      FDRE                        : 458
-#      FDS                         : 4
+#      FDS                         : 3
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 325
+# IO Buffers                       : 326
 #      IBUF                        : 2
 #      IOBUF                       : 64
-#      OBUF                        : 259
+#      OBUF                        : 260
 # DSPs                             : 6
 #      DSP48A1                     : 6
 
@@ -1287,21 +1273,20 @@ Selected Device : 6slx75csg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1008  out of  93296     1%  
- Number of Slice LUTs:                11013  out of  46648    23%  
-    Number used as Logic:             11013  out of  46648    23%  
+ Number of Slice Registers:            1014  out of  93296     1%  
+ Number of Slice LUTs:                11043  out of  46648    23%  
+    Number used as Logic:             11043  out of  46648    23%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  11361
-   Number with an unused Flip Flop:   10353  out of  11361    91%  
-   Number with an unused LUT:           348  out of  11361     3%  
-   Number of fully used LUT-FF pairs:   660  out of  11361     5%  
+ Number of LUT Flip Flop pairs used:  11413
+   Number with an unused Flip Flop:   10399  out of  11413    91%  
+   Number with an unused LUT:           370  out of  11413     3%  
+   Number of fully used LUT-FF pairs:   644  out of  11413     5%  
    Number of unique control sets:        14
 
 IO Utilization: 
- Number of IOs:                         326
- Number of bonded IOBs:                 326  out of    328    99%  
-    IOB Flip Flops/Latches:               1
+ Number of IOs:                         327
+ Number of bonded IOBs:                 327  out of    328    99%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -1328,7 +1313,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 1015  |
+clk                                | BUFGP                  | 1020  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1340,9 +1325,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 122.689ns (Maximum Frequency: 8.151MHz)
-   Minimum input arrival time before clock: 8.500ns
-   Maximum output required time after clock: 7.319ns
-   Maximum combinational path delay: 8.472ns
+   Minimum input arrival time before clock: 8.501ns
+   Maximum output required time after clock: 7.357ns
+   Maximum combinational path delay: 8.473ns
 
 Timing Details:
 ---------------
@@ -1351,7 +1336,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 122.689ns (frequency: 8.151MHz)
-  Total number of paths / destination ports: 1108202270992713600000000000000000000000000000000000000 / 1972
+  Total number of paths / destination ports: 1108202270992713800000000000000000000000000000000000000 / 1980
 -------------------------------------------------------------------------
 Delay:               122.689ns (Levels of Logic = 449)
   Source:            XLXI_6/ArgB_0_1 (FF)
@@ -1820,9 +1805,9 @@ Delay:               122.689ns (Levels of Logic = 449)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 1533 / 1469
+  Total number of paths / destination ports: 1990 / 1475
 -------------------------------------------------------------------------
-Offset:              8.500ns (Levels of Logic = 3)
+Offset:              8.501ns (Levels of Logic = 3)
   Source:            rst (PAD)
   Destination:       XLXI_6/ArgA_31 (FF)
   Destination Clock: clk rising
@@ -1831,41 +1816,40 @@ Offset:              8.500ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           571   1.222   2.352  rst_IBUF (rst_IBUF)
-     OR3:I2->O           150   0.320   2.008  XLXI_54 (ALUrst_OBUF)
-     INV:I->O            300   0.206   2.071  XLXI_6/rst_inv1_INV_0 (XLXI_6/rst_inv)
-     FDE:CE                    0.322          XLXI_6/StatusRegVal_0
+     IBUF:I->O           574   1.222   2.353  rst_IBUF (rst_IBUF)
+     OR4:I2->O           150   0.320   2.008  XLXI_57 (ALUrst_OBUF)
+     INV:I->O            303   0.206   2.071  XLXI_6/rst_inv1_INV_0 (XLXI_6/rst_inv)
+     FDE:CE                    0.322          XLXI_6/ALUSelect_0
     ----------------------------------------
-    Total                      8.500ns (2.070ns logic, 6.430ns route)
-                                       (24.4% logic, 75.6% route)
+    Total                      8.501ns (2.070ns logic, 6.431ns route)
+                                       (24.3% logic, 75.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 515 / 322
+  Total number of paths / destination ports: 516 / 323
 -------------------------------------------------------------------------
-Offset:              7.319ns (Levels of Logic = 4)
-  Source:            XLXI_57/Q (FF)
+Offset:              7.357ns (Levels of Logic = 3)
+  Source:            XLXI_9/DataACKOut (FF)
   Destination:       ALUrst (PAD)
   Source Clock:      clk rising
 
-  Data Path: XLXI_57/Q to ALUrst
+  Data Path: XLXI_9/DataACKOut to ALUrst
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.447   0.579  Q (Q)
-     end scope: 'XLXI_57:Q'
-     INV:I->O              1   0.568   0.924  XLXI_55 (XLXN_267)
-     OR3:I1->O           150   0.223   2.008  XLXI_54 (ALUrst_OBUF)
+     FDE:C->Q              2   0.447   0.616  XLXI_9/DataACKOut (XLXI_9/DataACKOut)
+     INV:I->O              1   0.568   0.924  XLXI_55 (XLXN_284)
+     OR4:I1->O           150   0.223   2.008  XLXI_57 (ALUrst_OBUF)
      OBUF:I->O                 2.571          ALUrst_OBUF (ALUrst)
     ----------------------------------------
-    Total                      7.319ns (3.809ns logic, 3.510ns route)
-                                       (52.0% logic, 48.0% route)
+    Total                      7.357ns (3.809ns logic, 3.548ns route)
+                                       (51.8% logic, 48.2% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Delay:               8.472ns (Levels of Logic = 3)
+Delay:               8.473ns (Levels of Logic = 3)
   Source:            rst (PAD)
   Destination:       ALUrst (PAD)
 
@@ -1873,11 +1857,11 @@ Delay:               8.472ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           571   1.222   2.352  rst_IBUF (rst_IBUF)
-     OR3:I2->O           150   0.320   2.008  XLXI_54 (ALUrst_OBUF)
+     IBUF:I->O           574   1.222   2.353  rst_IBUF (rst_IBUF)
+     OR4:I2->O           150   0.320   2.008  XLXI_57 (ALUrst_OBUF)
      OBUF:I->O                 2.571          ALUrst_OBUF (ALUrst)
     ----------------------------------------
-    Total                      8.472ns (4.113ns logic, 4.359ns route)
+    Total                      8.473ns (4.113ns logic, 4.360ns route)
                                        (48.5% logic, 51.5% route)
 
 =========================================================================
@@ -1896,12 +1880,12 @@ clk            |  122.689|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 79.00 secs
-Total CPU time to Xst completion: 79.14 secs
+Total REAL time to Xst completion: 68.00 secs
+Total CPU time to Xst completion: 67.62 secs
  
 --> 
 
-Total memory usage is 366508 kilobytes
+Total memory usage is 371628 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   10 (   0 filtered)

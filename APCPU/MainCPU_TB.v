@@ -61,8 +61,9 @@ module MainCPU_MainCPU_sch_tb();
 		.ALUrst(ALUrst)
    );
 // Initialize Inputs
+reg rw;
 reg [31:0] EAB, EDB, IDB;
-assign ExternalDataBus = EDB;
+assign ExternalDataBus = rw? EDB : 32'dz;
 assign ExternalAddressBus = EAB;
        initial
 	begin
@@ -71,6 +72,7 @@ assign ExternalAddressBus = EAB;
 		rst = 0;
 	   EAB = 0;
 		EDB = 0;
+		rw = 1;
 		ExternalExchangeReady = 0;
 		#100
 		#5 clk = ~clk;
@@ -92,7 +94,86 @@ assign ExternalAddressBus = EAB;
 		#5 clk = ~clk;
 	//Drive
 	//*************************
-	   //Pierwsza instrukcja
+	 //Pierwsza instrukcja
+		EDB = 3365; //LDI 13: 110100100101
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 1;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 0;
+		while(GetInstruction == 0)
+		begin
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		end
+		//Druga instrukcja
+		ExternalExchangeReady = 1;
+		EDB = 297; //SAP 1: 100101001
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 0;
+		while(GetInstruction == 0)
+		begin
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		end
+		//Trzecia instrukcja
+		ExternalExchangeReady = 1;
+		EDB = 2597; //LDI 10: 101000100101
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 0;
+		while(GetInstruction == 0)
+		begin
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		end
+		//Czwarta instrukcja
+		ExternalExchangeReady = 1;
+		EDB = 34819; //Add 0, 1, 2: 100001000000000011
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 0;
+		while(GetInstruction == 0)
+		begin
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		end
+		//Pi¹ta instrukcja
+		ExternalExchangeReady = 1;
+		EDB = 5159; //ST 4, 2: 1010000100111
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 0;
+		rw = 0;
+		while(GetInstruction == 0)
+		begin
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		end
+		//End of instructions
+		forever 
+		begin
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		end
+   end
+endmodule
+/*
+//Pierwsza instrukcja
 		EDB = 1281;
 		#5 clk = ~clk;
 		#5 clk = ~clk;
@@ -142,5 +223,80 @@ assign ExternalAddressBus = EAB;
 		#5 clk = ~clk;
 		#5 clk = ~clk;
 		end
-   end
-endmodule
+*/
+
+/* **********************************
+ //Pierwsza instrukcja
+		EDB = 3365; //LDI 13: 110100100101
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 1;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 0;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		//Druga instrukcja
+		ExternalExchangeReady = 1;
+		EDB = 297; //SAP 1: 100101001
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 0;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		//Trzecia instrukcja
+		ExternalExchangeReady = 1;
+		EDB = 2597; //LDI 10: 101000100101
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 0;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		//Czwarta instrukcja
+		ExternalExchangeReady = 1;
+		EDB = 34819; //Add 0, 1, 2: 100001000000000011
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 0;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		EDB = 5159; //ST 4, 2: 1010000100111
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		ExternalExchangeReady = 0;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+
+*/

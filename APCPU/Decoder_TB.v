@@ -59,20 +59,39 @@ module Decoder_TB;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-		#5
-		rst = 1;
-		#5
-		rst = 0;
-		forever
-		  begin
+		#5 clk = ~clk;
+		#5 rst = 1;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+		#5 rst = 0;
 		   #5 clk = ~clk;
-			InstructionBus = 32'd12802;
+			InstructionBus = 32'd8706;//ADDIMC 34
+			APSelBus =3;
 			#5 clk = ~clk;
-			InstructionBus = 32'd17994755;
+			#5 clk = ~clk;
+			InstructionBus = 32'd22276;// ADDC 7, 2, 1
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			InstructionBus = 32'd12814;// SHLC 2, 6
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			InstructionBus = 32'd8979; // OR 3, 4
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			InstructionBus = 32'd537; // JPR 2
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			InstructionBus = 32'd547; // POP 2
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			InstructionBus = 32'd10788; // LD 2 5
+			forever
+		  begin
+			#5 clk = ~clk;
 			#5 clk = ~clk;
         end
 		// Add stimulus here
-
 	end
       
 endmodule

@@ -32,7 +32,7 @@ module SR_TB;
 	// Outputs
 	wire [7:0] SRData;
    
-	reg [7:0] SRRead; // To check if readings are 1 cycle delayed
+	//reg [7:0] SRRead; // To check if readings are 1 cycle delayed
 	// Instantiate the Unit Under Test (UUT)
 	SR uut (
 		.clk(clk), 
@@ -49,46 +49,47 @@ module SR_TB;
 		// Wait 100 ns for global reset to finish
 		#100;
         rst = 1;
-		  #5
-		  rst = 0;
+		   #5 clk = ~clk;
+			#5 clk = ~clk;
+		  #5 rst = 0;
 		// Add stimulus here
-		  forever
-		  begin
 		   #5 clk = ~clk;
 			SRSet = 0;
-			SRRead = SRData;
+		//	SRRead = SRData;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			SRSet = 1;
-			SRRead = SRData;
+		//	SRRead = SRData;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			SRSet = 2;
-			SRRead = SRData;
+			SRSet = 255;
+		//	SRRead = SRData;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			SRSet = 3;
-			SRRead = SRData;
+			SRSet = 37;
+		//	SRRead = SRData;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			SRSet = 4;
-			SRRead = SRData;
+			SRSet = 42;
+		//	SRRead = SRData;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			SRSet = 5;
-			SRRead = SRData;
+			SRSet = 176;
+		//	SRRead = SRData;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			SRSet = 6;
-			SRRead = SRData;
+			SRSet = 223;
+		//	SRRead = SRData;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			SRSet = 7;
-			SRRead = SRData;
+		//	SRRead = SRData;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			SRSet = 8;
-			SRRead = SRData;
+			SRSet = 11;
+		//	SRRead = SRData;
+			forever
+		  begin
 			#5 clk = ~clk;
 			#5 clk = ~clk;
          end

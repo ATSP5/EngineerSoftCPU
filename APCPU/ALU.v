@@ -17,26 +17,26 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module ALU( input wire clk, // Clock signal
-            input wire rst, // Reset signal Pod³¹czyæ do clk!
-            input wire [31:0] A, // ALU 32-bit Input 
-            input wire [31:0] B,  // ALU 32-bit Input                 
-            input wire [7:0] ALU_Sel,// ALU Selection
-			   input wire ValidMemData, //Valid data from memory signal
-			   input wire [23:0] DecoderData, //Data from decoder
-			   input wire [7:0] StatusRegisterVelues, //Value of status register | C -Carry | N - Negative | x | x | x | x | CPI1 - Compare Index 1 | CPI0 - Compare Index 0 | (x'es to be used in another version of CPU)
+module ALU( input wire clk, // Sygna³ zegarowy
+            input wire rst, // Reset
+            input wire [31:0] A, // ALU 32-bit WE 
+            input wire [31:0] B,  // ALU 32-bit WE                 
+            input wire [7:0] ALU_Sel,// Wybór instrukcji
+			   input wire ValidMemData, //Sygna³ typu ACK z pamiêci
+			   input wire [23:0] DecoderData, //Dane z dekodera
+			   input wire [7:0] StatusRegisterVelues, //Wartoœci rejestru SR | C -Carry | N - Negative | x | x | x | x | CPI1 - Compare Index 1 | CPI0 - Compare Index 0 | (x'es to be used in another version of CPU)
 				input wire [31:0] SPAddr, // Adres w rejestrze SP
 				
-			   inout wire [31:0] DataIO,//Data from/to memory / General Register
+			   inout wire [31:0] DataIO,//Dane z/do pamiêci / rejestrów ogólnego przeznaczenia
 				
-			   output reg [31:0] SetSP,//Set Stack Pointer
-			   output reg [1:0] InDecSP,//Increment/Decrement SP 00 - Do nothing 01 - Increment 10 - Decrement 11 - Set SP 
-			   output reg [1:0] MemIO,//Menage data bus, 00-NOP, 01- Read from Mem, 10- Write to Mem 11 - Data to General Registers
-            output reg [31:0] ALUAddr, //Send Addres to Memory controler
-            output reg [2:0] MenagePC, //Menage Program Counter 000 - Do nothing, 001 - inc, 010 - dec, 011 - set 100 - add to current
-            output reg [31:0] PCSet,//Set addres to PC 	
-            output reg [7:0] SetSR,//Set Status Register
-            output reg [3:0] SetAP//Set Acumulator Pointer 			  
+			   output reg [31:0] SetSP,//Ustaw SP
+			   output reg [1:0] InDecSP,//Inkrementuj/Dekrementuj SP 00 - Nie rób nic 01 - Inkrementuj 10 - Dekrementuj 11 - Ustaw SP 
+			   output reg [1:0] MemIO,//Za¿¹dzaj wewnêtrzn¹ magistral¹ danych, 00-Nie rób nic, 01- Odczyt z pamiêci, 10- Zapis do pamiêci 11 - Dane do rejestrów ogólnego przeznaczenia
+            output reg [31:0] ALUAddr, //Adres do kontrolera pamiêci
+            output reg [2:0] MenagePC, //Za¿¹dzaj PC 000 - Nie rób nic, 001 - inc, 010 - dec, 011 - ustaw 100 - dodaj do wartoœci bierz¹cej
+            output reg [31:0] PCSet,//Ustaw adres do PC 	
+            output reg [7:0] SetSR,//Ustaw SR
+            output reg [3:0] SetAP//Ustaw AP 			  
     );
            
 			  reg [31:0] ArgA;
@@ -51,14 +51,9 @@ module ALU( input wire clk, // Clock signal
 			  //reg [31:0] ReadDataBus;
 			  reg [2:0] PCReset;
 			  reg oe; //Zezwolenie na wyjœciowy kierunek DataIO
-			  //Rejestry wewnêtrzne:
-			  //reg [7:0] EndWaitCode;// Rejestr zawieraj¹cy kod powrotu z instrukcji oczekiwania
-			  //Przypisz linii IO danych, rejestr danych:
+			  
         assign DataIO = oe ? DataBus : 32'dz;
-		  //assign DataIO = DataBus;
-		  //assign ReadDataBus = DataIO;
-		  //assign oe = 0;
-		  //Dla ka¿dego cyklu:
+		  
      always @(posedge clk)
       begin
 		 //Ustaw wszystkie wyjœcia jako logiczne 0 przy ka¿dym cyklu zegara!!!
@@ -70,10 +65,10 @@ module ALU( input wire clk, // Clock signal
         ALUAddr <= 32'd0;
         MenagePC <= 3'd0;
         PCSet <= 32'd0;
-        SetSR <= 8'd0; // Hmm czy aby na pewno??? Trza to ustaliæ.
+        SetSR <= 8'd0; 
         SetAP <= 4'd0;
 		  DataBus <= 32'd0;
-		  oe <= 1'b1;
+		  oe <= 1'b0;
 		 end
 		 else
 		  begin
@@ -338,21 +333,24 @@ module ALU( input wire clk, // Clock signal
 			 8'd23: // RJP
 		    begin
 			 oe <= 1'b0;
+			 MemIO <= 2'b00;
 		     PCSet <= (DataFromDecoder + 23'd1);
 			  MenagePC <= 3'b100;
           end
 			 8'd24: // JP
 		    begin
 			 oe <= 1'b0;
+			 MemIO <= 2'b00;
 		     PCSet <= DataFromDecoder;
 			  MenagePC <= 3'b011;
           end
 			 8'd25: // JPR 
 		    begin
 			  oe <= 1'b0;
+			  MemIO <= 2'b00;
 			  if(ValidMemoryData == 1'b1)
 			   begin
-				 PCSet <= DataIO;// Tu chyba powinno byæ DataIO, sprawdzimy !!!
+				 PCSet <= DataIO;// 
 				 MenagePC <= 3'd3;// Go to instruction
 				 MemIO <= 2'd0;
 				 ALUAddr <= 32'd0;
@@ -366,6 +364,7 @@ module ALU( input wire clk, // Clock signal
 			 8'd26: // JEQ
 		    begin
 			 oe <= 1'b0;
+			 MemIO <= 2'b00;
 		     if(StatusRegVal[1] == 1'b1 && StatusRegVal[0] == 1'b1)
 			    begin 
 				  PCSet <= DataFromDecoder;
@@ -379,6 +378,7 @@ module ALU( input wire clk, // Clock signal
 			 8'd27: // JG
 		    begin
 			 oe <= 1'b0;
+			 MemIO <= 2'b00;
 		     if(StatusRegVal[1] == 1'b1 && StatusRegVal[0] == 1'b0)
 			    begin 
 				  PCSet <= DataFromDecoder;
@@ -392,6 +392,7 @@ module ALU( input wire clk, // Clock signal
 			 8'd28: // JL
 		    begin
 			 oe <= 1'b0;
+			 MemIO <= 2'b00;
 		     if(StatusRegVal[1] == 1'b0 && StatusRegVal[0] == 1'b1)
 			    begin 
 				  PCSet <= DataFromDecoder;
@@ -405,6 +406,7 @@ module ALU( input wire clk, // Clock signal
 			 8'd29: // JGEQ
 		    begin
 			 oe <= 1'b0;
+			 MemIO <= 2'b00;
 		     if(StatusRegVal[1] == 1'b1 && (StatusRegVal[0] == 1'b1 || StatusRegVal[0] == 1'b0))
 			    begin 
 				  PCSet <= DataFromDecoder;
@@ -418,6 +420,7 @@ module ALU( input wire clk, // Clock signal
 			 8'd30: // JLEQ
 		    begin
 			 oe <= 1'b0;
+			 MemIO <= 2'b00;
 		     if((StatusRegVal[1] == 1'b1 || StatusRegVal[1] == 1'b0)&& StatusRegVal[0] == 1'b1)
 			    begin 
 				  PCSet <= DataFromDecoder;
@@ -431,6 +434,7 @@ module ALU( input wire clk, // Clock signal
 			 8'd31: // CP
 		    begin
 			 oe <= 1'b0;
+			 MemIO <= 2'b00;
 			 if(StatusRegVal[6]== 1'b1)
 			 begin
            	if($signed(ArgA) == $signed(ArgB))
@@ -472,6 +476,7 @@ module ALU( input wire clk, // Clock signal
 			 8'd32: // CPC
 			 begin
 			 oe <= 1'b0;
+			 MemIO <= 2'b00;
 			  if(StatusRegVal[6]== 1'b1)
 			   begin
 				  if($signed({ArgA,StatusRegVal[7]}) == $signed({ArgB,1'b0}))
@@ -492,12 +497,12 @@ module ALU( input wire clk, // Clock signal
 				end
 			  else
 			   begin
-		     if({ArgA,StatusRegVal[1]} == {ArgB,1'b0})
+		     if({ArgA,StatusRegVal[7]} == {ArgB,1'b0})
 			   begin
 				 SetSR[1] <=1'b1;
 				 SetSR[0] <=1'b1;
 				end
-				else if({ArgA,StatusRegVal[1]} > {ArgB,1'b0})
+				else if({ArgA,StatusRegVal[7]} > {ArgB,1'b0})
 				begin 
 				 SetSR[1] <=1'b1;
 				 SetSR[0] <=1'b0;
@@ -513,6 +518,7 @@ module ALU( input wire clk, // Clock signal
 			  8'd33: // CPI
 		    begin
 			 oe <= 1'b0;
+			 MemIO <= 2'b00;
 			  if(StatusRegVal[6]== 1'b1)
 			   begin
 				 if($signed(ArgA) == {8'd0,DataFromDecoder})
@@ -626,10 +632,12 @@ module ALU( input wire clk, // Clock signal
 			 oe <= 1'b0;
             SetAP <= DataFromDecoder + 4'd1; // Do numeru rejestru dodaj 1 co wyzwoli proces ustawiania w rejestrze. 
 				MenagePC <= 3'd1;
+				MemIO <= 2'b00;
           end
 			 8'd42: // SSP
 			 begin
 			 oe <= 1'b0;
+			 MemIO <= 2'b00;
             SetSP <= ArgA;
 				InDecSP <= 2'd3;
 				MenagePC <= 3'd1;
@@ -643,12 +651,14 @@ module ALU( input wire clk, // Clock signal
 			 oe <= 1'b0;
             SetSR <= StatusRegVal | ArgA;
 				MenagePC <= 3'd1;
+				MemIO <= 2'b00;
           end
 			 8'd45: // SAND
 			 begin
 			 oe <= 1'b0;
             SetSR <= StatusRegVal & ArgA;
 				MenagePC <= 3'd1;
+				MemIO <= 2'b00;
           end
 			 8'd46: // SLD
 			 begin

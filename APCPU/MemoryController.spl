@@ -8,6 +8,7 @@ ExternalExchangeReady
 =MemoryIOBus[1:0]=
 [Outputs]
 ValidMemoryData
+ExchangeACK
 =InstructionBus[31:0]=
 =ExternalDrive[2:0]=
 [BiDir]

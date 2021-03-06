@@ -1,12 +1,14 @@
 [Inputs]
 clk
 rst
+DataACKIn
 =SelX[2:0]=
 =SelY[2:0]=
 =SelZ[2:0]=
 =MemInstruction[1:0]=
 =MemData[31:0]=
 [Outputs]
+DataACKOut
 =A[31:0]=
 =B[31:0]=
 [BiDir]

@@ -26,6 +26,8 @@ module GPReg(
     input wire[2:0] SelZ,
     input wire[1:0] MemInstruction, //Menage data bus, 00-NOP, 01- Read from Mem, 10- Write to Mem 11 - Data to General Registers
     input wire[31:0] MemData,
+	 input wire DataACKIn,
+	 output reg DataACKOut,
     output reg[31:0] A,
     output reg[31:0] B
     );
@@ -35,6 +37,7 @@ module GPReg(
   begin
    if(rst == 1'b0)
 	 begin
+	 DataACKOut <= DataACKIn;
 	  A <= Accumulator[SelX];
 	  B <= Accumulator[SelY]; 
 	  if(MemInstruction == 2'b11)

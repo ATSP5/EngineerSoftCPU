@@ -15,6 +15,7 @@ Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/Mai
 Analyzing Verilog file "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:1016 - "E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v" Line 36: Port XLXN_280 is not connected to this instance
 Completed static elaboration
 Compiling module ALU
 Compiling module AP
@@ -24,15 +25,14 @@ Compiling module SP
 Compiling module SR
 Compiling module PC
 Compiling module MemoryController
-Compiling module OR3
 Compiling module INV
-Compiling module IFD_HXILINX_MainCPU
+Compiling module OR4
 Compiling module MainCPU
 Compiling module MainCPU_MainCPU_sch_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 7 sub-compilation(s) to finish...
-Compiled 14 Verilog Units
+Waiting for 6 sub-compilation(s) to finish...
+Compiled 13 Verilog Units
 Built simulation executable E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_MainCPU_sch_tb_isim_beh.exe
-Fuse Memory Usage: 28776 KB
-Fuse CPU Usage: 390 ms
+Fuse Memory Usage: 28848 KB
+Fuse CPU Usage: 405 ms

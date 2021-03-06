@@ -32,7 +32,7 @@ module GPReg_TB;
 	reg [2:0] SelZ;
 	reg [1:0] MemInstruction;
 	reg [31:0] MemData;
-
+   integer c;
 	// Outputs
 	wire [31:0] A;
 	wire [31:0] B;
@@ -60,12 +60,14 @@ module GPReg_TB;
 		MemInstruction = 0;
 		MemData = 0;
       rst = clk;
+		c = 0;
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
          rst = 1;
-			#5
+			#5 clk = ~clk;
+			#5 clk = ~clk;
 			rst = 0;
 		   #5 clk = ~clk;
 			SelX = 3'b000;
@@ -76,38 +78,34 @@ module GPReg_TB;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			
-			SelX = 3'b000;
-			SelY = 3'b000;
-			SelZ = 3'b000;
+			for(c = 0; c<8; c = c+1)
+			begin
+			SelX = c;
+			SelY = c;
+			SelZ = c;
 			MemInstruction = 2'b11;
-		   MemData = 55;
+		   MemData = 55*c + 1;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
+			end
 			
-			SelX = 3'b000;
-			SelY = 3'b000;
-			SelZ = 3'b001;
-			MemInstruction = 2'b11;
-		   MemData = 44;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
 			
-			SelX = 3'b000;
-			SelY = 3'b000;
-			SelZ = 3'b010;
-			MemInstruction = 2'b11;
-		   MemData = 37;
+			for(c = 0; c<8; c = c+1)
+			begin
+			SelX = c;
+			SelY = c;
+			SelZ = c;
+			MemInstruction = c % 3;
+		   MemData = 55*c + 1;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
+			end
 			
-			SelX = 3'b001;
-			SelY = 3'b010;
-			SelZ = 3'b000;
-			MemInstruction = 2'b01;
-		   MemData = 55;
+			forever
+			 begin
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			
+			 end
          
 	end
       

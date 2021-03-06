@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>MainCPU (E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU.sch)</SelectedItem>
+         <SelectedItem>XLXI_13 - MemoryController (E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000164000000020000000000000000000000000200000064ffffffff000000810000000300000002000001640000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>MainCPU (E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU.sch)</CurrentItem>
+      <CurrentItem>XLXI_13 - MemoryController (E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -35,7 +35,26 @@
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
-      <SelectedItems/>
+      <SelectedItems>
+         <SelectedItem>ALU.v</SelectedItem>
+         <SelectedItem>ALU_TB.v</SelectedItem>
+         <SelectedItem>AP.v</SelectedItem>
+         <SelectedItem>AP_TB.v</SelectedItem>
+         <SelectedItem>Decoder.v</SelectedItem>
+         <SelectedItem>Decoder_TB.v</SelectedItem>
+         <SelectedItem>GPReg.v</SelectedItem>
+         <SelectedItem>GPReg_TB.v</SelectedItem>
+         <SelectedItem>MainCPU.sch</SelectedItem>
+         <SelectedItem>MainCPU_TB.v</SelectedItem>
+         <SelectedItem>MemoryController.v</SelectedItem>
+         <SelectedItem>MemoryController_TB.v</SelectedItem>
+         <SelectedItem>PC.v</SelectedItem>
+         <SelectedItem>PC_TB.v</SelectedItem>
+         <SelectedItem>SP.v</SelectedItem>
+         <SelectedItem>SP_TB.v</SelectedItem>
+         <SelectedItem>SR.v</SelectedItem>
+         <SelectedItem>SR_TB.v</SelectedItem>
+      </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000130000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000000640000000100000000</ViewHeaderState>
@@ -81,7 +100,7 @@
       <SelectedItems>
          <SelectedItem>MainCPU_MainCPU_sch_tb (E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MainCPU_TB.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >10</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >8</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000178000000020000000000000000000000000200000064ffffffff000000810000000300000002000001780000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
@@ -106,13 +125,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ISim Simulator</SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>ISim Simulator</CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -124,13 +143,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Design Summary/Reports</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >12</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Design Summary/Reports</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -138,13 +157,13 @@
          <ClosedNode>ISim Simulator</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_CDC" guiview="Process" >
       <ClosedNodes>

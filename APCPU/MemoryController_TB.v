@@ -61,8 +61,8 @@ module MemoryController_TB;
 		.ExternalExchangeReady(ExternalExchangeReady)
 	);
 
-  assign ExternalDataBus = EDB;
-  //assign InternalDataBus = IDB;
+  //assign ExternalDataBus = EDB;
+  assign InternalDataBus = IDB;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
@@ -80,70 +80,43 @@ module MemoryController_TB;
 		  rst = 0;
 		  clk = ~clk;
 		// Add stimulus here
-	//	NEXT INSTRUCTION PROCEDURE:
- forever
-		  begin
+	//WRITE MEMORY PROCEDURE:
+      
 		   #5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			PCGetNewInstruction = 1;
-			PCAddressBus = 540;
+			MemoryIOBus = 2'b10;
+			ALUAddressBus = 32'd 4467;
+			#5 clk = ~clk;
+			IDB = 32'd 555;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
+			ExternalExchangeReady = 1'd1;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			ExternalExchangeReady = 1'd0;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
+			forever
+		  begin
 			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-         ExternalExchangeReady = 1'b1;
-			EDB = 339;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			PCGetNewInstruction = 0;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-		  end
-
+			end
 	end
       
 endmodule
 
 /*
-NEXT INSTRUCTION PROCEDURE:
- forever
-		  begin
+//	NEXT INSTRUCTION PROCEDURE:
+ 
 		   #5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			PCGetNewInstruction = 1;
 			PCAddressBus = 540;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-         ExternalExchangeReady = 1'b1;
-			EDB = 339;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			PCGetNewInstruction = 0;
@@ -155,12 +128,29 @@ NEXT INSTRUCTION PROCEDURE:
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
+			EDB = 339;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+         ExternalExchangeReady = 1'b1;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			ExternalExchangeReady = 1'b0;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+	forever
+		  begin
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 		  end
-MEMORY READ PROCEDURE:		  
-		  forever
-		  begin
+
+//MEMORY READ PROCEDURE:		  
+		  
 		   #5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
@@ -171,13 +161,16 @@ MEMORY READ PROCEDURE:
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			#5 clk = ~clk;
-			ExternalExchangeReady = 1'd1;
 			EDB = 32'd 555;
 			#5 clk = ~clk;
+			ExternalExchangeReady = 1'd1;
+			#5 clk = ~clk;
+			ExternalExchangeReady = 1'd0;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
+			forever
+		  begin
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			end

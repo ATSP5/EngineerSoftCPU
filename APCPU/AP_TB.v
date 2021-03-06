@@ -51,8 +51,7 @@ module AP_TB;
 		#5 clk = ~clk;
 		#5
 		rst = 0;
-        forever
-		  begin
+     
 		   #5 clk = ~clk;
 			APSet = 0;
 			#5 clk = ~clk;
@@ -79,6 +78,13 @@ module AP_TB;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			APSet = 8;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			APSet = 0;
+			#5 clk = ~clk;
+			#5 clk = ~clk;
+			forever
+		  begin
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 		  end

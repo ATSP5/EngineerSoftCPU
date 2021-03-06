@@ -22,6 +22,8 @@ module Decoder( input wire clk,
     input wire rst,// asynchronous reset nie pod³¹czyæ do clk
     input wire[31:0] InstructionBus,
     input wire[2:0] APSelBus,
+	 input wire DataACKIn,
+	 output reg DataACKOut,
     output reg[7:0] AluCode,
     output reg[23:0] DecoderData,
     output reg[2:0] RegSelX,
@@ -32,6 +34,7 @@ module Decoder( input wire clk,
 	  begin
 	   if(rst == 1'b0)
 		 begin
+		 DataACKOut <= DataACKIn;
 		 AluCode <= InstructionBus[7:0];
 		  case(InstructionBus[7:0])
 		   8'd255: //Przeka¿ tylko instrukcje
@@ -49,10 +52,11 @@ module Decoder( input wire clk,
 			  RegSelY <= InstructionBus[13:11];
 			  RegSelZ <= InstructionBus[16:14];
 			 end
-			 8'd13,8'd14,8'd15,8'd16: // Instrukcja typu{x[8]} Rx[3] L [6] 0[15]
+			 8'd13,8'd14,8'd15,8'd16: // Instrukcja typu{x[8]} Rx[3] L [6] 0[15] 
 			  begin
 			   RegSelX <= InstructionBus[10:8];
 				DecoderData <= InstructionBus[16:11];
+				RegSelZ <= InstructionBus[10:8];
 				end
 			 8'd17,8'd18,8'd19,8'd20,8'd21,8'd22,8'd38: //Instrukcje typu: {x[8]} Rx[3] Ry [3] 0[18] z docelowym Rx
 			   begin
@@ -68,10 +72,15 @@ module Decoder( input wire clk,
 				 begin
 				  RegSelZ <= InstructionBus[10:8];
 				 end
-				 8'd36,8'd49://Instrukcje typu {x[8]} Rx[3](Docelowy) Ry [3] 0[18]
+				 8'd36://Instrukcje typu {x[8]} Rz[3](Docelowy) Ry [3] 0[18]
 				 begin
 				  RegSelZ <= InstructionBus[10:8];
 				  RegSelY <= InstructionBus[13:11];
+				 end
+				 8'd49://Instrukcje typu {x[8]} Rz[3](Docelowy) Rx [3] 0[18]
+				 begin
+				  RegSelZ <= InstructionBus[10:8];
+				  RegSelX <= InstructionBus[13:11];
 				 end
    		 endcase
 	  end
@@ -81,6 +90,7 @@ module Decoder( input wire clk,
 		 RegSelX <= 32'd0;
 		 RegSelY <= 32'd0;
 		 RegSelZ <= 32'd0;
+		 DataACKOut <= 0;
 		 DecoderData <= 24'd0;
 		end
 	 end

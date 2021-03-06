@@ -61,35 +61,32 @@ module PC_TB;
 		  #5 clk = ~clk;
 		  #5 clk = ~clk;
 		// Add stimulus here
-       forever
-		  begin
+       
 		   #5 clk = ~clk;
 			PCDrive = 3'b000;
-			PCSet = 5791;
+			PCSet = 10;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			PCDrive = 3'b011;
-			PCSet = 5791;
+			PCSet = 10;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			PCDrive = 3'b000;
-			PCSet = 7894;
+			PCSet = 25;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			PCDrive = 3'b001;
-			PCSet = 7894;
+			PCSet = 30;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
-			PCDrive = 3'b001;
-			PCSet = 7894;
+			PCDrive = 3'b010;
+			PCSet = 30;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			PCDrive = 3'b100;
 			PCSet = 33;
-			#5 clk = ~clk;
-			#5 clk = ~clk;
-			PCDrive = 3'b000;
-			PCSet = 7894;
+			forever
+		  begin
 			#5 clk = ~clk;
 			#5 clk = ~clk;
          end

@@ -53,3 +53,5 @@ par -w -intstyle ise -ol high -mt off MemoryController_map.ncd MemoryController.
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MemoryController.twx MemoryController.ncd -o MemoryController.twr MemoryController.pcf 
 vhdtdtfi -lib work E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController.v -lang verilog -prj APCPU -o MemoryController.spl -module MemoryController -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan6 MemoryController.spl E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController.sym 
+vhdtdtfi -lib work E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController.v -lang verilog -prj APCPU -o MemoryController.spl -module MemoryController -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 MemoryController.spl E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/MemoryController.sym 

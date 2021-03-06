@@ -30,7 +30,8 @@ module MemoryController(input wire clk,
     input wire[1:0] MemoryIOBus, // 00-NOP, 01- Read from Mem, 10- Write to Mem 11 - Data to General Registers
     output reg ValidMemoryData,// Potwierdzenie danych z pamiêci 
 	 output reg[2:0] ExternalDrive, //000 - Do nothing 001 - Get Instruction 010 - Memory read 011 - Memory Write 100 - IO Read (Reserved) 101 - IO Write (Reserved) 110, 111 - Reserved + state pointer
-	 input wire ExternalExchangeReady // Ready signal for external data exchange 
+	 input wire ExternalExchangeReady, // Ready signal for external data exchange
+    output reg ExchangeACK//	 Ready signal for external data exchange sent into decoder
     );
 
 	 reg EDB_EN, EAB_EN, IDB_EN;// External/Internal Data/Adress Bus Enable
@@ -44,6 +45,7 @@ module MemoryController(input wire clk,
 		 begin
 		 if(rst == 1'b0)
 		 begin
+		 ExchangeACK <= ExternalExchangeReady;
 		 // Pobranie kolejnej instrukcji
 		  if( ExternalDrive == 3'b001)
 		   begin
@@ -100,6 +102,7 @@ module MemoryController(input wire clk,
 		  EDB_EN <= 1'b1;
 		  EAB_EN <= 1'b1;
 		  IDB_EN <= 1'b1;
+		  ExchangeACK <= 0;
 		 end
 		 end
 	 

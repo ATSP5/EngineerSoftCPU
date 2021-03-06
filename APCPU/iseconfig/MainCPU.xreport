@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-01-18T20:00:43</DateModified>
+  <DateModified>2021-01-26T18:11:04</DateModified>
   <ModuleName>MainCPU</ModuleName>
-  <SummaryTimeStamp>2021-01-18T19:55:32</SummaryTimeStamp>
+  <SummaryTimeStamp>2021-01-19T20:33:09</SummaryTimeStamp>
   <SavedFilePath>E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU/iseconfig/MainCPU.xreport</SavedFilePath>
   <ImplementationReportsDirectory>E:/Adam/GitHubLocallReopsitory/EngineerSoftCPU/APCPU\</ImplementationReportsDirectory>
   <DateInitialized>2021-01-17T23:27:47</DateInitialized>

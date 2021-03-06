@@ -1,9 +1,11 @@
 [Inputs]
 clk
 rst
+DataACKIn
 =InstructionBus[31:0]=
 =APSelBus[2:0]=
 [Outputs]
+DataACKOut
 =AluCode[7:0]=
 =DecoderData[23:0]=
 =RegSelX[2:0]=

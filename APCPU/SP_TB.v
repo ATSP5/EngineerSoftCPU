@@ -50,37 +50,42 @@ module SP_TB;
       rst = 0;
 		// Wait 100 ns for global reset to finish
 		#100;
-        rst = 1;
-		#5 
+		#5 clk = ~clk;
+		#5 clk = ~clk;
+      #5 rst = 1;
+		#5 clk = ~clk;
+		#5 clk = ~clk;
 		  rst = 0;
 		// Add stimulus here
-        forever
-		  begin
+        
 		   #5 clk = ~clk;
 			SPDrive = 2'b00;
-			SPSet = 5791;
+			SPSet = 10;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			SPDrive = 2'b11;
-			SPSet = 5791;
+			SPSet = 10;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			SPDrive = 2'b00;
-			SPSet = 7894;
+			SPSet = 20;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			SPDrive = 2'b01;
-			SPSet = 7894;
+			SPSet = 30;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			SPDrive = 2'b01;
-			SPSet = 7894;
+			SPSet = 40;
 			#5 clk = ~clk;
 			#5 clk = ~clk;
 			SPDrive = 2'b10;
-			SPSet = 7894;
+			SPSet = 50;
+			forever
+		  begin
 			#5 clk = ~clk;
 			#5 clk = ~clk;
+			SPDrive = 2'b00;
          end
 	end
       

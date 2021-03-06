@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : MainCPU.vf
-// /___/   /\     Timestamp : 01/18/2021 20:00:47
+// /___/   /\     Timestamp : 01/19/2021 20:26:36
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -18,27 +18,6 @@
 //    This verilog netlist is translated from an ECS schematic.It can be 
 //    synthesized and simulated, but it should not be modified. 
 //
-`timescale 100 ps / 10 ps
-
-module IFD_HXILINX_MainCPU(Q, C, D);
-   
-   output             Q;
-
-   input 	      C;	
-   input              D;
-   
-   parameter INIT = 1'b0;
-   (* IOB = "TRUE" *) 
-
-   reg                Q = INIT;
-
-   always @(posedge C)
-     begin
-          Q <= D;
-     end
-   
-   
-endmodule
 `timescale 1ns / 1ps
 
 module MainCPU(clk, 
@@ -63,6 +42,7 @@ module MainCPU(clk,
                SelZ, 
                SRSet, 
                ValidMemoryData, 
+               XLXN_280, 
                ExternalAddressBus, 
                ExternalDataBus, 
                InternalDataBus);
@@ -89,6 +69,7 @@ module MainCPU(clk,
    output [2:0] SelZ;
    output [7:0] SRSet;
    output ValidMemoryData;
+   output XLXN_280;
     inout [31:0] ExternalAddressBus;
     inout [31:0] ExternalDataBus;
     inout [31:0] InternalDataBus;
@@ -98,8 +79,9 @@ module MainCPU(clk,
    wire [31:0] XLXN_17;
    wire [1:0] XLXN_18;
    wire [31:0] XLXN_20;
-   wire XLXN_267;
-   wire XLXN_270;
+   wire XLXN_278;
+   wire XLXN_279;
+   wire XLXN_284;
    wire [2:0] APSel_DUMMY;
    wire [1:0] MemIO_DUMMY;
    wire [3:0] APSet_DUMMY;
@@ -116,6 +98,7 @@ module MainCPU(clk,
    wire [2:0] SelX_DUMMY;
    wire [2:0] SelY_DUMMY;
    wire [2:0] SelZ_DUMMY;
+   wire XLXN_280_DUMMY;
    wire [2:0] PCDrive_DUMMY;
    wire ValidMemoryData_DUMMY;
    
@@ -137,6 +120,7 @@ module MainCPU(clk,
    assign SelZ[2:0] = SelZ_DUMMY[2:0];
    assign SRSet[7:0] = SRSet_DUMMY[7:0];
    assign ValidMemoryData = ValidMemoryData_DUMMY;
+   assign XLXN_280 = XLXN_280_DUMMY;
    ALU  XLXI_6 (.A(A_DUMMY[31:0]), 
                .ALU_Sel(ALUSel_DUMMY[7:0]), 
                .B(B_DUMMY[31:0]), 
@@ -161,14 +145,17 @@ module MainCPU(clk,
               .APSel(APSel_DUMMY[2:0]));
    Decoder  XLXI_8 (.APSelBus(APSel_DUMMY[2:0]), 
                    .clk(clk), 
+                   .DataACKIn(XLXN_278), 
                    .InstructionBus(InstructionBus_DUMMY[31:0]), 
                    .rst(rst), 
                    .AluCode(ALUSel_DUMMY[7:0]), 
+                   .DataACKOut(XLXN_279), 
                    .DecoderData(DecoderData_DUMMY[23:0]), 
                    .RegSelX(SelX_DUMMY[2:0]), 
                    .RegSelY(SelY_DUMMY[2:0]), 
                    .RegSelZ(SelZ_DUMMY[2:0]));
    GPReg  XLXI_9 (.clk(clk), 
+                 .DataACKIn(XLXN_279), 
                  .MemData(InternalDataBus[31:0]), 
                  .MemInstruction(MemIO_DUMMY[1:0]), 
                  .rst(rst), 
@@ -176,7 +163,8 @@ module MainCPU(clk,
                  .SelY(SelY_DUMMY[2:0]), 
                  .SelZ(SelZ_DUMMY[2:0]), 
                  .A(A_DUMMY[31:0]), 
-                 .B(B_DUMMY[31:0]));
+                 .B(B_DUMMY[31:0]), 
+                 .DataACKOut(XLXN_280_DUMMY));
    SP  XLXI_10 (.clk(clk), 
                .rst(rst), 
                .SPDrive(XLXN_18[1:0]), 
@@ -199,20 +187,18 @@ module MainCPU(clk,
                              .PCAddressBus(PCAddressBus_DUMMY[31:0]), 
                              .PCGetNewInstruction(GetInstruction_DUMMY), 
                              .rst(rst), 
+                             .ExchangeACK(XLXN_278), 
                              .ExternalDrive(ExternalDrive[2:0]), 
                              .InstructionBus(InstructionBus_DUMMY[31:0]), 
                              .ValidMemoryData(ValidMemoryData_DUMMY), 
                              .ExternalAddressBus(ExternalAddressBus[31:0]), 
                              .ExternalDataBus(ExternalDataBus[31:0]), 
                              .InternalDataBus(InternalDataBus[31:0]));
-   OR3  XLXI_54 (.I0(GetInstruction_DUMMY), 
-                .I1(XLXN_267), 
+   INV  XLXI_55 (.I(XLXN_280_DUMMY), 
+                .O(XLXN_284));
+   OR4  XLXI_57 (.I0(GetInstruction_DUMMY), 
+                .I1(XLXN_284), 
                 .I2(rst), 
+                .I3(ExternalExchangeReady), 
                 .O(ALUrst_DUMMY));
-   INV  XLXI_55 (.I(XLXN_270), 
-                .O(XLXN_267));
-   (* HU_SET = "XLXI_57_0" *) 
-   IFD_HXILINX_MainCPU #( .INIT(1'b0) ) XLXI_57 (.C(clk), 
-                                .D(ExternalExchangeReady), 
-                                .Q(XLXN_270));
 endmodule
